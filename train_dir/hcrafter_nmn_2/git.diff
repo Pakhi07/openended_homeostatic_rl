@@ -1,0 +1,12 @@
+diff --git a/run_hcrafter_sf.bash b/run_hcrafter_sf.bash
+index a6780fc..5841440 100644
+--- a/run_hcrafter_sf.bash
++++ b/run_hcrafter_sf.bash
+@@ -1,6 +1,6 @@
+ python train_hcrafter_env.py \
+ --env=HomeostaticCrafter-v1 \
+---experiment=hcrafter_nmn_0 \
++--experiment=hcrafter_nmn_2 \
+ --stats_avg=100 \
+ --num_envs_per_worker=10 \
+ --with_wandb=True \

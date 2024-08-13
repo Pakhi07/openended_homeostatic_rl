@@ -1,0 +1,12 @@
+python enjoy_hcrafter_env_record.py \
+--env=HomeostaticCrafter-v1 \
+--experiment=hcrafter_nmn_2 \
+--train_dir=./train_dir \
+--device=cpu \
+--num_envs_per_worker=1 \
+--num_workers 1 \
+--stats_avg 1 \
+--serial_mode True \
+--max_num_episodes 1 \
+--save_video \
+--no_render

@@ -1,0 +1,3 @@
+Crafter reward agent statistics @ 100 test runs.
+bootstrapped reward 100 episode: 16.402929999999994
+bootstrapped standard deviation: 0.2622550148096177
