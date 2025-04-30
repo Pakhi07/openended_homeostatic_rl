@@ -81,6 +81,6 @@ python plot_achievement.py
   title={Unexpected Capability of Homeostasis for Open-ended Learning},
   author={Yoshida, Naoto and Kuniyoshi, Yasuo},
   year={2025},
-  publisher={OSF}
+  publisher={Preprimt available from OSF, https://doi.org/10.31219/osf.io/926eh}
 }
 ```
