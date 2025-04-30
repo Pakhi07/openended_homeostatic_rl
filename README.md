@@ -77,12 +77,10 @@ python plot_achievement.py
 
 ## Citation
 ```text
-@misc{Source,
-author = {[Anonymous Authors]},
-title = {An Open Source Implementation of Unexpected Capability of Homeostasis for Open-ended Learning},
-year = {2025},
-publisher = {GitHub},
-note = {GitHub repository},
-howpublished = {\url{TBA}}
+@article{yoshida2025unexpected,
+  title={Unexpected Capability of Homeostasis for Open-ended Learning},
+  author={Yoshida, Naoto and Kuniyoshi, Yasuo},
+  year={2025},
+  publisher={OSF}
 }
 ```
