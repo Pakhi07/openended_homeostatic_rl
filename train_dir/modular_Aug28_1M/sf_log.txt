@@ -1,0 +1,1485 @@
+[2025-08-28 10:56:39,691][02663] Saving configuration to /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/config.json...
+[2025-08-28 10:56:39,703][02663] Rollout worker 0 uses device cpu
+[2025-08-28 10:56:39,703][02663] Rollout worker 1 uses device cpu
+[2025-08-28 10:56:39,703][02663] Rollout worker 2 uses device cpu
+[2025-08-28 10:56:39,703][02663] Rollout worker 3 uses device cpu
+[2025-08-28 10:56:39,703][02663] Rollout worker 4 uses device cpu
+[2025-08-28 10:56:39,703][02663] Rollout worker 5 uses device cpu
+[2025-08-28 10:56:39,704][02663] Rollout worker 6 uses device cpu
+[2025-08-28 10:56:39,704][02663] Rollout worker 7 uses device cpu
+[2025-08-28 10:56:39,704][02663] Rollout worker 8 uses device cpu
+[2025-08-28 10:56:39,704][02663] Rollout worker 9 uses device cpu
+[2025-08-28 10:56:39,704][02663] Rollout worker 10 uses device cpu
+[2025-08-28 10:56:39,704][02663] Rollout worker 11 uses device cpu
+[2025-08-28 10:56:39,704][02663] Rollout worker 12 uses device cpu
+[2025-08-28 10:56:39,704][02663] Rollout worker 13 uses device cpu
+[2025-08-28 10:56:39,704][02663] Rollout worker 14 uses device cpu
+[2025-08-28 10:56:39,705][02663] Rollout worker 15 uses device cpu
+[2025-08-28 10:56:39,705][02663] Rollout worker 16 uses device cpu
+[2025-08-28 10:56:39,705][02663] Rollout worker 17 uses device cpu
+[2025-08-28 10:56:39,705][02663] Rollout worker 18 uses device cpu
+[2025-08-28 10:56:39,705][02663] Rollout worker 19 uses device cpu
+[2025-08-28 10:56:39,705][02663] Rollout worker 20 uses device cpu
+[2025-08-28 10:56:39,705][02663] Rollout worker 21 uses device cpu
+[2025-08-28 10:56:39,705][02663] Rollout worker 22 uses device cpu
+[2025-08-28 10:56:39,705][02663] Rollout worker 23 uses device cpu
+[2025-08-28 10:56:39,706][02663] Rollout worker 24 uses device cpu
+[2025-08-28 10:56:39,706][02663] Rollout worker 25 uses device cpu
+[2025-08-28 10:56:39,706][02663] Rollout worker 26 uses device cpu
+[2025-08-28 10:56:39,706][02663] Rollout worker 27 uses device cpu
+[2025-08-28 10:56:39,706][02663] Rollout worker 28 uses device cpu
+[2025-08-28 10:56:39,706][02663] Rollout worker 29 uses device cpu
+[2025-08-28 10:56:39,706][02663] Rollout worker 30 uses device cpu
+[2025-08-28 10:56:39,706][02663] Rollout worker 31 uses device cpu
+[2025-08-28 10:56:39,706][02663] Rollout worker 32 uses device cpu
+[2025-08-28 10:56:39,707][02663] Rollout worker 33 uses device cpu
+[2025-08-28 10:56:39,707][02663] Rollout worker 34 uses device cpu
+[2025-08-28 10:56:39,707][02663] Rollout worker 35 uses device cpu
+[2025-08-28 10:56:39,707][02663] Rollout worker 36 uses device cpu
+[2025-08-28 10:56:39,707][02663] Rollout worker 37 uses device cpu
+[2025-08-28 10:56:39,707][02663] Rollout worker 38 uses device cpu
+[2025-08-28 10:56:39,707][02663] Rollout worker 39 uses device cpu
+[2025-08-28 10:56:39,707][02663] Rollout worker 40 uses device cpu
+[2025-08-28 10:56:39,707][02663] Rollout worker 41 uses device cpu
+[2025-08-28 10:56:39,708][02663] Rollout worker 42 uses device cpu
+[2025-08-28 10:56:39,708][02663] Rollout worker 43 uses device cpu
+[2025-08-28 10:56:39,708][02663] Rollout worker 44 uses device cpu
+[2025-08-28 10:56:39,708][02663] Rollout worker 45 uses device cpu
+[2025-08-28 10:56:39,708][02663] Rollout worker 46 uses device cpu
+[2025-08-28 10:56:39,708][02663] Rollout worker 47 uses device cpu
+[2025-08-28 10:56:39,708][02663] Rollout worker 48 uses device cpu
+[2025-08-28 10:56:39,708][02663] Rollout worker 49 uses device cpu
+[2025-08-28 10:56:39,904][02663] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-08-28 10:56:39,904][02663] InferenceWorker_p0-w0: min num requests: 16
+[2025-08-28 10:56:40,118][02663] Starting all processes...
+[2025-08-28 10:56:40,119][02663] Starting process learner_proc0
+[2025-08-28 10:56:41,900][02663] Starting all processes...
+[2025-08-28 10:56:41,906][02663] Starting process inference_proc0-0
+[2025-08-28 10:56:41,906][02663] Starting process rollout_proc0
+[2025-08-28 10:56:41,908][02830] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-08-28 10:56:41,908][02830] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-08-28 10:56:41,906][02663] Starting process rollout_proc1
+[2025-08-28 10:56:41,906][02663] Starting process rollout_proc2
+[2025-08-28 10:56:41,906][02663] Starting process rollout_proc3
+[2025-08-28 10:56:41,906][02663] Starting process rollout_proc4
+[2025-08-28 10:56:41,906][02663] Starting process rollout_proc5
+[2025-08-28 10:56:41,909][02663] Starting process rollout_proc6
+[2025-08-28 10:56:41,910][02663] Starting process rollout_proc7
+[2025-08-28 10:56:41,939][02830] Num visible devices: 1
+[2025-08-28 10:56:41,910][02663] Starting process rollout_proc8
+[2025-08-28 10:56:41,959][02830] Starting seed is not provided
+[2025-08-28 10:56:41,960][02830] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-08-28 10:56:41,960][02830] Initializing actor-critic model on device cuda:0
+[2025-08-28 10:56:41,960][02830] RunningMeanStd input shape: (4,)
+[2025-08-28 10:56:41,912][02663] Starting process rollout_proc9
+[2025-08-28 10:56:41,914][02663] Starting process rollout_proc10
+[2025-08-28 10:56:41,964][02830] RunningMeanStd input shape: (3, 64, 64)
+[2025-08-28 10:56:41,965][02830] RunningMeanStd input shape: (1,)
+[2025-08-28 10:56:41,914][02663] Starting process rollout_proc11
+[2025-08-28 10:56:41,914][02663] Starting process rollout_proc12
+[2025-08-28 10:56:41,914][02663] Starting process rollout_proc13
+[2025-08-28 10:56:41,914][02663] Starting process rollout_proc14
+[2025-08-28 10:56:41,916][02663] Starting process rollout_proc15
+[2025-08-28 10:56:41,916][02663] Starting process rollout_proc16
+[2025-08-28 10:56:41,987][02663] Starting process rollout_proc22
+[2025-08-28 10:56:41,921][02663] Starting process rollout_proc18
+[2025-08-28 10:56:41,924][02663] Starting process rollout_proc19
+[2025-08-28 10:56:41,927][02663] Starting process rollout_proc20
+[2025-08-28 10:56:41,993][02663] Starting process rollout_proc23
+[2025-08-28 10:56:41,918][02663] Starting process rollout_proc17
+[2025-08-28 10:56:41,987][02663] Starting process rollout_proc21
+[2025-08-28 10:56:42,039][02663] Starting process rollout_proc24
+[2025-08-28 10:56:42,039][02663] Starting process rollout_proc25
+[2025-08-28 10:56:42,039][02663] Starting process rollout_proc26
+[2025-08-28 10:56:42,039][02663] Starting process rollout_proc27
+[2025-08-28 10:56:42,075][02663] Starting process rollout_proc28
+[2025-08-28 10:56:42,117][02663] Starting process rollout_proc29
+[2025-08-28 10:56:42,118][02663] Starting process rollout_proc30
+[2025-08-28 10:56:42,160][02663] Starting process rollout_proc31
+[2025-08-28 10:56:42,178][02663] Starting process rollout_proc32
+[2025-08-28 10:56:42,304][02830] Copied Vision Encoder output size: 1024
+[2025-08-28 10:56:42,304][02830] Modular encoder found 4 measurements.
+[2025-08-28 10:56:42,311][02830] Created 4 module heads. Final output size: 512
+[2025-08-28 10:56:42,190][02663] Starting process rollout_proc33
+[2025-08-28 10:56:42,206][02663] Starting process rollout_proc34
+[2025-08-28 10:56:42,206][02663] Starting process rollout_proc35
+[2025-08-28 10:56:42,235][02663] Starting process rollout_proc36
+[2025-08-28 10:56:42,235][02663] Starting process rollout_proc37
+[2025-08-28 10:56:42,235][02663] Starting process rollout_proc38
+[2025-08-28 10:56:42,235][02663] Starting process rollout_proc39
+[2025-08-28 10:56:42,236][02663] Starting process rollout_proc40
+[2025-08-28 10:56:42,238][02663] Starting process rollout_proc41
+[2025-08-28 10:56:42,240][02663] Starting process rollout_proc42
+[2025-08-28 10:56:42,272][02663] Starting process rollout_proc43
+[2025-08-28 10:56:42,303][02663] Starting process rollout_proc44
+[2025-08-28 10:56:42,337][02663] Starting process rollout_proc46
+[2025-08-28 10:56:42,337][02663] Starting process rollout_proc47
+[2025-08-28 10:56:42,336][02663] Starting process rollout_proc45
+[2025-08-28 10:56:42,412][02663] Starting process rollout_proc48
+[2025-08-28 10:56:42,412][02663] Starting process rollout_proc49
+[2025-08-28 10:56:43,119][02830] Created Actor Critic model with architecture:
+[2025-08-28 10:56:43,119][02830] ActorCriticSharedWeights(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): ModularHcrafterEncoder(
+    (vision_encoder): HcrafterConvEncoder(
+      (basic_encoder): Sequential(
+        (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+        (1): ELU(alpha=1.0)
+        (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+        (3): ELU(alpha=1.0)
+        (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+        (5): ELU(alpha=1.0)
+        (6): Flatten(start_dim=1, end_dim=-1)
+      )
+    )
+    (module_heads): ModuleList(
+      (0-3): 4 x Sequential(
+        (0): Linear(in_features=1028, out_features=128, bias=True)
+        (1): ELU(alpha=1.0)
+        (2): Linear(in_features=128, out_features=512, bias=True)
+        (3): ELU(alpha=1.0)
+      )
+    )
+  )
+  (core): ModelCoreRNN(
+    (core): GRU(512, 512)
+  )
+  (decoder): MlpDecoder(
+    (mlp): Identity()
+  )
+  (critic_linear): Linear(in_features=512, out_features=1, bias=True)
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+)
+[2025-08-28 10:56:47,833][02830] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-08-28 10:56:49,880][02860] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-08-28 10:56:49,882][02860] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-08-28 10:56:49,926][02860] Num visible devices: 1
+[2025-08-28 10:56:51,167][03010] Worker 38 uses CPU cores [17]
+[2025-08-28 10:56:52,011][02942] Worker 17 uses CPU cores [17]
+[2025-08-28 10:56:53,059][02950] Worker 25 uses CPU cores [18]
+[2025-08-28 10:56:53,719][02943] Worker 19 uses CPU cores [19]
+[2025-08-28 10:56:53,739][03043] Worker 42 uses CPU cores [14]
+[2025-08-28 10:56:53,811][02923] Worker 15 uses CPU cores [15]
+[2025-08-28 10:56:53,931][02941] Worker 21 uses CPU cores [14]
+[2025-08-28 10:56:54,279][02932] Worker 18 uses CPU cores [18]
+[2025-08-28 10:56:54,379][02868] Worker 6 uses CPU cores [20]
+[2025-08-28 10:56:54,464][02985] Worker 33 uses CPU cores [19]
+[2025-08-28 10:56:54,523][03089] Worker 45 uses CPU cores [17]
+[2025-08-28 10:56:54,583][03086] Worker 46 uses CPU cores [18]
+[2025-08-28 10:56:54,631][02970] Worker 32 uses CPU cores [18]
+[2025-08-28 10:56:54,651][02959] Worker 28 uses CPU cores [14]
+[2025-08-28 10:56:54,835][03131] Worker 49 uses CPU cores [14, 15, 16, 17, 18, 19, 20]
+[2025-08-28 10:56:54,891][02914] Worker 12 uses CPU cores [19]
+[2025-08-28 10:56:54,983][02862] Worker 2 uses CPU cores [16]
+[2025-08-28 10:56:55,176][02861] Worker 1 uses CPU cores [15]
+[2025-08-28 10:56:55,412][03009] Worker 37 uses CPU cores [16]
+[2025-08-28 10:56:55,472][02904] Worker 9 uses CPU cores [16]
+[2025-08-28 10:56:55,491][03023] Worker 41 uses CPU cores [20]
+[2025-08-28 10:56:55,583][02940] Worker 23 uses CPU cores [16]
+[2025-08-28 10:56:55,657][02921] Worker 13 uses CPU cores [20]
+[2025-08-28 10:56:55,783][02993] Worker 34 uses CPU cores [20]
+[2025-08-28 10:56:56,203][02871] Worker 8 uses CPU cores [15]
+[2025-08-28 10:56:56,204][02930] Worker 22 uses CPU cores [15]
+[2025-08-28 10:56:56,279][02867] Worker 7 uses CPU cores [14]
+[2025-08-28 10:56:56,419][03007] Worker 35 uses CPU cores [14]
+[2025-08-28 10:56:56,423][03013] Worker 40 uses CPU cores [19]
+[2025-08-28 10:56:56,431][03088] Worker 47 uses CPU cores [19]
+[2025-08-28 10:56:56,450][02939] Worker 20 uses CPU cores [20]
+[2025-08-28 10:56:56,576][02830] No checkpoints found
+[2025-08-28 10:56:56,577][02830] Did not load from checkpoint, starting from scratch!
+[2025-08-28 10:56:56,577][02830] Initialized policy 0 weights for model version 0
+[2025-08-28 10:56:56,580][02830] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-08-28 10:56:56,588][02830] LearnerWorker_p0 finished initialization!
+[2025-08-28 10:56:56,591][02869] Worker 4 uses CPU cores [18]
+[2025-08-28 10:56:56,717][03012] Worker 39 uses CPU cores [18]
+[2025-08-28 10:56:56,739][03008] Worker 36 uses CPU cores [15]
+[2025-08-28 10:56:56,779][02922] Worker 14 uses CPU cores [14]
+[2025-08-28 10:56:56,830][03105] Worker 48 uses CPU cores [20]
+[2025-08-28 10:56:56,843][02863] Worker 0 uses CPU cores [14]
+[2025-08-28 10:56:56,919][02977] Worker 31 uses CPU cores [17]
+[2025-08-28 10:56:56,939][02884] Worker 10 uses CPU cores [17]
+[2025-08-28 10:56:56,948][02931] Worker 16 uses CPU cores [16]
+[2025-08-28 10:56:56,955][03063] Worker 43 uses CPU cores [15]
+[2025-08-28 10:56:56,973][02944] Worker 24 uses CPU cores [17]
+[2025-08-28 10:56:56,979][02958] Worker 27 uses CPU cores [20]
+[2025-08-28 10:56:57,015][03084] Worker 44 uses CPU cores [16]
+[2025-08-28 10:56:57,033][02907] Worker 11 uses CPU cores [18]
+[2025-08-28 10:56:57,047][02860] RunningMeanStd input shape: (4,)
+[2025-08-28 10:56:57,049][02860] RunningMeanStd input shape: (3, 64, 64)
+[2025-08-28 10:56:57,049][02860] RunningMeanStd input shape: (1,)
+[2025-08-28 10:56:57,052][02962] Worker 30 uses CPU cores [16]
+[2025-08-28 10:56:57,066][02860] Copied Vision Encoder output size: 1024
+[2025-08-28 10:56:57,066][02860] Modular encoder found 4 measurements.
+[2025-08-28 10:56:57,067][02960] Worker 26 uses CPU cores [19]
+[2025-08-28 10:56:57,073][02860] Created 4 module heads. Final output size: 512
+[2025-08-28 10:56:57,115][02961] Worker 29 uses CPU cores [15]
+[2025-08-28 10:56:57,123][02864] Worker 3 uses CPU cores [17]
+[2025-08-28 10:56:57,140][02866] Worker 5 uses CPU cores [19]
+[2025-08-28 10:56:57,149][02663] Inference worker 0-0 is ready!
+[2025-08-28 10:56:57,150][02663] All inference workers are ready! Signal rollout workers to start!
+[2025-08-28 10:56:59,893][02663] Heartbeat connected on Batcher_0
+[2025-08-28 10:56:59,898][02663] Heartbeat connected on LearnerWorker_p0
+[2025-08-28 10:56:59,953][02663] Heartbeat connected on InferenceWorker_p0-w0
+[2025-08-28 10:57:01,316][02663] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-08-28 10:57:06,316][02663] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-08-28 10:57:07,600][02871] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:07,721][03089] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:07,760][02923] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:07,741][02958] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:07,879][02861] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:07,919][02864] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:07,958][02993] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:07,946][03063] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,026][03086] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,072][02943] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,091][03013] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,128][02977] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,137][02866] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,191][02939] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,197][02914] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,199][03105] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,249][02867] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,260][02944] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,271][02884] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,273][02922] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,313][02961] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,316][02941] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,338][02960] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,349][03010] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,389][03008] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,430][03012] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,455][02930] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,464][02985] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,446][03007] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,487][02970] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,518][03043] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,555][02950] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,523][03023] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,635][03088] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,836][02921] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,842][02863] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,893][02942] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,891][02868] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,953][02932] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:08,988][02869] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:09,127][02959] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:09,501][02907] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:11,103][02904] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:11,316][02663] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-08-28 10:57:12,104][02940] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:12,354][02931] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:12,503][03131] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:12,843][03084] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:12,888][03009] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:13,031][02862] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:13,715][02962] Decorrelating experience for 0 frames...
+[2025-08-28 10:57:16,316][02663] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-08-28 10:57:17,776][03089] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,293][02923] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,312][02663] Heartbeat connected on RolloutWorker_w45
+[2025-08-28 10:57:18,471][02861] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,586][02993] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,617][02941] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,632][02871] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,644][02943] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,655][03063] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,704][03008] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,683][03007] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,749][02866] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,852][02864] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,881][02663] Heartbeat connected on RolloutWorker_w15
+[2025-08-28 10:57:18,894][02922] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,922][02977] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,922][02939] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:18,915][02958] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,012][02663] Heartbeat connected on RolloutWorker_w1
+[2025-08-28 10:57:18,999][02960] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,024][02884] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,125][02930] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,144][02663] Heartbeat connected on RolloutWorker_w8
+[2025-08-28 10:57:19,179][02663] Heartbeat connected on RolloutWorker_w36
+[2025-08-28 10:57:19,183][02663] Heartbeat connected on RolloutWorker_w43
+[2025-08-28 10:57:19,186][02663] Heartbeat connected on RolloutWorker_w21
+[2025-08-28 10:57:19,191][03010] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,208][02663] Heartbeat connected on RolloutWorker_w34
+[2025-08-28 10:57:19,195][02867] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,227][02663] Heartbeat connected on RolloutWorker_w19
+[2025-08-28 10:57:19,275][03105] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,280][02663] Heartbeat connected on RolloutWorker_w35
+[2025-08-28 10:57:19,324][02663] Heartbeat connected on RolloutWorker_w22
+[2025-08-28 10:57:19,335][02663] Heartbeat connected on RolloutWorker_w5
+[2025-08-28 10:57:19,375][02663] Heartbeat connected on RolloutWorker_w3
+[2025-08-28 10:57:19,389][02961] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,390][03013] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,397][03086] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,411][02663] Heartbeat connected on RolloutWorker_w31
+[2025-08-28 10:57:19,460][02663] Heartbeat connected on RolloutWorker_w20
+[2025-08-28 10:57:19,465][02914] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,487][02663] Heartbeat connected on RolloutWorker_w14
+[2025-08-28 10:57:19,489][02663] Heartbeat connected on RolloutWorker_w10
+[2025-08-28 10:57:19,489][02663] Heartbeat connected on RolloutWorker_w29
+[2025-08-28 10:57:19,501][02944] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,507][02663] Heartbeat connected on RolloutWorker_w27
+[2025-08-28 10:57:19,523][02663] Heartbeat connected on RolloutWorker_w26
+[2025-08-28 10:57:19,545][03043] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,557][03023] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,569][02663] Heartbeat connected on RolloutWorker_w38
+[2025-08-28 10:57:19,606][03012] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,626][02868] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,626][02663] Heartbeat connected on RolloutWorker_w7
+[2025-08-28 10:57:19,642][02942] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,657][02863] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,677][02663] Heartbeat connected on RolloutWorker_w48
+[2025-08-28 10:57:19,682][02663] Heartbeat connected on RolloutWorker_w24
+[2025-08-28 10:57:19,691][02985] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,717][02921] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,734][02970] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,747][02663] Heartbeat connected on RolloutWorker_w40
+[2025-08-28 10:57:19,756][02663] Heartbeat connected on RolloutWorker_w17
+[2025-08-28 10:57:19,783][02663] Heartbeat connected on RolloutWorker_w12
+[2025-08-28 10:57:19,823][02950] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,825][02663] Heartbeat connected on RolloutWorker_w42
+[2025-08-28 10:57:19,833][02663] Heartbeat connected on RolloutWorker_w41
+[2025-08-28 10:57:19,834][02932] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,877][02663] Heartbeat connected on RolloutWorker_w0
+[2025-08-28 10:57:19,881][02663] Heartbeat connected on RolloutWorker_w6
+[2025-08-28 10:57:19,887][03088] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,897][02663] Heartbeat connected on RolloutWorker_w33
+[2025-08-28 10:57:19,899][02663] Heartbeat connected on RolloutWorker_w13
+[2025-08-28 10:57:19,920][02959] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:19,978][02663] Heartbeat connected on RolloutWorker_w47
+[2025-08-28 10:57:19,988][02663] Heartbeat connected on RolloutWorker_w46
+[2025-08-28 10:57:20,009][02663] Heartbeat connected on RolloutWorker_w28
+[2025-08-28 10:57:20,153][02663] Heartbeat connected on RolloutWorker_w39
+[2025-08-28 10:57:20,229][02869] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:20,267][02663] Heartbeat connected on RolloutWorker_w25
+[2025-08-28 10:57:20,277][02663] Heartbeat connected on RolloutWorker_w32
+[2025-08-28 10:57:20,304][02663] Heartbeat connected on RolloutWorker_w18
+[2025-08-28 10:57:20,399][02907] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:20,429][02663] Heartbeat connected on RolloutWorker_w4
+[2025-08-28 10:57:20,492][02663] Heartbeat connected on RolloutWorker_w11
+[2025-08-28 10:57:20,669][03131] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:20,748][02663] Heartbeat connected on RolloutWorker_w49
+[2025-08-28 10:57:21,316][02663] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-08-28 10:57:24,968][02904] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:25,697][02663] Heartbeat connected on RolloutWorker_w9
+[2025-08-28 10:57:25,698][02830] Signal inference workers to stop experience collection...
+[2025-08-28 10:57:25,788][02931] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:25,970][02940] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:26,094][02860] InferenceWorker_p0-w0: stopping experience collection
+[2025-08-28 10:57:26,316][02663] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 25.0. Samples: 625. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-08-28 10:57:26,377][02663] Heartbeat connected on RolloutWorker_w16
+[2025-08-28 10:57:26,382][03009] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:26,592][02663] Heartbeat connected on RolloutWorker_w23
+[2025-08-28 10:57:26,815][02663] Heartbeat connected on RolloutWorker_w37
+[2025-08-28 10:57:26,821][03084] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:26,842][02862] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:27,116][02663] Heartbeat connected on RolloutWorker_w2
+[2025-08-28 10:57:27,133][02663] Heartbeat connected on RolloutWorker_w44
+[2025-08-28 10:57:27,212][02962] Decorrelating experience for 32 frames...
+[2025-08-28 10:57:27,312][02663] Heartbeat connected on RolloutWorker_w30
+[2025-08-28 10:57:31,316][02663] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 97.9. Samples: 2937. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-08-28 10:57:31,317][02663] Avg episode reward: [(0, '-81.456')]
+[2025-08-28 10:57:31,982][02830] Signal inference workers to resume experience collection...
+[2025-08-28 10:57:31,983][02860] InferenceWorker_p0-w0: resuming experience collection
+[2025-08-28 10:57:36,316][02663] Fps is (10 sec: 819.2, 60 sec: 234.1, 300 sec: 234.1). Total num frames: 8192. Throughput: 0: 300.4. Samples: 10513. Policy #0 lag: (min: 0.0, avg: 2.1, max: 4.0)
+[2025-08-28 10:57:36,316][02663] Avg episode reward: [(0, '-81.456')]
+[2025-08-28 10:57:38,109][02860] Updated weights for policy 0, policy_version 10 (0.0134)
+[2025-08-28 10:57:41,316][02663] Fps is (10 sec: 1024.0, 60 sec: 256.0, 300 sec: 256.0). Total num frames: 10240. Throughput: 0: 313.6. Samples: 12542. Policy #0 lag: (min: 0.0, avg: 1.2, max: 3.0)
+[2025-08-28 10:57:41,316][02663] Avg episode reward: [(0, '-81.456')]
+[2025-08-28 10:57:46,316][02663] Fps is (10 sec: 307.2, 60 sec: 250.3, 300 sec: 250.3). Total num frames: 11264. Throughput: 0: 293.3. Samples: 13199. Policy #0 lag: (min: 0.0, avg: 0.8, max: 10.0)
+[2025-08-28 10:57:46,316][02663] Avg episode reward: [(0, '-97.571')]
+[2025-08-28 10:57:51,316][02663] Fps is (10 sec: 409.6, 60 sec: 286.7, 300 sec: 286.7). Total num frames: 14336. Throughput: 0: 371.1. Samples: 16698. Policy #0 lag: (min: 0.0, avg: 1.3, max: 5.0)
+[2025-08-28 10:57:51,316][02663] Avg episode reward: [(0, '-110.834')]
+[2025-08-28 10:57:56,316][02663] Fps is (10 sec: 409.6, 60 sec: 279.3, 300 sec: 279.3). Total num frames: 15360. Throughput: 0: 378.9. Samples: 17051. Policy #0 lag: (min: 0.0, avg: 0.9, max: 7.0)
+[2025-08-28 10:57:56,316][02663] Avg episode reward: [(0, '-110.884')]
+[2025-08-28 10:58:01,319][02663] Fps is (10 sec: 409.4, 60 sec: 307.2, 300 sec: 307.2). Total num frames: 18432. Throughput: 0: 434.3. Samples: 19543. Policy #0 lag: (min: 0.0, avg: 1.4, max: 7.0)
+[2025-08-28 10:58:01,320][02663] Avg episode reward: [(0, '-113.349')]
+[2025-08-28 10:58:02,305][02860] Updated weights for policy 0, policy_version 20 (0.0016)
+[2025-08-28 10:58:06,316][02663] Fps is (10 sec: 921.6, 60 sec: 409.6, 300 sec: 378.1). Total num frames: 24576. Throughput: 0: 594.9. Samples: 26770. Policy #0 lag: (min: 0.0, avg: 1.7, max: 9.0)
+[2025-08-28 10:58:06,316][02663] Avg episode reward: [(0, '-113.847')]
+[2025-08-28 10:58:11,316][02663] Fps is (10 sec: 717.1, 60 sec: 426.7, 300 sec: 365.7). Total num frames: 25600. Throughput: 0: 596.6. Samples: 27473. Policy #0 lag: (min: 0.0, avg: 0.6, max: 2.0)
+[2025-08-28 10:58:11,316][02663] Avg episode reward: [(0, '-114.818')]
+[2025-08-28 10:58:16,319][02663] Fps is (10 sec: 409.4, 60 sec: 477.8, 300 sec: 382.3). Total num frames: 28672. Throughput: 0: 588.0. Samples: 29400. Policy #0 lag: (min: 0.0, avg: 2.1, max: 6.0)
+[2025-08-28 10:58:16,320][02663] Avg episode reward: [(0, '-115.573')]
+[2025-08-28 10:58:18,785][02860] Updated weights for policy 0, policy_version 30 (0.0014)
+[2025-08-28 10:58:21,316][02663] Fps is (10 sec: 614.4, 60 sec: 529.1, 300 sec: 396.8). Total num frames: 31744. Throughput: 0: 514.2. Samples: 33651. Policy #0 lag: (min: 0.0, avg: 1.6, max: 6.0)
+[2025-08-28 10:58:21,316][02663] Avg episode reward: [(0, '-115.616')]
+[2025-08-28 10:58:26,316][02663] Fps is (10 sec: 307.3, 60 sec: 529.1, 300 sec: 373.5). Total num frames: 31744. Throughput: 0: 477.7. Samples: 34037. Policy #0 lag: (min: 0.0, avg: 1.6, max: 6.0)
+[2025-08-28 10:58:26,316][02663] Avg episode reward: [(0, '-114.974')]
+[2025-08-28 10:58:31,319][02663] Fps is (10 sec: 511.8, 60 sec: 614.4, 300 sec: 409.6). Total num frames: 36864. Throughput: 0: 532.0. Samples: 37141. Policy #0 lag: (min: 0.0, avg: 1.5, max: 10.0)
+[2025-08-28 10:58:31,320][02663] Avg episode reward: [(0, '-114.835')]
+[2025-08-28 10:58:31,323][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000036_36864.pth...
+[2025-08-28 10:58:35,149][02860] Updated weights for policy 0, policy_version 40 (0.0015)
+[2025-08-28 10:58:36,316][02663] Fps is (10 sec: 921.6, 60 sec: 546.1, 300 sec: 431.2). Total num frames: 40960. Throughput: 0: 589.2. Samples: 43214. Policy #0 lag: (min: 0.0, avg: 0.9, max: 8.0)
+[2025-08-28 10:58:36,316][02663] Avg episode reward: [(0, '-115.207')]
+[2025-08-28 10:58:41,316][02663] Fps is (10 sec: 512.2, 60 sec: 529.1, 300 sec: 419.8). Total num frames: 41984. Throughput: 0: 595.7. Samples: 43856. Policy #0 lag: (min: 0.0, avg: 0.5, max: 2.0)
+[2025-08-28 10:58:41,316][02663] Avg episode reward: [(0, '-114.283')]
+[2025-08-28 10:58:46,316][02663] Fps is (10 sec: 307.2, 60 sec: 546.1, 300 sec: 419.4). Total num frames: 44032. Throughput: 0: 587.2. Samples: 45964. Policy #0 lag: (min: 0.0, avg: 1.8, max: 11.0)
+[2025-08-28 10:58:46,316][02663] Avg episode reward: [(0, '-116.163')]
+[2025-08-28 10:58:51,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 428.2). Total num frames: 47104. Throughput: 0: 505.1. Samples: 49499. Policy #0 lag: (min: 0.0, avg: 1.4, max: 8.0)
+[2025-08-28 10:58:51,316][02663] Avg episode reward: [(0, '-117.379')]
+[2025-08-28 10:58:56,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 427.4). Total num frames: 49152. Throughput: 0: 504.0. Samples: 50155. Policy #0 lag: (min: 0.0, avg: 2.1, max: 12.0)
+[2025-08-28 10:58:56,316][02663] Avg episode reward: [(0, '-118.188')]
+[2025-08-28 10:58:58,581][02860] Updated weights for policy 0, policy_version 50 (0.0015)
+[2025-08-28 10:59:01,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 443.7). Total num frames: 53248. Throughput: 0: 546.4. Samples: 53988. Policy #0 lag: (min: 0.0, avg: 1.4, max: 8.0)
+[2025-08-28 10:59:01,316][02663] Avg episode reward: [(0, '-117.016')]
+[2025-08-28 10:59:06,316][02663] Fps is (10 sec: 716.8, 60 sec: 529.1, 300 sec: 450.6). Total num frames: 56320. Throughput: 0: 550.3. Samples: 58415. Policy #0 lag: (min: 0.0, avg: 1.3, max: 7.0)
+[2025-08-28 10:59:06,316][02663] Avg episode reward: [(0, '-116.250')]
+[2025-08-28 10:59:11,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 449.0). Total num frames: 58368. Throughput: 0: 559.5. Samples: 59215. Policy #0 lag: (min: 0.0, avg: 2.2, max: 11.0)
+[2025-08-28 10:59:11,316][02663] Avg episode reward: [(0, '-114.978')]
+[2025-08-28 10:59:15,790][02860] Updated weights for policy 0, policy_version 60 (0.0015)
+[2025-08-28 10:59:16,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.2, 300 sec: 455.1). Total num frames: 61440. Throughput: 0: 571.7. Samples: 62865. Policy #0 lag: (min: 0.0, avg: 1.2, max: 7.0)
+[2025-08-28 10:59:16,316][02663] Avg episode reward: [(0, '-114.613')]
+[2025-08-28 10:59:21,316][02663] Fps is (10 sec: 512.0, 60 sec: 529.1, 300 sec: 453.5). Total num frames: 63488. Throughput: 0: 499.5. Samples: 65690. Policy #0 lag: (min: 0.0, avg: 1.2, max: 6.0)
+[2025-08-28 10:59:21,316][02663] Avg episode reward: [(0, '-112.785')]
+[2025-08-28 10:59:26,316][02663] Fps is (10 sec: 409.6, 60 sec: 563.2, 300 sec: 452.0). Total num frames: 65536. Throughput: 0: 505.6. Samples: 66609. Policy #0 lag: (min: 0.0, avg: 2.7, max: 15.0)
+[2025-08-28 10:59:26,316][02663] Avg episode reward: [(0, '-113.730')]
+[2025-08-28 10:59:31,316][02663] Fps is (10 sec: 614.4, 60 sec: 546.2, 300 sec: 464.2). Total num frames: 69632. Throughput: 0: 559.5. Samples: 71140. Policy #0 lag: (min: 0.0, avg: 1.5, max: 12.0)
+[2025-08-28 10:59:31,316][02663] Avg episode reward: [(0, '-114.983')]
+[2025-08-28 10:59:34,821][02860] Updated weights for policy 0, policy_version 70 (0.0015)
+[2025-08-28 10:59:36,316][02663] Fps is (10 sec: 614.4, 60 sec: 512.0, 300 sec: 462.5). Total num frames: 71680. Throughput: 0: 538.9. Samples: 73751. Policy #0 lag: (min: 0.0, avg: 1.5, max: 13.0)
+[2025-08-28 10:59:36,316][02663] Avg episode reward: [(0, '-115.326')]
+[2025-08-28 10:59:41,316][02663] Fps is (10 sec: 409.6, 60 sec: 529.1, 300 sec: 460.8). Total num frames: 73728. Throughput: 0: 546.6. Samples: 74753. Policy #0 lag: (min: 0.0, avg: 2.3, max: 12.0)
+[2025-08-28 10:59:41,316][02663] Avg episode reward: [(0, '-117.245')]
+[2025-08-28 10:59:46,316][02663] Fps is (10 sec: 614.4, 60 sec: 563.2, 300 sec: 471.7). Total num frames: 77824. Throughput: 0: 556.1. Samples: 79013. Policy #0 lag: (min: 0.0, avg: 1.0, max: 8.0)
+[2025-08-28 10:59:46,316][02663] Avg episode reward: [(0, '-116.357')]
+[2025-08-28 10:59:51,316][02663] Fps is (10 sec: 614.4, 60 sec: 546.1, 300 sec: 469.8). Total num frames: 79872. Throughput: 0: 530.0. Samples: 82267. Policy #0 lag: (min: 0.0, avg: 0.8, max: 12.0)
+[2025-08-28 10:59:51,316][02663] Avg episode reward: [(0, '-116.257')]
+[2025-08-28 10:59:54,085][02860] Updated weights for policy 0, policy_version 80 (0.0015)
+[2025-08-28 10:59:56,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 474.0). Total num frames: 82944. Throughput: 0: 539.7. Samples: 83502. Policy #0 lag: (min: 0.0, avg: 2.3, max: 12.0)
+[2025-08-28 10:59:56,316][02663] Avg episode reward: [(0, '-115.902')]
+[2025-08-28 11:00:01,316][02663] Fps is (10 sec: 614.4, 60 sec: 546.1, 300 sec: 477.9). Total num frames: 86016. Throughput: 0: 554.0. Samples: 87796. Policy #0 lag: (min: 0.0, avg: 1.8, max: 17.0)
+[2025-08-28 11:00:01,316][02663] Avg episode reward: [(0, '-114.755')]
+[2025-08-28 11:00:06,316][02663] Fps is (10 sec: 512.0, 60 sec: 529.1, 300 sec: 476.0). Total num frames: 88064. Throughput: 0: 543.4. Samples: 90144. Policy #0 lag: (min: 0.0, avg: 0.7, max: 8.0)
+[2025-08-28 11:00:06,316][02663] Avg episode reward: [(0, '-114.506')]
+[2025-08-28 11:00:11,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 479.7). Total num frames: 91136. Throughput: 0: 552.7. Samples: 91480. Policy #0 lag: (min: 0.0, avg: 1.6, max: 11.0)
+[2025-08-28 11:00:11,316][02663] Avg episode reward: [(0, '-112.187')]
+[2025-08-28 11:00:12,032][02860] Updated weights for policy 0, policy_version 90 (0.0015)
+[2025-08-28 11:00:16,316][02663] Fps is (10 sec: 614.4, 60 sec: 546.1, 300 sec: 483.1). Total num frames: 94208. Throughput: 0: 545.7. Samples: 95698. Policy #0 lag: (min: 0.0, avg: 1.2, max: 7.0)
+[2025-08-28 11:00:16,316][02663] Avg episode reward: [(0, '-112.168')]
+[2025-08-28 11:00:21,335][02663] Fps is (10 sec: 511.0, 60 sec: 546.0, 300 sec: 481.2). Total num frames: 96256. Throughput: 0: 541.8. Samples: 98142. Policy #0 lag: (min: 0.0, avg: 0.8, max: 8.0)
+[2025-08-28 11:00:21,336][02663] Avg episode reward: [(0, '-111.859')]
+[2025-08-28 11:00:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 484.5). Total num frames: 99328. Throughput: 0: 561.2. Samples: 100009. Policy #0 lag: (min: 0.0, avg: 2.6, max: 8.0)
+[2025-08-28 11:00:26,316][02663] Avg episode reward: [(0, '-111.243')]
+[2025-08-28 11:00:30,313][02860] Updated weights for policy 0, policy_version 100 (0.0015)
+[2025-08-28 11:00:31,316][02663] Fps is (10 sec: 615.6, 60 sec: 546.1, 300 sec: 487.6). Total num frames: 102400. Throughput: 0: 559.4. Samples: 104186. Policy #0 lag: (min: 0.0, avg: 1.2, max: 7.0)
+[2025-08-28 11:00:31,316][02663] Avg episode reward: [(0, '-111.827')]
+[2025-08-28 11:00:31,322][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000100_102400.pth...
+[2025-08-28 11:00:31,394][02830] Saving new best policy, reward=-111.827!
+[2025-08-28 11:00:36,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 485.8). Total num frames: 104448. Throughput: 0: 551.0. Samples: 107060. Policy #0 lag: (min: 0.0, avg: 1.7, max: 15.0)
+[2025-08-28 11:00:36,317][02663] Avg episode reward: [(0, '-111.081')]
+[2025-08-28 11:00:36,317][02830] Saving new best policy, reward=-111.081!
+[2025-08-28 11:00:41,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 493.4). Total num frames: 108544. Throughput: 0: 567.6. Samples: 109042. Policy #0 lag: (min: 0.0, avg: 1.5, max: 10.0)
+[2025-08-28 11:00:41,316][02663] Avg episode reward: [(0, '-112.567')]
+[2025-08-28 11:00:46,316][02663] Fps is (10 sec: 614.4, 60 sec: 546.1, 300 sec: 491.5). Total num frames: 110592. Throughput: 0: 557.2. Samples: 112868. Policy #0 lag: (min: 0.0, avg: 1.6, max: 7.0)
+[2025-08-28 11:00:46,316][02663] Avg episode reward: [(0, '-114.414')]
+[2025-08-28 11:00:48,565][02860] Updated weights for policy 0, policy_version 110 (0.0016)
+[2025-08-28 11:00:51,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 494.2). Total num frames: 113664. Throughput: 0: 564.4. Samples: 115540. Policy #0 lag: (min: 0.0, avg: 1.9, max: 16.0)
+[2025-08-28 11:00:51,316][02663] Avg episode reward: [(0, '-115.125')]
+[2025-08-28 11:00:56,316][02663] Fps is (10 sec: 614.4, 60 sec: 563.2, 300 sec: 496.7). Total num frames: 116736. Throughput: 0: 566.2. Samples: 116961. Policy #0 lag: (min: 0.0, avg: 2.4, max: 12.0)
+[2025-08-28 11:00:56,316][02663] Avg episode reward: [(0, '-117.361')]
+[2025-08-28 11:01:01,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 494.9). Total num frames: 118784. Throughput: 0: 558.1. Samples: 120811. Policy #0 lag: (min: 0.0, avg: 1.3, max: 9.0)
+[2025-08-28 11:01:01,316][02663] Avg episode reward: [(0, '-116.658')]
+[2025-08-28 11:01:06,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 497.4). Total num frames: 121856. Throughput: 0: 563.1. Samples: 123471. Policy #0 lag: (min: 0.0, avg: 1.6, max: 13.0)
+[2025-08-28 11:01:06,316][02663] Avg episode reward: [(0, '-117.720')]
+[2025-08-28 11:01:07,913][02860] Updated weights for policy 0, policy_version 120 (0.0015)
+[2025-08-28 11:01:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 563.2, 300 sec: 499.7). Total num frames: 124928. Throughput: 0: 563.8. Samples: 125380. Policy #0 lag: (min: 0.0, avg: 1.4, max: 7.0)
+[2025-08-28 11:01:11,316][02663] Avg episode reward: [(0, '-116.623')]
+[2025-08-28 11:01:16,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 497.9). Total num frames: 126976. Throughput: 0: 539.1. Samples: 128447. Policy #0 lag: (min: 0.0, avg: 1.1, max: 7.0)
+[2025-08-28 11:01:16,316][02663] Avg episode reward: [(0, '-116.474')]
+[2025-08-28 11:01:21,322][02663] Fps is (10 sec: 409.4, 60 sec: 546.3, 300 sec: 496.2). Total num frames: 129024. Throughput: 0: 535.0. Samples: 131136. Policy #0 lag: (min: 0.0, avg: 1.7, max: 10.0)
+[2025-08-28 11:01:21,322][02663] Avg episode reward: [(0, '-114.490')]
+[2025-08-28 11:01:26,318][02663] Fps is (10 sec: 511.9, 60 sec: 546.1, 300 sec: 498.5). Total num frames: 132096. Throughput: 0: 534.9. Samples: 133115. Policy #0 lag: (min: 0.0, avg: 2.5, max: 15.0)
+[2025-08-28 11:01:26,319][02663] Avg episode reward: [(0, '-113.687')]
+[2025-08-28 11:01:26,813][02860] Updated weights for policy 0, policy_version 130 (0.0015)
+[2025-08-28 11:01:31,316][02663] Fps is (10 sec: 614.8, 60 sec: 546.1, 300 sec: 500.6). Total num frames: 135168. Throughput: 0: 530.3. Samples: 136731. Policy #0 lag: (min: 0.0, avg: 2.9, max: 15.0)
+[2025-08-28 11:01:31,316][02663] Avg episode reward: [(0, '-112.350')]
+[2025-08-28 11:01:36,316][02663] Fps is (10 sec: 614.6, 60 sec: 563.2, 300 sec: 502.7). Total num frames: 138240. Throughput: 0: 556.4. Samples: 140579. Policy #0 lag: (min: 0.0, avg: 1.5, max: 9.0)
+[2025-08-28 11:01:36,316][02663] Avg episode reward: [(0, '-111.354')]
+[2025-08-28 11:01:41,316][02663] Fps is (10 sec: 614.4, 60 sec: 546.1, 300 sec: 504.7). Total num frames: 141312. Throughput: 0: 563.6. Samples: 142325. Policy #0 lag: (min: 0.0, avg: 2.8, max: 12.0)
+[2025-08-28 11:01:41,316][02663] Avg episode reward: [(0, '-111.002')]
+[2025-08-28 11:01:41,333][02830] Saving new best policy, reward=-111.002!
+[2025-08-28 11:01:45,353][02860] Updated weights for policy 0, policy_version 140 (0.0015)
+[2025-08-28 11:01:46,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 503.0). Total num frames: 143360. Throughput: 0: 540.6. Samples: 145137. Policy #0 lag: (min: 0.0, avg: 1.8, max: 9.0)
+[2025-08-28 11:01:46,316][02663] Avg episode reward: [(0, '-112.243')]
+[2025-08-28 11:01:51,339][02663] Fps is (10 sec: 510.8, 60 sec: 545.9, 300 sec: 504.9). Total num frames: 146432. Throughput: 0: 550.6. Samples: 148262. Policy #0 lag: (min: 0.0, avg: 1.8, max: 12.0)
+[2025-08-28 11:01:51,340][02663] Avg episode reward: [(0, '-113.132')]
+[2025-08-28 11:01:56,316][02663] Fps is (10 sec: 512.0, 60 sec: 529.1, 300 sec: 503.3). Total num frames: 148480. Throughput: 0: 542.6. Samples: 149795. Policy #0 lag: (min: 0.0, avg: 1.2, max: 7.0)
+[2025-08-28 11:01:56,316][02663] Avg episode reward: [(0, '-112.918')]
+[2025-08-28 11:02:01,316][02663] Fps is (10 sec: 513.2, 60 sec: 546.1, 300 sec: 513.7). Total num frames: 151552. Throughput: 0: 537.6. Samples: 152637. Policy #0 lag: (min: 0.0, avg: 1.8, max: 16.0)
+[2025-08-28 11:02:01,316][02663] Avg episode reward: [(0, '-114.975')]
+[2025-08-28 11:02:04,065][02860] Updated weights for policy 0, policy_version 150 (0.0014)
+[2025-08-28 11:02:06,316][02663] Fps is (10 sec: 614.4, 60 sec: 546.1, 300 sec: 524.2). Total num frames: 154624. Throughput: 0: 573.4. Samples: 156936. Policy #0 lag: (min: 0.0, avg: 1.5, max: 8.0)
+[2025-08-28 11:02:06,316][02663] Avg episode reward: [(0, '-116.036')]
+[2025-08-28 11:02:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 546.1, 300 sec: 534.6). Total num frames: 157696. Throughput: 0: 578.6. Samples: 159150. Policy #0 lag: (min: 0.0, avg: 0.8, max: 7.0)
+[2025-08-28 11:02:11,316][02663] Avg episode reward: [(0, '-115.592')]
+[2025-08-28 11:02:16,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 541.5). Total num frames: 159744. Throughput: 0: 552.6. Samples: 161599. Policy #0 lag: (min: 0.0, avg: 2.1, max: 13.0)
+[2025-08-28 11:02:16,316][02663] Avg episode reward: [(0, '-114.640')]
+[2025-08-28 11:02:21,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.3, 300 sec: 551.9). Total num frames: 162816. Throughput: 0: 552.8. Samples: 165457. Policy #0 lag: (min: 0.0, avg: 2.2, max: 8.0)
+[2025-08-28 11:02:21,316][02663] Avg episode reward: [(0, '-116.883')]
+[2025-08-28 11:02:21,625][02860] Updated weights for policy 0, policy_version 160 (0.0015)
+[2025-08-28 11:02:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.2, 300 sec: 558.9). Total num frames: 164864. Throughput: 0: 547.8. Samples: 166975. Policy #0 lag: (min: 0.0, avg: 1.1, max: 7.0)
+[2025-08-28 11:02:26,316][02663] Avg episode reward: [(0, '-116.410')]
+[2025-08-28 11:02:31,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 541.5). Total num frames: 167936. Throughput: 0: 533.6. Samples: 169148. Policy #0 lag: (min: 0.0, avg: 1.9, max: 8.0)
+[2025-08-28 11:02:31,316][02663] Avg episode reward: [(0, '-116.135')]
+[2025-08-28 11:02:31,319][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000164_167936.pth...
+[2025-08-28 11:02:31,396][02830] Removing /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000036_36864.pth
+[2025-08-28 11:02:36,316][02663] Fps is (10 sec: 614.4, 60 sec: 546.1, 300 sec: 545.0). Total num frames: 171008. Throughput: 0: 563.3. Samples: 173599. Policy #0 lag: (min: 0.0, avg: 1.8, max: 12.0)
+[2025-08-28 11:02:36,316][02663] Avg episode reward: [(0, '-116.624')]
+[2025-08-28 11:02:39,332][02860] Updated weights for policy 0, policy_version 170 (0.0015)
+[2025-08-28 11:02:41,316][02663] Fps is (10 sec: 614.4, 60 sec: 546.1, 300 sec: 551.9). Total num frames: 174080. Throughput: 0: 573.4. Samples: 175600. Policy #0 lag: (min: 0.0, avg: 1.5, max: 9.0)
+[2025-08-28 11:02:41,316][02663] Avg episode reward: [(0, '-116.896')]
+[2025-08-28 11:02:46,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 548.4). Total num frames: 176128. Throughput: 0: 566.6. Samples: 178133. Policy #0 lag: (min: 0.0, avg: 1.0, max: 9.0)
+[2025-08-28 11:02:46,316][02663] Avg episode reward: [(0, '-115.913')]
+[2025-08-28 11:02:51,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.3, 300 sec: 555.4). Total num frames: 179200. Throughput: 0: 544.2. Samples: 181424. Policy #0 lag: (min: 0.0, avg: 1.0, max: 12.0)
+[2025-08-28 11:02:51,316][02663] Avg episode reward: [(0, '-115.266')]
+[2025-08-28 11:02:56,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 551.9). Total num frames: 181248. Throughput: 0: 523.8. Samples: 182723. Policy #0 lag: (min: 0.0, avg: 1.6, max: 8.0)
+[2025-08-28 11:02:56,316][02663] Avg episode reward: [(0, '-114.221')]
+[2025-08-28 11:03:00,008][02860] Updated weights for policy 0, policy_version 180 (0.0015)
+[2025-08-28 11:03:01,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 541.5). Total num frames: 184320. Throughput: 0: 541.9. Samples: 185984. Policy #0 lag: (min: 0.0, avg: 1.8, max: 12.0)
+[2025-08-28 11:03:01,316][02663] Avg episode reward: [(0, '-114.768')]
+[2025-08-28 11:03:06,316][02663] Fps is (10 sec: 716.8, 60 sec: 563.2, 300 sec: 551.9). Total num frames: 188416. Throughput: 0: 562.9. Samples: 190788. Policy #0 lag: (min: 0.0, avg: 1.4, max: 9.0)
+[2025-08-28 11:03:06,316][02663] Avg episode reward: [(0, '-112.861')]
+[2025-08-28 11:03:11,318][02663] Fps is (10 sec: 614.3, 60 sec: 546.1, 300 sec: 548.5). Total num frames: 190464. Throughput: 0: 552.4. Samples: 191834. Policy #0 lag: (min: 0.0, avg: 1.5, max: 9.0)
+[2025-08-28 11:03:11,318][02663] Avg episode reward: [(0, '-112.444')]
+[2025-08-28 11:03:16,316][02663] Fps is (10 sec: 409.6, 60 sec: 546.1, 300 sec: 545.0). Total num frames: 192512. Throughput: 0: 556.6. Samples: 194197. Policy #0 lag: (min: 0.0, avg: 1.9, max: 9.0)
+[2025-08-28 11:03:16,317][02663] Avg episode reward: [(0, '-112.329')]
+[2025-08-28 11:03:17,461][02860] Updated weights for policy 0, policy_version 190 (0.0015)
+[2025-08-28 11:03:21,316][02663] Fps is (10 sec: 512.1, 60 sec: 546.1, 300 sec: 555.4). Total num frames: 195584. Throughput: 0: 546.1. Samples: 198174. Policy #0 lag: (min: 0.0, avg: 1.2, max: 9.0)
+[2025-08-28 11:03:21,316][02663] Avg episode reward: [(0, '-110.132')]
+[2025-08-28 11:03:21,320][02830] Saving new best policy, reward=-110.132!
+[2025-08-28 11:03:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 545.0). Total num frames: 197632. Throughput: 0: 526.0. Samples: 199268. Policy #0 lag: (min: 0.0, avg: 1.5, max: 7.0)
+[2025-08-28 11:03:26,316][02663] Avg episode reward: [(0, '-109.873')]
+[2025-08-28 11:03:26,316][02830] Saving new best policy, reward=-109.873!
+[2025-08-28 11:03:31,316][02663] Fps is (10 sec: 614.4, 60 sec: 563.2, 300 sec: 545.0). Total num frames: 201728. Throughput: 0: 539.4. Samples: 202405. Policy #0 lag: (min: 0.0, avg: 2.3, max: 11.0)
+[2025-08-28 11:03:31,316][02663] Avg episode reward: [(0, '-109.364')]
+[2025-08-28 11:03:31,319][02830] Saving new best policy, reward=-109.364!
+[2025-08-28 11:03:35,825][02860] Updated weights for policy 0, policy_version 200 (0.0016)
+[2025-08-28 11:03:36,316][02663] Fps is (10 sec: 716.8, 60 sec: 563.2, 300 sec: 551.9). Total num frames: 204800. Throughput: 0: 561.1. Samples: 206675. Policy #0 lag: (min: 0.0, avg: 1.3, max: 9.0)
+[2025-08-28 11:03:36,316][02663] Avg episode reward: [(0, '-109.092')]
+[2025-08-28 11:03:36,316][02830] Saving new best policy, reward=-109.092!
+[2025-08-28 11:03:41,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 551.9). Total num frames: 206848. Throughput: 0: 563.1. Samples: 208064. Policy #0 lag: (min: 0.0, avg: 2.3, max: 10.0)
+[2025-08-28 11:03:41,316][02663] Avg episode reward: [(0, '-108.314')]
+[2025-08-28 11:03:41,319][02830] Saving new best policy, reward=-108.314!
+[2025-08-28 11:03:46,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 551.9). Total num frames: 209920. Throughput: 0: 564.9. Samples: 211405. Policy #0 lag: (min: 0.0, avg: 1.0, max: 6.0)
+[2025-08-28 11:03:46,316][02663] Avg episode reward: [(0, '-107.994')]
+[2025-08-28 11:03:46,317][02830] Saving new best policy, reward=-107.994!
+[2025-08-28 11:03:51,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 551.9). Total num frames: 211968. Throughput: 0: 529.8. Samples: 214627. Policy #0 lag: (min: 0.0, avg: 1.6, max: 13.0)
+[2025-08-28 11:03:51,316][02663] Avg episode reward: [(0, '-108.653')]
+[2025-08-28 11:03:55,637][02860] Updated weights for policy 0, policy_version 210 (0.0016)
+[2025-08-28 11:03:56,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 548.4). Total num frames: 215040. Throughput: 0: 537.8. Samples: 216032. Policy #0 lag: (min: 0.0, avg: 2.6, max: 12.0)
+[2025-08-28 11:03:56,316][02663] Avg episode reward: [(0, '-109.197')]
+[2025-08-28 11:04:01,316][02663] Fps is (10 sec: 614.4, 60 sec: 563.2, 300 sec: 548.4). Total num frames: 218112. Throughput: 0: 570.3. Samples: 219862. Policy #0 lag: (min: 0.0, avg: 2.0, max: 12.0)
+[2025-08-28 11:04:01,316][02663] Avg episode reward: [(0, '-108.597')]
+[2025-08-28 11:04:06,317][02663] Fps is (10 sec: 614.3, 60 sec: 546.1, 300 sec: 551.9). Total num frames: 221184. Throughput: 0: 566.2. Samples: 223652. Policy #0 lag: (min: 0.0, avg: 1.3, max: 7.0)
+[2025-08-28 11:04:06,317][02663] Avg episode reward: [(0, '-108.107')]
+[2025-08-28 11:04:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 563.2, 300 sec: 551.9). Total num frames: 224256. Throughput: 0: 575.2. Samples: 225151. Policy #0 lag: (min: 0.0, avg: 1.6, max: 8.0)
+[2025-08-28 11:04:11,316][02663] Avg episode reward: [(0, '-107.751')]
+[2025-08-28 11:04:11,319][02830] Saving new best policy, reward=-107.751!
+[2025-08-28 11:04:12,789][02860] Updated weights for policy 0, policy_version 220 (0.0014)
+[2025-08-28 11:04:16,316][02663] Fps is (10 sec: 614.5, 60 sec: 580.3, 300 sec: 555.4). Total num frames: 227328. Throughput: 0: 577.4. Samples: 228388. Policy #0 lag: (min: 0.0, avg: 1.0, max: 8.0)
+[2025-08-28 11:04:16,316][02663] Avg episode reward: [(0, '-107.233')]
+[2025-08-28 11:04:16,317][02830] Saving new best policy, reward=-107.233!
+[2025-08-28 11:04:21,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 555.4). Total num frames: 229376. Throughput: 0: 555.8. Samples: 231684. Policy #0 lag: (min: 0.0, avg: 2.1, max: 14.0)
+[2025-08-28 11:04:21,316][02663] Avg episode reward: [(0, '-107.411')]
+[2025-08-28 11:04:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 551.9). Total num frames: 232448. Throughput: 0: 554.9. Samples: 233034. Policy #0 lag: (min: 0.0, avg: 1.7, max: 8.0)
+[2025-08-28 11:04:26,316][02663] Avg episode reward: [(0, '-106.931')]
+[2025-08-28 11:04:26,316][02830] Saving new best policy, reward=-106.931!
+[2025-08-28 11:04:30,443][02860] Updated weights for policy 0, policy_version 230 (0.0014)
+[2025-08-28 11:04:31,316][02663] Fps is (10 sec: 614.4, 60 sec: 563.2, 300 sec: 555.4). Total num frames: 235520. Throughput: 0: 569.6. Samples: 237039. Policy #0 lag: (min: 0.0, avg: 0.9, max: 7.0)
+[2025-08-28 11:04:31,316][02663] Avg episode reward: [(0, '-107.684')]
+[2025-08-28 11:04:31,320][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000230_235520.pth...
+[2025-08-28 11:04:31,386][02830] Removing /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000100_102400.pth
+[2025-08-28 11:04:36,316][02663] Fps is (10 sec: 716.8, 60 sec: 580.3, 300 sec: 562.3). Total num frames: 239616. Throughput: 0: 605.1. Samples: 241857. Policy #0 lag: (min: 0.0, avg: 1.1, max: 8.0)
+[2025-08-28 11:04:36,317][02663] Avg episode reward: [(0, '-107.180')]
+[2025-08-28 11:04:41,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 558.9). Total num frames: 242688. Throughput: 0: 605.4. Samples: 243277. Policy #0 lag: (min: 0.0, avg: 1.8, max: 9.0)
+[2025-08-28 11:04:41,316][02663] Avg episode reward: [(0, '-106.741')]
+[2025-08-28 11:04:41,324][02830] Saving new best policy, reward=-106.741!
+[2025-08-28 11:04:46,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 558.9). Total num frames: 244736. Throughput: 0: 588.4. Samples: 246339. Policy #0 lag: (min: 0.0, avg: 1.5, max: 9.0)
+[2025-08-28 11:04:46,316][02663] Avg episode reward: [(0, '-107.573')]
+[2025-08-28 11:04:47,429][02860] Updated weights for policy 0, policy_version 240 (0.0015)
+[2025-08-28 11:04:51,319][02663] Fps is (10 sec: 409.4, 60 sec: 580.2, 300 sec: 555.4). Total num frames: 246784. Throughput: 0: 564.5. Samples: 249058. Policy #0 lag: (min: 0.0, avg: 1.4, max: 14.0)
+[2025-08-28 11:04:51,320][02663] Avg episode reward: [(0, '-107.007')]
+[2025-08-28 11:04:56,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 555.4). Total num frames: 249856. Throughput: 0: 562.2. Samples: 250448. Policy #0 lag: (min: 0.0, avg: 1.6, max: 11.0)
+[2025-08-28 11:04:56,316][02663] Avg episode reward: [(0, '-106.556')]
+[2025-08-28 11:04:56,317][02830] Saving new best policy, reward=-106.556!
+[2025-08-28 11:05:01,316][02663] Fps is (10 sec: 717.1, 60 sec: 597.3, 300 sec: 562.3). Total num frames: 253952. Throughput: 0: 578.6. Samples: 254423. Policy #0 lag: (min: 0.0, avg: 2.0, max: 15.0)
+[2025-08-28 11:05:01,316][02663] Avg episode reward: [(0, '-107.641')]
+[2025-08-28 11:05:03,695][02860] Updated weights for policy 0, policy_version 250 (0.0014)
+[2025-08-28 11:05:06,323][02663] Fps is (10 sec: 716.3, 60 sec: 597.3, 300 sec: 562.3). Total num frames: 257024. Throughput: 0: 614.3. Samples: 259333. Policy #0 lag: (min: 0.0, avg: 0.6, max: 8.0)
+[2025-08-28 11:05:06,324][02663] Avg episode reward: [(0, '-108.390')]
+[2025-08-28 11:05:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 562.3). Total num frames: 260096. Throughput: 0: 617.9. Samples: 260838. Policy #0 lag: (min: 0.0, avg: 1.2, max: 9.0)
+[2025-08-28 11:05:11,316][02663] Avg episode reward: [(0, '-107.715')]
+[2025-08-28 11:05:16,316][02663] Fps is (10 sec: 512.4, 60 sec: 580.3, 300 sec: 562.4). Total num frames: 262144. Throughput: 0: 583.9. Samples: 263313. Policy #0 lag: (min: 0.0, avg: 1.7, max: 13.0)
+[2025-08-28 11:05:16,316][02663] Avg episode reward: [(0, '-109.188')]
+[2025-08-28 11:05:21,316][02663] Fps is (10 sec: 409.6, 60 sec: 580.3, 300 sec: 558.9). Total num frames: 264192. Throughput: 0: 542.9. Samples: 266289. Policy #0 lag: (min: 0.0, avg: 1.0, max: 6.0)
+[2025-08-28 11:05:21,316][02663] Avg episode reward: [(0, '-108.587')]
+[2025-08-28 11:05:24,129][02860] Updated weights for policy 0, policy_version 260 (0.0014)
+[2025-08-28 11:05:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 558.9). Total num frames: 267264. Throughput: 0: 547.8. Samples: 267928. Policy #0 lag: (min: 0.0, avg: 1.5, max: 7.0)
+[2025-08-28 11:05:26,316][02663] Avg episode reward: [(0, '-110.300')]
+[2025-08-28 11:05:31,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 562.3). Total num frames: 270336. Throughput: 0: 560.6. Samples: 271568. Policy #0 lag: (min: 0.0, avg: 1.6, max: 10.0)
+[2025-08-28 11:05:31,316][02663] Avg episode reward: [(0, '-110.699')]
+[2025-08-28 11:05:36,316][02663] Fps is (10 sec: 614.4, 60 sec: 563.2, 300 sec: 558.9). Total num frames: 273408. Throughput: 0: 581.0. Samples: 275199. Policy #0 lag: (min: 0.0, avg: 1.3, max: 13.0)
+[2025-08-28 11:05:36,316][02663] Avg episode reward: [(0, '-110.263')]
+[2025-08-28 11:05:41,316][02663] Fps is (10 sec: 512.0, 60 sec: 546.1, 300 sec: 558.9). Total num frames: 275456. Throughput: 0: 587.7. Samples: 276895. Policy #0 lag: (min: 0.0, avg: 2.1, max: 17.0)
+[2025-08-28 11:05:41,316][02663] Avg episode reward: [(0, '-108.842')]
+[2025-08-28 11:05:42,001][02860] Updated weights for policy 0, policy_version 270 (0.0015)
+[2025-08-28 11:05:46,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 558.9). Total num frames: 278528. Throughput: 0: 567.6. Samples: 279966. Policy #0 lag: (min: 0.0, avg: 1.4, max: 7.0)
+[2025-08-28 11:05:46,316][02663] Avg episode reward: [(0, '-108.836')]
+[2025-08-28 11:05:51,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 555.4). Total num frames: 280576. Throughput: 0: 529.0. Samples: 283135. Policy #0 lag: (min: 0.0, avg: 1.2, max: 7.0)
+[2025-08-28 11:05:51,317][02663] Avg episode reward: [(0, '-108.352')]
+[2025-08-28 11:05:56,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 558.9). Total num frames: 283648. Throughput: 0: 540.8. Samples: 285172. Policy #0 lag: (min: 0.0, avg: 1.3, max: 8.0)
+[2025-08-28 11:05:56,316][02663] Avg episode reward: [(0, '-108.737')]
+[2025-08-28 11:05:58,792][02860] Updated weights for policy 0, policy_version 280 (0.0016)
+[2025-08-28 11:06:01,316][02663] Fps is (10 sec: 716.8, 60 sec: 563.2, 300 sec: 562.3). Total num frames: 287744. Throughput: 0: 578.4. Samples: 289341. Policy #0 lag: (min: 0.0, avg: 2.0, max: 12.0)
+[2025-08-28 11:06:01,316][02663] Avg episode reward: [(0, '-107.705')]
+[2025-08-28 11:06:06,316][02663] Fps is (10 sec: 614.4, 60 sec: 546.2, 300 sec: 558.9). Total num frames: 289792. Throughput: 0: 584.0. Samples: 292571. Policy #0 lag: (min: 0.0, avg: 1.4, max: 8.0)
+[2025-08-28 11:06:06,316][02663] Avg episode reward: [(0, '-107.698')]
+[2025-08-28 11:06:11,331][02663] Fps is (10 sec: 511.2, 60 sec: 546.0, 300 sec: 562.3). Total num frames: 292864. Throughput: 0: 583.3. Samples: 294186. Policy #0 lag: (min: 0.0, avg: 1.8, max: 13.0)
+[2025-08-28 11:06:11,332][02663] Avg episode reward: [(0, '-107.557')]
+[2025-08-28 11:06:16,316][02663] Fps is (10 sec: 614.4, 60 sec: 563.2, 300 sec: 565.8). Total num frames: 295936. Throughput: 0: 581.1. Samples: 297718. Policy #0 lag: (min: 0.0, avg: 1.5, max: 17.0)
+[2025-08-28 11:06:16,316][02663] Avg episode reward: [(0, '-106.876')]
+[2025-08-28 11:06:16,784][02860] Updated weights for policy 0, policy_version 290 (0.0015)
+[2025-08-28 11:06:21,316][02663] Fps is (10 sec: 615.4, 60 sec: 580.3, 300 sec: 565.8). Total num frames: 299008. Throughput: 0: 573.6. Samples: 301009. Policy #0 lag: (min: 0.0, avg: 1.9, max: 13.0)
+[2025-08-28 11:06:21,316][02663] Avg episode reward: [(0, '-108.224')]
+[2025-08-28 11:06:26,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 565.8). Total num frames: 302080. Throughput: 0: 567.8. Samples: 302445. Policy #0 lag: (min: 0.0, avg: 1.1, max: 7.0)
+[2025-08-28 11:06:26,316][02663] Avg episode reward: [(0, '-107.595')]
+[2025-08-28 11:06:31,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 565.8). Total num frames: 305152. Throughput: 0: 589.8. Samples: 306506. Policy #0 lag: (min: 0.0, avg: 1.3, max: 7.0)
+[2025-08-28 11:06:31,316][02663] Avg episode reward: [(0, '-105.556')]
+[2025-08-28 11:06:31,320][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000298_305152.pth...
+[2025-08-28 11:06:31,404][02830] Removing /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000164_167936.pth
+[2025-08-28 11:06:31,408][02830] Saving new best policy, reward=-105.556!
+[2025-08-28 11:06:34,263][02860] Updated weights for policy 0, policy_version 300 (0.0014)
+[2025-08-28 11:06:36,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 562.3). Total num frames: 307200. Throughput: 0: 591.4. Samples: 309747. Policy #0 lag: (min: 0.0, avg: 0.9, max: 12.0)
+[2025-08-28 11:06:36,316][02663] Avg episode reward: [(0, '-105.886')]
+[2025-08-28 11:06:41,338][02663] Fps is (10 sec: 510.9, 60 sec: 580.1, 300 sec: 565.8). Total num frames: 310272. Throughput: 0: 581.6. Samples: 311358. Policy #0 lag: (min: 0.0, avg: 2.3, max: 13.0)
+[2025-08-28 11:06:41,338][02663] Avg episode reward: [(0, '-108.286')]
+[2025-08-28 11:06:46,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 565.8). Total num frames: 313344. Throughput: 0: 566.2. Samples: 314820. Policy #0 lag: (min: 0.0, avg: 1.0, max: 13.0)
+[2025-08-28 11:06:46,316][02663] Avg episode reward: [(0, '-106.662')]
+[2025-08-28 11:06:51,316][02663] Fps is (10 sec: 615.8, 60 sec: 597.3, 300 sec: 569.3). Total num frames: 316416. Throughput: 0: 570.3. Samples: 318233. Policy #0 lag: (min: 0.0, avg: 1.4, max: 13.0)
+[2025-08-28 11:06:51,316][02663] Avg episode reward: [(0, '-104.901')]
+[2025-08-28 11:06:51,335][02830] Saving new best policy, reward=-104.901!
+[2025-08-28 11:06:52,418][02860] Updated weights for policy 0, policy_version 310 (0.0014)
+[2025-08-28 11:06:56,316][02663] Fps is (10 sec: 716.8, 60 sec: 614.4, 300 sec: 572.7). Total num frames: 320512. Throughput: 0: 586.6. Samples: 320576. Policy #0 lag: (min: 0.0, avg: 1.0, max: 9.0)
+[2025-08-28 11:06:56,316][02663] Avg episode reward: [(0, '-103.071')]
+[2025-08-28 11:06:56,316][02830] Saving new best policy, reward=-103.071!
+[2025-08-28 11:07:01,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 569.3). Total num frames: 322560. Throughput: 0: 590.8. Samples: 324305. Policy #0 lag: (min: 0.0, avg: 1.1, max: 8.0)
+[2025-08-28 11:07:01,316][02663] Avg episode reward: [(0, '-104.708')]
+[2025-08-28 11:07:06,316][02663] Fps is (10 sec: 409.6, 60 sec: 580.3, 300 sec: 565.8). Total num frames: 324608. Throughput: 0: 582.0. Samples: 327197. Policy #0 lag: (min: 0.0, avg: 1.6, max: 13.0)
+[2025-08-28 11:07:06,316][02663] Avg episode reward: [(0, '-104.895')]
+[2025-08-28 11:07:09,722][02860] Updated weights for policy 0, policy_version 320 (0.0015)
+[2025-08-28 11:07:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.5, 300 sec: 572.7). Total num frames: 328704. Throughput: 0: 588.2. Samples: 328914. Policy #0 lag: (min: 0.0, avg: 2.0, max: 9.0)
+[2025-08-28 11:07:11,316][02663] Avg episode reward: [(0, '-103.435')]
+[2025-08-28 11:07:16,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 572.7). Total num frames: 331776. Throughput: 0: 584.5. Samples: 332809. Policy #0 lag: (min: 0.0, avg: 1.0, max: 7.0)
+[2025-08-28 11:07:16,316][02663] Avg episode reward: [(0, '-104.306')]
+[2025-08-28 11:07:21,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 576.2). Total num frames: 334848. Throughput: 0: 595.9. Samples: 336562. Policy #0 lag: (min: 0.0, avg: 1.2, max: 10.0)
+[2025-08-28 11:07:21,316][02663] Avg episode reward: [(0, '-103.683')]
+[2025-08-28 11:07:25,142][02860] Updated weights for policy 0, policy_version 330 (0.0015)
+[2025-08-28 11:07:26,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 576.2). Total num frames: 337920. Throughput: 0: 612.7. Samples: 338916. Policy #0 lag: (min: 0.0, avg: 1.6, max: 13.0)
+[2025-08-28 11:07:26,316][02663] Avg episode reward: [(0, '-105.491')]
+[2025-08-28 11:07:31,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 576.2). Total num frames: 340992. Throughput: 0: 619.8. Samples: 342712. Policy #0 lag: (min: 0.0, avg: 1.2, max: 14.0)
+[2025-08-28 11:07:31,316][02663] Avg episode reward: [(0, '-105.399')]
+[2025-08-28 11:07:36,316][02663] Fps is (10 sec: 614.4, 60 sec: 614.4, 300 sec: 576.2). Total num frames: 344064. Throughput: 0: 614.2. Samples: 345872. Policy #0 lag: (min: 0.0, avg: 1.9, max: 8.0)
+[2025-08-28 11:07:36,316][02663] Avg episode reward: [(0, '-103.699')]
+[2025-08-28 11:07:41,316][02663] Fps is (10 sec: 512.0, 60 sec: 597.6, 300 sec: 576.2). Total num frames: 346112. Throughput: 0: 597.5. Samples: 347465. Policy #0 lag: (min: 0.0, avg: 2.2, max: 13.0)
+[2025-08-28 11:07:41,316][02663] Avg episode reward: [(0, '-104.423')]
+[2025-08-28 11:07:44,087][02860] Updated weights for policy 0, policy_version 340 (0.0015)
+[2025-08-28 11:07:46,316][02663] Fps is (10 sec: 409.6, 60 sec: 580.3, 300 sec: 572.7). Total num frames: 348160. Throughput: 0: 575.4. Samples: 350199. Policy #0 lag: (min: 0.0, avg: 1.0, max: 7.0)
+[2025-08-28 11:07:46,316][02663] Avg episode reward: [(0, '-105.068')]
+[2025-08-28 11:07:51,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 576.2). Total num frames: 351232. Throughput: 0: 585.1. Samples: 353528. Policy #0 lag: (min: 0.0, avg: 1.9, max: 11.0)
+[2025-08-28 11:07:51,316][02663] Avg episode reward: [(0, '-105.650')]
+[2025-08-28 11:07:56,316][02663] Fps is (10 sec: 614.4, 60 sec: 563.2, 300 sec: 576.2). Total num frames: 354304. Throughput: 0: 587.7. Samples: 355359. Policy #0 lag: (min: 0.0, avg: 1.3, max: 11.0)
+[2025-08-28 11:07:56,316][02663] Avg episode reward: [(0, '-105.207')]
+[2025-08-28 11:08:01,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 572.7). Total num frames: 357376. Throughput: 0: 575.6. Samples: 358709. Policy #0 lag: (min: 0.0, avg: 2.0, max: 7.0)
+[2025-08-28 11:08:01,316][02663] Avg episode reward: [(0, '-104.690')]
+[2025-08-28 11:08:02,042][02860] Updated weights for policy 0, policy_version 350 (0.0014)
+[2025-08-28 11:08:06,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 576.2). Total num frames: 360448. Throughput: 0: 587.6. Samples: 363004. Policy #0 lag: (min: 0.0, avg: 2.5, max: 16.0)
+[2025-08-28 11:08:06,316][02663] Avg episode reward: [(0, '-106.465')]
+[2025-08-28 11:08:11,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 583.2). Total num frames: 364544. Throughput: 0: 586.2. Samples: 365295. Policy #0 lag: (min: 0.0, avg: 1.4, max: 8.0)
+[2025-08-28 11:08:11,316][02663] Avg episode reward: [(0, '-104.972')]
+[2025-08-28 11:08:16,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 366592. Throughput: 0: 577.3. Samples: 368691. Policy #0 lag: (min: 0.0, avg: 1.7, max: 10.0)
+[2025-08-28 11:08:16,316][02663] Avg episode reward: [(0, '-105.642')]
+[2025-08-28 11:08:18,133][02860] Updated weights for policy 0, policy_version 360 (0.0015)
+[2025-08-28 11:08:21,318][02663] Fps is (10 sec: 614.3, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 370688. Throughput: 0: 583.4. Samples: 372126. Policy #0 lag: (min: 0.0, avg: 2.6, max: 13.0)
+[2025-08-28 11:08:21,318][02663] Avg episode reward: [(0, '-106.691')]
+[2025-08-28 11:08:26,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 372736. Throughput: 0: 586.6. Samples: 373862. Policy #0 lag: (min: 0.0, avg: 1.3, max: 9.0)
+[2025-08-28 11:08:26,316][02663] Avg episode reward: [(0, '-107.268')]
+[2025-08-28 11:08:31,316][02663] Fps is (10 sec: 409.7, 60 sec: 563.2, 300 sec: 576.2). Total num frames: 374784. Throughput: 0: 590.0. Samples: 376747. Policy #0 lag: (min: 0.0, avg: 1.9, max: 14.0)
+[2025-08-28 11:08:31,316][02663] Avg episode reward: [(0, '-108.175')]
+[2025-08-28 11:08:31,320][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000366_374784.pth...
+[2025-08-28 11:08:31,395][02830] Removing /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000230_235520.pth
+[2025-08-28 11:08:36,071][02860] Updated weights for policy 0, policy_version 370 (0.0015)
+[2025-08-28 11:08:36,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 378880. Throughput: 0: 602.1. Samples: 380623. Policy #0 lag: (min: 0.0, avg: 0.8, max: 12.0)
+[2025-08-28 11:08:36,316][02663] Avg episode reward: [(0, '-107.125')]
+[2025-08-28 11:08:41,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 583.2). Total num frames: 381952. Throughput: 0: 602.9. Samples: 382489. Policy #0 lag: (min: 0.0, avg: 1.5, max: 9.0)
+[2025-08-28 11:08:41,317][02663] Avg episode reward: [(0, '-107.365')]
+[2025-08-28 11:08:46,316][02663] Fps is (10 sec: 512.0, 60 sec: 597.3, 300 sec: 583.2). Total num frames: 384000. Throughput: 0: 591.8. Samples: 385338. Policy #0 lag: (min: 0.0, avg: 1.2, max: 7.0)
+[2025-08-28 11:08:46,316][02663] Avg episode reward: [(0, '-105.416')]
+[2025-08-28 11:08:51,316][02663] Fps is (10 sec: 409.6, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 386048. Throughput: 0: 562.6. Samples: 388323. Policy #0 lag: (min: 0.0, avg: 1.5, max: 9.0)
+[2025-08-28 11:08:51,316][02663] Avg episode reward: [(0, '-104.622')]
+[2025-08-28 11:08:56,253][02860] Updated weights for policy 0, policy_version 380 (0.0015)
+[2025-08-28 11:08:56,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 389120. Throughput: 0: 546.8. Samples: 389903. Policy #0 lag: (min: 0.0, avg: 1.8, max: 8.0)
+[2025-08-28 11:08:56,316][02663] Avg episode reward: [(0, '-103.736')]
+[2025-08-28 11:09:01,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 392192. Throughput: 0: 548.6. Samples: 393376. Policy #0 lag: (min: 0.0, avg: 2.1, max: 11.0)
+[2025-08-28 11:09:01,316][02663] Avg episode reward: [(0, '-103.663')]
+[2025-08-28 11:09:06,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 395264. Throughput: 0: 557.3. Samples: 397203. Policy #0 lag: (min: 0.0, avg: 1.1, max: 13.0)
+[2025-08-28 11:09:06,316][02663] Avg episode reward: [(0, '-102.618')]
+[2025-08-28 11:09:06,316][02830] Saving new best policy, reward=-102.618!
+[2025-08-28 11:09:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 563.2, 300 sec: 579.7). Total num frames: 398336. Throughput: 0: 559.1. Samples: 399020. Policy #0 lag: (min: 0.0, avg: 1.1, max: 12.0)
+[2025-08-28 11:09:11,316][02663] Avg episode reward: [(0, '-103.179')]
+[2025-08-28 11:09:12,985][02860] Updated weights for policy 0, policy_version 390 (0.0015)
+[2025-08-28 11:09:16,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 401408. Throughput: 0: 574.9. Samples: 402619. Policy #0 lag: (min: 0.0, avg: 1.5, max: 7.0)
+[2025-08-28 11:09:16,316][02663] Avg episode reward: [(0, '-104.811')]
+[2025-08-28 11:09:21,316][02663] Fps is (10 sec: 614.4, 60 sec: 563.2, 300 sec: 583.2). Total num frames: 404480. Throughput: 0: 574.3. Samples: 406466. Policy #0 lag: (min: 0.0, avg: 0.9, max: 7.0)
+[2025-08-28 11:09:21,316][02663] Avg episode reward: [(0, '-104.495')]
+[2025-08-28 11:09:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 579.7). Total num frames: 406528. Throughput: 0: 570.6. Samples: 408165. Policy #0 lag: (min: 0.0, avg: 1.8, max: 14.0)
+[2025-08-28 11:09:26,316][02663] Avg episode reward: [(0, '-104.274')]
+[2025-08-28 11:09:29,773][02860] Updated weights for policy 0, policy_version 400 (0.0015)
+[2025-08-28 11:09:31,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 579.7). Total num frames: 410624. Throughput: 0: 582.6. Samples: 411554. Policy #0 lag: (min: 0.0, avg: 2.6, max: 13.0)
+[2025-08-28 11:09:31,316][02663] Avg episode reward: [(0, '-105.593')]
+[2025-08-28 11:09:36,318][02663] Fps is (10 sec: 716.6, 60 sec: 580.2, 300 sec: 579.7). Total num frames: 413696. Throughput: 0: 601.6. Samples: 415398. Policy #0 lag: (min: 0.0, avg: 1.2, max: 9.0)
+[2025-08-28 11:09:36,318][02663] Avg episode reward: [(0, '-107.337')]
+[2025-08-28 11:09:41,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 416768. Throughput: 0: 604.2. Samples: 417093. Policy #0 lag: (min: 0.0, avg: 1.4, max: 10.0)
+[2025-08-28 11:09:41,316][02663] Avg episode reward: [(0, '-107.298')]
+[2025-08-28 11:09:46,316][02663] Fps is (10 sec: 512.1, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 418816. Throughput: 0: 598.9. Samples: 420325. Policy #0 lag: (min: 0.0, avg: 1.7, max: 8.0)
+[2025-08-28 11:09:46,316][02663] Avg episode reward: [(0, '-105.905')]
+[2025-08-28 11:09:47,629][02860] Updated weights for policy 0, policy_version 410 (0.0015)
+[2025-08-28 11:09:51,316][02663] Fps is (10 sec: 409.6, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 420864. Throughput: 0: 584.6. Samples: 423508. Policy #0 lag: (min: 0.0, avg: 1.3, max: 12.0)
+[2025-08-28 11:09:51,316][02663] Avg episode reward: [(0, '-106.889')]
+[2025-08-28 11:09:56,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 579.7). Total num frames: 424960. Throughput: 0: 594.0. Samples: 425751. Policy #0 lag: (min: 0.0, avg: 1.8, max: 14.0)
+[2025-08-28 11:09:56,316][02663] Avg episode reward: [(0, '-106.834')]
+[2025-08-28 11:10:01,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 579.7). Total num frames: 428032. Throughput: 0: 601.2. Samples: 429675. Policy #0 lag: (min: 0.0, avg: 1.1, max: 8.0)
+[2025-08-28 11:10:01,317][02663] Avg episode reward: [(0, '-106.330')]
+[2025-08-28 11:10:04,341][02860] Updated weights for policy 0, policy_version 420 (0.0016)
+[2025-08-28 11:10:06,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 579.7). Total num frames: 431104. Throughput: 0: 579.5. Samples: 432543. Policy #0 lag: (min: 0.0, avg: 1.3, max: 8.0)
+[2025-08-28 11:10:06,316][02663] Avg episode reward: [(0, '-106.333')]
+[2025-08-28 11:10:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 583.2). Total num frames: 434176. Throughput: 0: 585.6. Samples: 434517. Policy #0 lag: (min: 0.0, avg: 1.2, max: 10.0)
+[2025-08-28 11:10:11,316][02663] Avg episode reward: [(0, '-106.148')]
+[2025-08-28 11:10:16,318][02663] Fps is (10 sec: 614.2, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 437248. Throughput: 0: 603.8. Samples: 438725. Policy #0 lag: (min: 0.0, avg: 1.4, max: 9.0)
+[2025-08-28 11:10:16,319][02663] Avg episode reward: [(0, '-106.068')]
+[2025-08-28 11:10:20,971][02860] Updated weights for policy 0, policy_version 430 (0.0014)
+[2025-08-28 11:10:21,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 440320. Throughput: 0: 592.1. Samples: 442041. Policy #0 lag: (min: 0.0, avg: 1.1, max: 8.0)
+[2025-08-28 11:10:21,316][02663] Avg episode reward: [(0, '-105.458')]
+[2025-08-28 11:10:26,319][02663] Fps is (10 sec: 512.0, 60 sec: 597.3, 300 sec: 583.2). Total num frames: 442368. Throughput: 0: 584.5. Samples: 443397. Policy #0 lag: (min: 0.0, avg: 1.3, max: 7.0)
+[2025-08-28 11:10:26,319][02663] Avg episode reward: [(0, '-105.620')]
+[2025-08-28 11:10:31,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 445440. Throughput: 0: 577.0. Samples: 446291. Policy #0 lag: (min: 0.0, avg: 1.7, max: 14.0)
+[2025-08-28 11:10:31,316][02663] Avg episode reward: [(0, '-107.226')]
+[2025-08-28 11:10:31,320][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000435_445440.pth...
+[2025-08-28 11:10:31,393][02830] Removing /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000298_305152.pth
+[2025-08-28 11:10:36,316][02663] Fps is (10 sec: 614.6, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 448512. Throughput: 0: 595.5. Samples: 450305. Policy #0 lag: (min: 0.0, avg: 0.9, max: 8.0)
+[2025-08-28 11:10:36,316][02663] Avg episode reward: [(0, '-108.494')]
+[2025-08-28 11:10:40,028][02860] Updated weights for policy 0, policy_version 440 (0.0015)
+[2025-08-28 11:10:41,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 583.2). Total num frames: 450560. Throughput: 0: 581.0. Samples: 451894. Policy #0 lag: (min: 0.0, avg: 1.2, max: 7.0)
+[2025-08-28 11:10:41,316][02663] Avg episode reward: [(0, '-108.932')]
+[2025-08-28 11:10:46,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 453632. Throughput: 0: 563.8. Samples: 455048. Policy #0 lag: (min: 0.0, avg: 0.9, max: 7.0)
+[2025-08-28 11:10:46,316][02663] Avg episode reward: [(0, '-109.372')]
+[2025-08-28 11:10:51,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 456704. Throughput: 0: 591.5. Samples: 459162. Policy #0 lag: (min: 0.0, avg: 2.6, max: 16.0)
+[2025-08-28 11:10:51,316][02663] Avg episode reward: [(0, '-108.998')]
+[2025-08-28 11:10:56,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 459776. Throughput: 0: 592.5. Samples: 461180. Policy #0 lag: (min: 0.0, avg: 0.9, max: 8.0)
+[2025-08-28 11:10:56,316][02663] Avg episode reward: [(0, '-108.915')]
+[2025-08-28 11:10:56,601][02860] Updated weights for policy 0, policy_version 450 (0.0015)
+[2025-08-28 11:11:01,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 462848. Throughput: 0: 574.3. Samples: 464565. Policy #0 lag: (min: 0.0, avg: 1.5, max: 8.0)
+[2025-08-28 11:11:01,316][02663] Avg episode reward: [(0, '-106.757')]
+[2025-08-28 11:11:06,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.7). Total num frames: 465920. Throughput: 0: 582.3. Samples: 468245. Policy #0 lag: (min: 0.0, avg: 1.6, max: 9.0)
+[2025-08-28 11:11:06,316][02663] Avg episode reward: [(0, '-104.486')]
+[2025-08-28 11:11:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 468992. Throughput: 0: 587.8. Samples: 469846. Policy #0 lag: (min: 0.0, avg: 0.6, max: 14.0)
+[2025-08-28 11:11:11,316][02663] Avg episode reward: [(0, '-103.295')]
+[2025-08-28 11:11:13,824][02860] Updated weights for policy 0, policy_version 460 (0.0015)
+[2025-08-28 11:11:16,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 472064. Throughput: 0: 601.3. Samples: 473350. Policy #0 lag: (min: 0.0, avg: 1.2, max: 12.0)
+[2025-08-28 11:11:16,316][02663] Avg episode reward: [(0, '-103.760')]
+[2025-08-28 11:11:21,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 475136. Throughput: 0: 591.6. Samples: 476929. Policy #0 lag: (min: 0.0, avg: 1.6, max: 9.0)
+[2025-08-28 11:11:21,316][02663] Avg episode reward: [(0, '-104.250')]
+[2025-08-28 11:11:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 477184. Throughput: 0: 584.0. Samples: 478172. Policy #0 lag: (min: 0.0, avg: 2.4, max: 12.0)
+[2025-08-28 11:11:26,316][02663] Avg episode reward: [(0, '-104.737')]
+[2025-08-28 11:11:31,317][02663] Fps is (10 sec: 511.9, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 480256. Throughput: 0: 582.3. Samples: 481251. Policy #0 lag: (min: 0.0, avg: 1.3, max: 12.0)
+[2025-08-28 11:11:31,317][02663] Avg episode reward: [(0, '-104.673')]
+[2025-08-28 11:11:32,470][02860] Updated weights for policy 0, policy_version 470 (0.0016)
+[2025-08-28 11:11:36,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.7). Total num frames: 483328. Throughput: 0: 576.3. Samples: 485097. Policy #0 lag: (min: 0.0, avg: 0.8, max: 7.0)
+[2025-08-28 11:11:36,316][02663] Avg episode reward: [(0, '-104.296')]
+[2025-08-28 11:11:41,316][02663] Fps is (10 sec: 512.1, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 485376. Throughput: 0: 552.8. Samples: 486055. Policy #0 lag: (min: 0.0, avg: 2.7, max: 15.0)
+[2025-08-28 11:11:41,316][02663] Avg episode reward: [(0, '-104.903')]
+[2025-08-28 11:11:46,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 488448. Throughput: 0: 561.7. Samples: 489841. Policy #0 lag: (min: 0.0, avg: 1.0, max: 7.0)
+[2025-08-28 11:11:46,316][02663] Avg episode reward: [(0, '-105.451')]
+[2025-08-28 11:11:49,209][02860] Updated weights for policy 0, policy_version 480 (0.0015)
+[2025-08-28 11:11:51,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 583.2). Total num frames: 492544. Throughput: 0: 581.2. Samples: 494401. Policy #0 lag: (min: 0.0, avg: 1.1, max: 8.0)
+[2025-08-28 11:11:51,316][02663] Avg episode reward: [(0, '-105.479')]
+[2025-08-28 11:11:56,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 579.7). Total num frames: 493568. Throughput: 0: 564.4. Samples: 495243. Policy #0 lag: (min: 0.0, avg: 1.4, max: 14.0)
+[2025-08-28 11:11:56,316][02663] Avg episode reward: [(0, '-105.951')]
+[2025-08-28 11:12:01,316][02663] Fps is (10 sec: 409.6, 60 sec: 563.2, 300 sec: 583.2). Total num frames: 496640. Throughput: 0: 546.0. Samples: 497921. Policy #0 lag: (min: 0.0, avg: 1.4, max: 6.0)
+[2025-08-28 11:12:01,316][02663] Avg episode reward: [(0, '-107.684')]
+[2025-08-28 11:12:06,316][02663] Fps is (10 sec: 716.8, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 500736. Throughput: 0: 574.7. Samples: 502791. Policy #0 lag: (min: 0.0, avg: 1.5, max: 7.0)
+[2025-08-28 11:12:06,316][02663] Avg episode reward: [(0, '-107.969')]
+[2025-08-28 11:12:06,932][02860] Updated weights for policy 0, policy_version 490 (0.0015)
+[2025-08-28 11:12:11,319][02663] Fps is (10 sec: 716.5, 60 sec: 580.2, 300 sec: 583.2). Total num frames: 503808. Throughput: 0: 585.0. Samples: 504498. Policy #0 lag: (min: 0.0, avg: 1.5, max: 13.0)
+[2025-08-28 11:12:11,320][02663] Avg episode reward: [(0, '-107.080')]
+[2025-08-28 11:12:16,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 579.7). Total num frames: 505856. Throughput: 0: 583.6. Samples: 507514. Policy #0 lag: (min: 0.0, avg: 1.5, max: 13.0)
+[2025-08-28 11:12:16,316][02663] Avg episode reward: [(0, '-106.036')]
+[2025-08-28 11:12:21,316][02663] Fps is (10 sec: 614.6, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 509952. Throughput: 0: 587.5. Samples: 511535. Policy #0 lag: (min: 0.0, avg: 1.1, max: 7.0)
+[2025-08-28 11:12:21,316][02663] Avg episode reward: [(0, '-106.294')]
+[2025-08-28 11:12:25,184][02860] Updated weights for policy 0, policy_version 500 (0.0015)
+[2025-08-28 11:12:26,321][02663] Fps is (10 sec: 614.0, 60 sec: 580.2, 300 sec: 579.7). Total num frames: 512000. Throughput: 0: 601.5. Samples: 513124. Policy #0 lag: (min: 0.0, avg: 1.3, max: 12.0)
+[2025-08-28 11:12:26,322][02663] Avg episode reward: [(0, '-105.382')]
+[2025-08-28 11:12:31,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 515072. Throughput: 0: 600.4. Samples: 516857. Policy #0 lag: (min: 0.0, avg: 1.4, max: 8.0)
+[2025-08-28 11:12:31,316][02663] Avg episode reward: [(0, '-105.019')]
+[2025-08-28 11:12:31,320][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000503_515072.pth...
+[2025-08-28 11:12:31,402][02830] Removing /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000366_374784.pth
+[2025-08-28 11:12:36,316][02663] Fps is (10 sec: 717.2, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 519168. Throughput: 0: 588.9. Samples: 520903. Policy #0 lag: (min: 0.0, avg: 1.6, max: 10.0)
+[2025-08-28 11:12:36,316][02663] Avg episode reward: [(0, '-107.333')]
+[2025-08-28 11:12:41,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 521216. Throughput: 0: 606.9. Samples: 522555. Policy #0 lag: (min: 0.0, avg: 1.4, max: 13.0)
+[2025-08-28 11:12:41,317][02663] Avg episode reward: [(0, '-105.165')]
+[2025-08-28 11:12:42,581][02860] Updated weights for policy 0, policy_version 510 (0.0015)
+[2025-08-28 11:12:46,316][02663] Fps is (10 sec: 409.6, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 523264. Throughput: 0: 610.5. Samples: 525394. Policy #0 lag: (min: 0.0, avg: 1.4, max: 7.0)
+[2025-08-28 11:12:46,316][02663] Avg episode reward: [(0, '-105.206')]
+[2025-08-28 11:12:51,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 527360. Throughput: 0: 580.6. Samples: 528920. Policy #0 lag: (min: 0.0, avg: 1.8, max: 16.0)
+[2025-08-28 11:12:51,316][02663] Avg episode reward: [(0, '-103.366')]
+[2025-08-28 11:12:56,316][02663] Fps is (10 sec: 716.8, 60 sec: 614.4, 300 sec: 586.6). Total num frames: 530432. Throughput: 0: 584.5. Samples: 530800. Policy #0 lag: (min: 0.0, avg: 1.3, max: 9.0)
+[2025-08-28 11:12:56,316][02663] Avg episode reward: [(0, '-104.487')]
+[2025-08-28 11:12:59,201][02860] Updated weights for policy 0, policy_version 520 (0.0015)
+[2025-08-28 11:13:01,316][02663] Fps is (10 sec: 614.4, 60 sec: 614.4, 300 sec: 586.6). Total num frames: 533504. Throughput: 0: 600.4. Samples: 534533. Policy #0 lag: (min: 0.0, avg: 1.5, max: 13.0)
+[2025-08-28 11:13:01,316][02663] Avg episode reward: [(0, '-104.982')]
+[2025-08-28 11:13:06,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 535552. Throughput: 0: 591.2. Samples: 538141. Policy #0 lag: (min: 0.0, avg: 1.9, max: 8.0)
+[2025-08-28 11:13:06,316][02663] Avg episode reward: [(0, '-104.039')]
+[2025-08-28 11:13:11,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 538624. Throughput: 0: 590.7. Samples: 539703. Policy #0 lag: (min: 0.0, avg: 1.6, max: 8.0)
+[2025-08-28 11:13:11,316][02663] Avg episode reward: [(0, '-106.147')]
+[2025-08-28 11:13:16,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 579.7). Total num frames: 541696. Throughput: 0: 585.9. Samples: 543221. Policy #0 lag: (min: 0.0, avg: 2.7, max: 9.0)
+[2025-08-28 11:13:16,316][02663] Avg episode reward: [(0, '-108.388')]
+[2025-08-28 11:13:16,610][02860] Updated weights for policy 0, policy_version 530 (0.0015)
+[2025-08-28 11:13:21,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 544768. Throughput: 0: 577.6. Samples: 546893. Policy #0 lag: (min: 0.0, avg: 1.0, max: 7.0)
+[2025-08-28 11:13:21,316][02663] Avg episode reward: [(0, '-109.392')]
+[2025-08-28 11:13:26,327][02663] Fps is (10 sec: 613.7, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 547840. Throughput: 0: 575.3. Samples: 548449. Policy #0 lag: (min: 0.0, avg: 1.8, max: 13.0)
+[2025-08-28 11:13:26,328][02663] Avg episode reward: [(0, '-109.431')]
+[2025-08-28 11:13:31,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 583.2). Total num frames: 550912. Throughput: 0: 592.7. Samples: 552065. Policy #0 lag: (min: 0.0, avg: 1.0, max: 7.0)
+[2025-08-28 11:13:31,316][02663] Avg episode reward: [(0, '-109.004')]
+[2025-08-28 11:13:35,072][02860] Updated weights for policy 0, policy_version 540 (0.0018)
+[2025-08-28 11:13:36,318][02663] Fps is (10 sec: 512.5, 60 sec: 563.2, 300 sec: 579.7). Total num frames: 552960. Throughput: 0: 585.2. Samples: 555254. Policy #0 lag: (min: 0.0, avg: 1.8, max: 9.0)
+[2025-08-28 11:13:36,318][02663] Avg episode reward: [(0, '-109.471')]
+[2025-08-28 11:13:41,320][02663] Fps is (10 sec: 511.8, 60 sec: 580.2, 300 sec: 583.2). Total num frames: 556032. Throughput: 0: 584.5. Samples: 557103. Policy #0 lag: (min: 0.0, avg: 1.1, max: 12.0)
+[2025-08-28 11:13:41,320][02663] Avg episode reward: [(0, '-108.487')]
+[2025-08-28 11:13:46,316][02663] Fps is (10 sec: 614.6, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 559104. Throughput: 0: 576.6. Samples: 560478. Policy #0 lag: (min: 0.0, avg: 2.1, max: 16.0)
+[2025-08-28 11:13:46,316][02663] Avg episode reward: [(0, '-108.593')]
+[2025-08-28 11:13:51,316][02663] Fps is (10 sec: 614.6, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 562176. Throughput: 0: 575.5. Samples: 564040. Policy #0 lag: (min: 0.0, avg: 0.7, max: 8.0)
+[2025-08-28 11:13:51,316][02663] Avg episode reward: [(0, '-107.910')]
+[2025-08-28 11:13:52,127][02860] Updated weights for policy 0, policy_version 550 (0.0013)
+[2025-08-28 11:13:56,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 565248. Throughput: 0: 584.6. Samples: 566010. Policy #0 lag: (min: 0.0, avg: 1.1, max: 7.0)
+[2025-08-28 11:13:56,316][02663] Avg episode reward: [(0, '-106.477')]
+[2025-08-28 11:14:01,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 583.2). Total num frames: 567296. Throughput: 0: 573.3. Samples: 569020. Policy #0 lag: (min: 0.0, avg: 1.5, max: 13.0)
+[2025-08-28 11:14:01,316][02663] Avg episode reward: [(0, '-106.776')]
+[2025-08-28 11:14:06,326][02663] Fps is (10 sec: 511.5, 60 sec: 580.2, 300 sec: 583.1). Total num frames: 570368. Throughput: 0: 580.1. Samples: 573002. Policy #0 lag: (min: 0.0, avg: 1.8, max: 12.0)
+[2025-08-28 11:14:06,327][02663] Avg episode reward: [(0, '-106.390')]
+[2025-08-28 11:14:09,068][02860] Updated weights for policy 0, policy_version 560 (0.0015)
+[2025-08-28 11:14:11,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 574464. Throughput: 0: 594.3. Samples: 575185. Policy #0 lag: (min: 0.0, avg: 1.0, max: 7.0)
+[2025-08-28 11:14:11,316][02663] Avg episode reward: [(0, '-107.256')]
+[2025-08-28 11:14:16,316][02663] Fps is (10 sec: 717.6, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 577536. Throughput: 0: 594.2. Samples: 578802. Policy #0 lag: (min: 0.0, avg: 1.6, max: 14.0)
+[2025-08-28 11:14:16,316][02663] Avg episode reward: [(0, '-107.716')]
+[2025-08-28 11:14:21,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 590.1). Total num frames: 580608. Throughput: 0: 608.3. Samples: 582625. Policy #0 lag: (min: 0.0, avg: 2.4, max: 10.0)
+[2025-08-28 11:14:21,316][02663] Avg episode reward: [(0, '-107.947')]
+[2025-08-28 11:14:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.4, 300 sec: 583.2). Total num frames: 582656. Throughput: 0: 597.3. Samples: 583981. Policy #0 lag: (min: 0.0, avg: 1.2, max: 7.0)
+[2025-08-28 11:14:26,316][02663] Avg episode reward: [(0, '-108.125')]
+[2025-08-28 11:14:27,669][02860] Updated weights for policy 0, policy_version 570 (0.0015)
+[2025-08-28 11:14:31,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 585728. Throughput: 0: 584.1. Samples: 586763. Policy #0 lag: (min: 0.0, avg: 1.3, max: 6.0)
+[2025-08-28 11:14:31,316][02663] Avg episode reward: [(0, '-106.278')]
+[2025-08-28 11:14:31,320][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000572_585728.pth...
+[2025-08-28 11:14:31,375][02830] Removing /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000435_445440.pth
+[2025-08-28 11:14:36,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.4, 300 sec: 583.2). Total num frames: 588800. Throughput: 0: 601.4. Samples: 591105. Policy #0 lag: (min: 0.0, avg: 1.4, max: 12.0)
+[2025-08-28 11:14:36,316][02663] Avg episode reward: [(0, '-105.051')]
+[2025-08-28 11:14:41,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.4, 300 sec: 586.6). Total num frames: 591872. Throughput: 0: 605.2. Samples: 593242. Policy #0 lag: (min: 0.0, avg: 0.6, max: 7.0)
+[2025-08-28 11:14:41,316][02663] Avg episode reward: [(0, '-106.112')]
+[2025-08-28 11:14:43,665][02860] Updated weights for policy 0, policy_version 580 (0.0015)
+[2025-08-28 11:14:46,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 590.1). Total num frames: 594944. Throughput: 0: 604.8. Samples: 596234. Policy #0 lag: (min: 0.0, avg: 2.3, max: 10.0)
+[2025-08-28 11:14:46,316][02663] Avg episode reward: [(0, '-105.645')]
+[2025-08-28 11:14:51,331][02663] Fps is (10 sec: 613.4, 60 sec: 597.2, 300 sec: 586.6). Total num frames: 598016. Throughput: 0: 603.4. Samples: 600157. Policy #0 lag: (min: 0.0, avg: 1.5, max: 10.0)
+[2025-08-28 11:14:51,332][02663] Avg episode reward: [(0, '-106.150')]
+[2025-08-28 11:14:56,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 601088. Throughput: 0: 588.9. Samples: 601685. Policy #0 lag: (min: 0.0, avg: 2.3, max: 8.0)
+[2025-08-28 11:14:56,316][02663] Avg episode reward: [(0, '-105.513')]
+[2025-08-28 11:15:01,316][02663] Fps is (10 sec: 512.8, 60 sec: 597.3, 300 sec: 583.2). Total num frames: 603136. Throughput: 0: 577.9. Samples: 604809. Policy #0 lag: (min: 0.0, avg: 0.9, max: 7.0)
+[2025-08-28 11:15:01,316][02663] Avg episode reward: [(0, '-108.165')]
+[2025-08-28 11:15:02,172][02860] Updated weights for policy 0, policy_version 590 (0.0015)
+[2025-08-28 11:15:06,316][02663] Fps is (10 sec: 512.0, 60 sec: 597.4, 300 sec: 583.2). Total num frames: 606208. Throughput: 0: 576.5. Samples: 608566. Policy #0 lag: (min: 0.0, avg: 2.3, max: 13.0)
+[2025-08-28 11:15:06,316][02663] Avg episode reward: [(0, '-108.638')]
+[2025-08-28 11:15:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 609280. Throughput: 0: 584.7. Samples: 610291. Policy #0 lag: (min: 0.0, avg: 2.0, max: 8.0)
+[2025-08-28 11:15:11,316][02663] Avg episode reward: [(0, '-106.354')]
+[2025-08-28 11:15:16,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 612352. Throughput: 0: 599.9. Samples: 613759. Policy #0 lag: (min: 0.0, avg: 2.6, max: 11.0)
+[2025-08-28 11:15:16,316][02663] Avg episode reward: [(0, '-106.534')]
+[2025-08-28 11:15:18,001][02860] Updated weights for policy 0, policy_version 600 (0.0014)
+[2025-08-28 11:15:21,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 590.1). Total num frames: 616448. Throughput: 0: 598.9. Samples: 618056. Policy #0 lag: (min: 0.0, avg: 1.5, max: 10.0)
+[2025-08-28 11:15:21,316][02663] Avg episode reward: [(0, '-107.051')]
+[2025-08-28 11:15:26,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 618496. Throughput: 0: 582.1. Samples: 619438. Policy #0 lag: (min: 0.0, avg: 2.1, max: 9.0)
+[2025-08-28 11:15:26,316][02663] Avg episode reward: [(0, '-106.885')]
+[2025-08-28 11:15:31,316][02663] Fps is (10 sec: 409.6, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 620544. Throughput: 0: 571.4. Samples: 621945. Policy #0 lag: (min: 0.0, avg: 1.1, max: 8.0)
+[2025-08-28 11:15:31,349][02663] Avg episode reward: [(0, '-105.356')]
+[2025-08-28 11:15:36,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 623616. Throughput: 0: 578.8. Samples: 626194. Policy #0 lag: (min: 0.0, avg: 0.7, max: 8.0)
+[2025-08-28 11:15:36,316][02663] Avg episode reward: [(0, '-105.457')]
+[2025-08-28 11:15:36,488][02860] Updated weights for policy 0, policy_version 610 (0.0014)
+[2025-08-28 11:15:41,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 626688. Throughput: 0: 581.4. Samples: 627847. Policy #0 lag: (min: 0.0, avg: 0.9, max: 7.0)
+[2025-08-28 11:15:41,316][02663] Avg episode reward: [(0, '-106.158')]
+[2025-08-28 11:15:46,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 629760. Throughput: 0: 595.4. Samples: 631603. Policy #0 lag: (min: 0.0, avg: 1.5, max: 16.0)
+[2025-08-28 11:15:46,316][02663] Avg episode reward: [(0, '-104.579')]
+[2025-08-28 11:15:51,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.5, 300 sec: 590.1). Total num frames: 633856. Throughput: 0: 600.9. Samples: 635605. Policy #0 lag: (min: 0.0, avg: 1.6, max: 9.0)
+[2025-08-28 11:15:51,316][02663] Avg episode reward: [(0, '-103.481')]
+[2025-08-28 11:15:52,830][02860] Updated weights for policy 0, policy_version 620 (0.0016)
+[2025-08-28 11:15:56,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 635904. Throughput: 0: 587.3. Samples: 636720. Policy #0 lag: (min: 0.0, avg: 1.2, max: 9.0)
+[2025-08-28 11:15:56,316][02663] Avg episode reward: [(0, '-104.241')]
+[2025-08-28 11:16:01,319][02663] Fps is (10 sec: 409.5, 60 sec: 580.2, 300 sec: 583.2). Total num frames: 637952. Throughput: 0: 570.7. Samples: 639441. Policy #0 lag: (min: 0.0, avg: 1.1, max: 9.0)
+[2025-08-28 11:16:01,320][02663] Avg episode reward: [(0, '-105.201')]
+[2025-08-28 11:16:06,319][02663] Fps is (10 sec: 614.2, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 642048. Throughput: 0: 588.9. Samples: 644558. Policy #0 lag: (min: 0.0, avg: 2.1, max: 14.0)
+[2025-08-28 11:16:06,320][02663] Avg episode reward: [(0, '-104.879')]
+[2025-08-28 11:16:10,581][02860] Updated weights for policy 0, policy_version 630 (0.0015)
+[2025-08-28 11:16:11,316][02663] Fps is (10 sec: 717.1, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 645120. Throughput: 0: 589.9. Samples: 645984. Policy #0 lag: (min: 0.0, avg: 1.4, max: 13.0)
+[2025-08-28 11:16:11,316][02663] Avg episode reward: [(0, '-105.790')]
+[2025-08-28 11:16:16,316][02663] Fps is (10 sec: 512.2, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 647168. Throughput: 0: 592.4. Samples: 648605. Policy #0 lag: (min: 0.0, avg: 1.3, max: 9.0)
+[2025-08-28 11:16:16,316][02663] Avg episode reward: [(0, '-106.687')]
+[2025-08-28 11:16:21,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 586.6). Total num frames: 650240. Throughput: 0: 589.0. Samples: 652698. Policy #0 lag: (min: 0.0, avg: 1.0, max: 8.0)
+[2025-08-28 11:16:21,316][02663] Avg episode reward: [(0, '-107.894')]
+[2025-08-28 11:16:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 583.2). Total num frames: 652288. Throughput: 0: 579.6. Samples: 653928. Policy #0 lag: (min: 0.0, avg: 1.3, max: 8.0)
+[2025-08-28 11:16:26,316][02663] Avg episode reward: [(0, '-107.686')]
+[2025-08-28 11:16:29,653][02860] Updated weights for policy 0, policy_version 640 (0.0015)
+[2025-08-28 11:16:31,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 656384. Throughput: 0: 572.0. Samples: 657343. Policy #0 lag: (min: 0.0, avg: 1.6, max: 9.0)
+[2025-08-28 11:16:31,316][02663] Avg episode reward: [(0, '-106.839')]
+[2025-08-28 11:16:31,320][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000641_656384.pth...
+[2025-08-28 11:16:31,392][02830] Removing /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000503_515072.pth
+[2025-08-28 11:16:36,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 590.1). Total num frames: 659456. Throughput: 0: 572.1. Samples: 661351. Policy #0 lag: (min: 0.0, avg: 1.5, max: 8.0)
+[2025-08-28 11:16:36,316][02663] Avg episode reward: [(0, '-106.285')]
+[2025-08-28 11:16:41,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 661504. Throughput: 0: 577.7. Samples: 662717. Policy #0 lag: (min: 0.0, avg: 1.6, max: 16.0)
+[2025-08-28 11:16:41,316][02663] Avg episode reward: [(0, '-104.625')]
+[2025-08-28 11:16:46,327][02663] Fps is (10 sec: 511.4, 60 sec: 580.2, 300 sec: 583.1). Total num frames: 664576. Throughput: 0: 603.6. Samples: 666610. Policy #0 lag: (min: 0.0, avg: 2.2, max: 10.0)
+[2025-08-28 11:16:46,328][02663] Avg episode reward: [(0, '-102.744')]
+[2025-08-28 11:16:46,637][02860] Updated weights for policy 0, policy_version 650 (0.0014)
+[2025-08-28 11:16:51,316][02663] Fps is (10 sec: 614.4, 60 sec: 563.2, 300 sec: 590.1). Total num frames: 667648. Throughput: 0: 562.4. Samples: 669864. Policy #0 lag: (min: 0.0, avg: 1.5, max: 9.0)
+[2025-08-28 11:16:51,317][02663] Avg episode reward: [(0, '-101.682')]
+[2025-08-28 11:16:51,320][02830] Saving new best policy, reward=-101.682!
+[2025-08-28 11:16:56,316][02663] Fps is (10 sec: 615.1, 60 sec: 580.3, 300 sec: 590.1). Total num frames: 670720. Throughput: 0: 562.1. Samples: 671279. Policy #0 lag: (min: 0.0, avg: 2.0, max: 14.0)
+[2025-08-28 11:16:56,316][02663] Avg episode reward: [(0, '-102.744')]
+[2025-08-28 11:17:01,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.4, 300 sec: 586.6). Total num frames: 673792. Throughput: 0: 590.4. Samples: 675174. Policy #0 lag: (min: 0.0, avg: 1.5, max: 9.0)
+[2025-08-28 11:17:01,316][02663] Avg episode reward: [(0, '-101.212')]
+[2025-08-28 11:17:01,319][02830] Saving new best policy, reward=-101.212!
+[2025-08-28 11:17:03,697][02860] Updated weights for policy 0, policy_version 660 (0.0015)
+[2025-08-28 11:17:06,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 676864. Throughput: 0: 583.7. Samples: 678964. Policy #0 lag: (min: 0.0, avg: 2.5, max: 13.0)
+[2025-08-28 11:17:06,316][02663] Avg episode reward: [(0, '-101.643')]
+[2025-08-28 11:17:11,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 586.6). Total num frames: 678912. Throughput: 0: 583.6. Samples: 680190. Policy #0 lag: (min: 0.0, avg: 2.0, max: 9.0)
+[2025-08-28 11:17:11,316][02663] Avg episode reward: [(0, '-101.984')]
+[2025-08-28 11:17:16,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 681984. Throughput: 0: 586.0. Samples: 683711. Policy #0 lag: (min: 0.0, avg: 1.4, max: 8.0)
+[2025-08-28 11:17:16,316][02663] Avg episode reward: [(0, '-104.293')]
+[2025-08-28 11:17:21,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 685056. Throughput: 0: 572.9. Samples: 687133. Policy #0 lag: (min: 0.0, avg: 0.7, max: 7.0)
+[2025-08-28 11:17:21,316][02663] Avg episode reward: [(0, '-102.991')]
+[2025-08-28 11:17:22,317][02860] Updated weights for policy 0, policy_version 670 (0.0015)
+[2025-08-28 11:17:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 687104. Throughput: 0: 567.8. Samples: 688267. Policy #0 lag: (min: 0.0, avg: 2.6, max: 12.0)
+[2025-08-28 11:17:26,316][02663] Avg episode reward: [(0, '-102.318')]
+[2025-08-28 11:17:31,319][02663] Fps is (10 sec: 614.2, 60 sec: 580.2, 300 sec: 583.2). Total num frames: 691200. Throughput: 0: 576.3. Samples: 692539. Policy #0 lag: (min: 0.0, avg: 1.0, max: 12.0)
+[2025-08-28 11:17:31,319][02663] Avg episode reward: [(0, '-103.284')]
+[2025-08-28 11:17:36,316][02663] Fps is (10 sec: 716.8, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 694272. Throughput: 0: 599.5. Samples: 696843. Policy #0 lag: (min: 0.0, avg: 1.1, max: 8.0)
+[2025-08-28 11:17:36,316][02663] Avg episode reward: [(0, '-102.995')]
+[2025-08-28 11:17:38,495][02860] Updated weights for policy 0, policy_version 680 (0.0015)
+[2025-08-28 11:17:41,316][02663] Fps is (10 sec: 614.6, 60 sec: 597.3, 300 sec: 590.1). Total num frames: 697344. Throughput: 0: 599.8. Samples: 698271. Policy #0 lag: (min: 0.0, avg: 2.1, max: 10.0)
+[2025-08-28 11:17:41,316][02663] Avg episode reward: [(0, '-102.713')]
+[2025-08-28 11:17:46,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.4, 300 sec: 583.2). Total num frames: 699392. Throughput: 0: 577.3. Samples: 701153. Policy #0 lag: (min: 0.0, avg: 2.1, max: 10.0)
+[2025-08-28 11:17:46,316][02663] Avg episode reward: [(0, '-102.138')]
+[2025-08-28 11:17:51,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 702464. Throughput: 0: 571.2. Samples: 704670. Policy #0 lag: (min: 0.0, avg: 1.7, max: 7.0)
+[2025-08-28 11:17:51,316][02663] Avg episode reward: [(0, '-102.223')]
+[2025-08-28 11:17:56,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 705536. Throughput: 0: 577.2. Samples: 706166. Policy #0 lag: (min: 0.0, avg: 1.4, max: 13.0)
+[2025-08-28 11:17:56,316][02663] Avg episode reward: [(0, '-102.987')]
+[2025-08-28 11:17:58,251][02860] Updated weights for policy 0, policy_version 690 (0.0015)
+[2025-08-28 11:18:01,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 708608. Throughput: 0: 574.7. Samples: 709571. Policy #0 lag: (min: 0.0, avg: 2.1, max: 8.0)
+[2025-08-28 11:18:01,316][02663] Avg episode reward: [(0, '-102.909')]
+[2025-08-28 11:18:06,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 590.1). Total num frames: 712704. Throughput: 0: 606.0. Samples: 714405. Policy #0 lag: (min: 0.0, avg: 1.2, max: 9.0)
+[2025-08-28 11:18:06,316][02663] Avg episode reward: [(0, '-102.606')]
+[2025-08-28 11:18:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 714752. Throughput: 0: 617.6. Samples: 716061. Policy #0 lag: (min: 0.0, avg: 0.9, max: 9.0)
+[2025-08-28 11:18:11,316][02663] Avg episode reward: [(0, '-102.486')]
+[2025-08-28 11:18:14,310][02860] Updated weights for policy 0, policy_version 700 (0.0015)
+[2025-08-28 11:18:16,316][02663] Fps is (10 sec: 512.0, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 717824. Throughput: 0: 586.4. Samples: 718927. Policy #0 lag: (min: 0.0, avg: 1.7, max: 9.0)
+[2025-08-28 11:18:16,317][02663] Avg episode reward: [(0, '-101.550')]
+[2025-08-28 11:18:21,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.7). Total num frames: 720896. Throughput: 0: 582.4. Samples: 723053. Policy #0 lag: (min: 0.0, avg: 1.6, max: 9.0)
+[2025-08-28 11:18:21,316][02663] Avg episode reward: [(0, '-100.145')]
+[2025-08-28 11:18:21,322][02830] Saving new best policy, reward=-100.145!
+[2025-08-28 11:18:26,327][02663] Fps is (10 sec: 511.4, 60 sec: 597.2, 300 sec: 583.1). Total num frames: 722944. Throughput: 0: 577.7. Samples: 724276. Policy #0 lag: (min: 0.0, avg: 1.9, max: 8.0)
+[2025-08-28 11:18:26,328][02663] Avg episode reward: [(0, '-99.686')]
+[2025-08-28 11:18:26,328][02830] Saving new best policy, reward=-99.686!
+[2025-08-28 11:18:31,225][02860] Updated weights for policy 0, policy_version 710 (0.0015)
+[2025-08-28 11:18:31,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.4, 300 sec: 590.1). Total num frames: 727040. Throughput: 0: 594.0. Samples: 727882. Policy #0 lag: (min: 0.0, avg: 1.3, max: 7.0)
+[2025-08-28 11:18:31,316][02663] Avg episode reward: [(0, '-100.528')]
+[2025-08-28 11:18:31,320][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000710_727040.pth...
+[2025-08-28 11:18:31,396][02830] Removing /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000572_585728.pth
+[2025-08-28 11:18:36,316][02663] Fps is (10 sec: 717.6, 60 sec: 597.3, 300 sec: 590.1). Total num frames: 730112. Throughput: 0: 610.1. Samples: 732123. Policy #0 lag: (min: 0.0, avg: 1.2, max: 8.0)
+[2025-08-28 11:18:36,316][02663] Avg episode reward: [(0, '-101.884')]
+[2025-08-28 11:18:41,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 732160. Throughput: 0: 600.5. Samples: 733188. Policy #0 lag: (min: 0.0, avg: 1.2, max: 8.0)
+[2025-08-28 11:18:41,316][02663] Avg episode reward: [(0, '-101.905')]
+[2025-08-28 11:18:46,319][02663] Fps is (10 sec: 511.8, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 735232. Throughput: 0: 609.4. Samples: 736996. Policy #0 lag: (min: 0.0, avg: 1.7, max: 7.0)
+[2025-08-28 11:18:46,320][02663] Avg episode reward: [(0, '-101.032')]
+[2025-08-28 11:18:47,993][02860] Updated weights for policy 0, policy_version 720 (0.0014)
+[2025-08-28 11:18:51,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 738304. Throughput: 0: 577.0. Samples: 740372. Policy #0 lag: (min: 0.0, avg: 1.9, max: 18.0)
+[2025-08-28 11:18:51,316][02663] Avg episode reward: [(0, '-102.646')]
+[2025-08-28 11:18:56,331][02663] Fps is (10 sec: 511.4, 60 sec: 580.1, 300 sec: 586.6). Total num frames: 740352. Throughput: 0: 558.4. Samples: 741197. Policy #0 lag: (min: 0.0, avg: 1.2, max: 10.0)
+[2025-08-28 11:18:56,332][02663] Avg episode reward: [(0, '-101.846')]
+[2025-08-28 11:19:01,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 586.7). Total num frames: 743424. Throughput: 0: 576.8. Samples: 744881. Policy #0 lag: (min: 0.0, avg: 1.5, max: 17.0)
+[2025-08-28 11:19:01,316][02663] Avg episode reward: [(0, '-100.716')]
+[2025-08-28 11:19:05,451][02860] Updated weights for policy 0, policy_version 730 (0.0016)
+[2025-08-28 11:19:06,318][02663] Fps is (10 sec: 717.8, 60 sec: 580.2, 300 sec: 586.6). Total num frames: 747520. Throughput: 0: 587.5. Samples: 749492. Policy #0 lag: (min: 0.0, avg: 1.5, max: 13.0)
+[2025-08-28 11:19:06,318][02663] Avg episode reward: [(0, '-100.752')]
+[2025-08-28 11:19:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 749568. Throughput: 0: 598.6. Samples: 751208. Policy #0 lag: (min: 0.0, avg: 1.1, max: 9.0)
+[2025-08-28 11:19:11,316][02663] Avg episode reward: [(0, '-100.581')]
+[2025-08-28 11:19:16,316][02663] Fps is (10 sec: 614.5, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 753664. Throughput: 0: 594.8. Samples: 754648. Policy #0 lag: (min: 0.0, avg: 1.6, max: 8.0)
+[2025-08-28 11:19:16,316][02663] Avg episode reward: [(0, '-102.062')]
+[2025-08-28 11:19:21,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 755712. Throughput: 0: 577.8. Samples: 758124. Policy #0 lag: (min: 0.0, avg: 1.7, max: 8.0)
+[2025-08-28 11:19:21,316][02663] Avg episode reward: [(0, '-102.560')]
+[2025-08-28 11:19:24,498][02860] Updated weights for policy 0, policy_version 740 (0.0015)
+[2025-08-28 11:19:26,316][02663] Fps is (10 sec: 409.6, 60 sec: 580.4, 300 sec: 583.2). Total num frames: 757760. Throughput: 0: 580.4. Samples: 759305. Policy #0 lag: (min: 0.0, avg: 1.8, max: 8.0)
+[2025-08-28 11:19:26,316][02663] Avg episode reward: [(0, '-103.195')]
+[2025-08-28 11:19:31,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 583.2). Total num frames: 760832. Throughput: 0: 565.3. Samples: 762434. Policy #0 lag: (min: 0.0, avg: 2.0, max: 12.0)
+[2025-08-28 11:19:31,317][02663] Avg episode reward: [(0, '-104.315')]
+[2025-08-28 11:19:36,316][02663] Fps is (10 sec: 716.8, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 764928. Throughput: 0: 583.2. Samples: 766618. Policy #0 lag: (min: 0.0, avg: 1.3, max: 13.0)
+[2025-08-28 11:19:36,316][02663] Avg episode reward: [(0, '-104.424')]
+[2025-08-28 11:19:41,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 766976. Throughput: 0: 607.8. Samples: 768540. Policy #0 lag: (min: 0.0, avg: 1.7, max: 8.0)
+[2025-08-28 11:19:41,316][02663] Avg episode reward: [(0, '-103.562')]
+[2025-08-28 11:19:42,121][02860] Updated weights for policy 0, policy_version 750 (0.0016)
+[2025-08-28 11:19:46,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 770048. Throughput: 0: 598.1. Samples: 771794. Policy #0 lag: (min: 0.0, avg: 1.8, max: 8.0)
+[2025-08-28 11:19:46,316][02663] Avg episode reward: [(0, '-104.312')]
+[2025-08-28 11:19:51,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 773120. Throughput: 0: 577.1. Samples: 775461. Policy #0 lag: (min: 0.0, avg: 1.2, max: 10.0)
+[2025-08-28 11:19:51,316][02663] Avg episode reward: [(0, '-104.481')]
+[2025-08-28 11:19:56,319][02663] Fps is (10 sec: 614.2, 60 sec: 597.5, 300 sec: 586.6). Total num frames: 776192. Throughput: 0: 576.4. Samples: 777149. Policy #0 lag: (min: 0.0, avg: 1.7, max: 9.0)
+[2025-08-28 11:19:56,320][02663] Avg episode reward: [(0, '-104.269')]
+[2025-08-28 11:19:59,968][02860] Updated weights for policy 0, policy_version 760 (0.0016)
+[2025-08-28 11:20:01,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 778240. Throughput: 0: 571.8. Samples: 780380. Policy #0 lag: (min: 0.0, avg: 1.3, max: 7.0)
+[2025-08-28 11:20:01,316][02663] Avg episode reward: [(0, '-104.051')]
+[2025-08-28 11:20:06,316][02663] Fps is (10 sec: 512.2, 60 sec: 563.2, 300 sec: 583.2). Total num frames: 781312. Throughput: 0: 573.3. Samples: 783924. Policy #0 lag: (min: 0.0, avg: 2.0, max: 8.0)
+[2025-08-28 11:20:06,316][02663] Avg episode reward: [(0, '-102.519')]
+[2025-08-28 11:20:11,318][02663] Fps is (10 sec: 716.6, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 785408. Throughput: 0: 594.1. Samples: 786039. Policy #0 lag: (min: 0.0, avg: 2.1, max: 9.0)
+[2025-08-28 11:20:11,319][02663] Avg episode reward: [(0, '-104.082')]
+[2025-08-28 11:20:14,505][02860] Updated weights for policy 0, policy_version 770 (0.0014)
+[2025-08-28 11:20:16,316][02663] Fps is (10 sec: 716.8, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 788480. Throughput: 0: 618.7. Samples: 790277. Policy #0 lag: (min: 0.0, avg: 1.8, max: 9.0)
+[2025-08-28 11:20:16,316][02663] Avg episode reward: [(0, '-103.879')]
+[2025-08-28 11:20:21,316][02663] Fps is (10 sec: 614.6, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 791552. Throughput: 0: 587.8. Samples: 793070. Policy #0 lag: (min: 0.0, avg: 1.4, max: 10.0)
+[2025-08-28 11:20:21,316][02663] Avg episode reward: [(0, '-104.095')]
+[2025-08-28 11:20:26,316][02663] Fps is (10 sec: 614.4, 60 sec: 614.4, 300 sec: 590.1). Total num frames: 794624. Throughput: 0: 583.1. Samples: 794778. Policy #0 lag: (min: 0.0, avg: 1.3, max: 7.0)
+[2025-08-28 11:20:26,316][02663] Avg episode reward: [(0, '-103.754')]
+[2025-08-28 11:20:31,316][02663] Fps is (10 sec: 512.0, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 796672. Throughput: 0: 596.1. Samples: 798620. Policy #0 lag: (min: 0.0, avg: 1.0, max: 14.0)
+[2025-08-28 11:20:31,316][02663] Avg episode reward: [(0, '-104.256')]
+[2025-08-28 11:20:31,320][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000778_796672.pth...
+[2025-08-28 11:20:31,410][02830] Removing /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000641_656384.pth
+[2025-08-28 11:20:34,030][02860] Updated weights for policy 0, policy_version 780 (0.0015)
+[2025-08-28 11:20:36,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 799744. Throughput: 0: 574.4. Samples: 801307. Policy #0 lag: (min: 0.0, avg: 1.3, max: 7.0)
+[2025-08-28 11:20:36,316][02663] Avg episode reward: [(0, '-104.751')]
+[2025-08-28 11:20:41,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 802816. Throughput: 0: 580.5. Samples: 803269. Policy #0 lag: (min: 0.0, avg: 1.7, max: 12.0)
+[2025-08-28 11:20:41,316][02663] Avg episode reward: [(0, '-103.228')]
+[2025-08-28 11:20:46,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 804864. Throughput: 0: 584.4. Samples: 806677. Policy #0 lag: (min: 0.0, avg: 1.3, max: 15.0)
+[2025-08-28 11:20:46,316][02663] Avg episode reward: [(0, '-101.817')]
+[2025-08-28 11:20:51,209][02860] Updated weights for policy 0, policy_version 790 (0.0014)
+[2025-08-28 11:20:51,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 808960. Throughput: 0: 591.2. Samples: 810530. Policy #0 lag: (min: 0.0, avg: 1.8, max: 14.0)
+[2025-08-28 11:20:51,316][02663] Avg episode reward: [(0, '-100.787')]
+[2025-08-28 11:20:56,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.4, 300 sec: 590.1). Total num frames: 812032. Throughput: 0: 594.9. Samples: 812808. Policy #0 lag: (min: 0.0, avg: 1.6, max: 8.0)
+[2025-08-28 11:20:56,316][02663] Avg episode reward: [(0, '-99.516')]
+[2025-08-28 11:20:56,317][02830] Saving new best policy, reward=-99.516!
+[2025-08-28 11:21:01,316][02663] Fps is (10 sec: 512.0, 60 sec: 597.3, 300 sec: 583.2). Total num frames: 814080. Throughput: 0: 578.3. Samples: 816300. Policy #0 lag: (min: 0.0, avg: 1.1, max: 8.0)
+[2025-08-28 11:21:01,316][02663] Avg episode reward: [(0, '-100.377')]
+[2025-08-28 11:21:06,316][02663] Fps is (10 sec: 512.0, 60 sec: 597.3, 300 sec: 583.2). Total num frames: 817152. Throughput: 0: 577.2. Samples: 819046. Policy #0 lag: (min: 0.0, avg: 2.2, max: 12.0)
+[2025-08-28 11:21:06,316][02663] Avg episode reward: [(0, '-99.432')]
+[2025-08-28 11:21:06,317][02830] Saving new best policy, reward=-99.432!
+[2025-08-28 11:21:09,083][02860] Updated weights for policy 0, policy_version 800 (0.0015)
+[2025-08-28 11:21:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 820224. Throughput: 0: 581.3. Samples: 820936. Policy #0 lag: (min: 0.0, avg: 1.4, max: 12.0)
+[2025-08-28 11:21:11,316][02663] Avg episode reward: [(0, '-101.709')]
+[2025-08-28 11:21:16,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 583.2). Total num frames: 822272. Throughput: 0: 572.3. Samples: 824373. Policy #0 lag: (min: 0.0, avg: 1.5, max: 17.0)
+[2025-08-28 11:21:16,316][02663] Avg episode reward: [(0, '-102.441')]
+[2025-08-28 11:21:21,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 590.1). Total num frames: 826368. Throughput: 0: 590.4. Samples: 827876. Policy #0 lag: (min: 0.0, avg: 2.4, max: 13.0)
+[2025-08-28 11:21:21,316][02663] Avg episode reward: [(0, '-103.201')]
+[2025-08-28 11:21:25,268][02860] Updated weights for policy 0, policy_version 810 (0.0016)
+[2025-08-28 11:21:26,316][02663] Fps is (10 sec: 716.8, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 829440. Throughput: 0: 600.8. Samples: 830305. Policy #0 lag: (min: 0.0, avg: 0.6, max: 7.0)
+[2025-08-28 11:21:26,316][02663] Avg episode reward: [(0, '-103.530')]
+[2025-08-28 11:21:31,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 831488. Throughput: 0: 595.4. Samples: 833468. Policy #0 lag: (min: 0.0, avg: 1.7, max: 14.0)
+[2025-08-28 11:21:31,316][02663] Avg episode reward: [(0, '-102.670')]
+[2025-08-28 11:21:36,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 834560. Throughput: 0: 579.2. Samples: 836596. Policy #0 lag: (min: 0.0, avg: 2.1, max: 9.0)
+[2025-08-28 11:21:36,316][02663] Avg episode reward: [(0, '-103.773')]
+[2025-08-28 11:21:41,318][02663] Fps is (10 sec: 614.2, 60 sec: 580.2, 300 sec: 586.6). Total num frames: 837632. Throughput: 0: 578.2. Samples: 838827. Policy #0 lag: (min: 0.0, avg: 1.0, max: 6.0)
+[2025-08-28 11:21:41,319][02663] Avg episode reward: [(0, '-102.735')]
+[2025-08-28 11:21:43,631][02860] Updated weights for policy 0, policy_version 820 (0.0015)
+[2025-08-28 11:21:46,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 840704. Throughput: 0: 572.8. Samples: 842077. Policy #0 lag: (min: 0.0, avg: 2.1, max: 13.0)
+[2025-08-28 11:21:46,316][02663] Avg episode reward: [(0, '-101.890')]
+[2025-08-28 11:21:51,316][02663] Fps is (10 sec: 512.1, 60 sec: 563.2, 300 sec: 583.2). Total num frames: 842752. Throughput: 0: 578.9. Samples: 845098. Policy #0 lag: (min: 0.0, avg: 1.8, max: 12.0)
+[2025-08-28 11:21:51,316][02663] Avg episode reward: [(0, '-102.125')]
+[2025-08-28 11:21:56,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 583.2). Total num frames: 845824. Throughput: 0: 576.4. Samples: 846876. Policy #0 lag: (min: 0.0, avg: 1.9, max: 12.0)
+[2025-08-28 11:21:56,316][02663] Avg episode reward: [(0, '-102.526')]
+[2025-08-28 11:22:01,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 848896. Throughput: 0: 582.7. Samples: 850594. Policy #0 lag: (min: 0.0, avg: 2.7, max: 14.0)
+[2025-08-28 11:22:01,316][02663] Avg episode reward: [(0, '-102.835')]
+[2025-08-28 11:22:02,520][02860] Updated weights for policy 0, policy_version 830 (0.0015)
+[2025-08-28 11:22:06,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 851968. Throughput: 0: 574.4. Samples: 853722. Policy #0 lag: (min: 0.0, avg: 1.7, max: 9.0)
+[2025-08-28 11:22:06,316][02663] Avg episode reward: [(0, '-102.304')]
+[2025-08-28 11:22:11,323][02663] Fps is (10 sec: 613.9, 60 sec: 580.2, 300 sec: 586.6). Total num frames: 855040. Throughput: 0: 556.7. Samples: 855362. Policy #0 lag: (min: 0.0, avg: 2.1, max: 12.0)
+[2025-08-28 11:22:11,324][02663] Avg episode reward: [(0, '-102.256')]
+[2025-08-28 11:22:16,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 858112. Throughput: 0: 575.2. Samples: 859351. Policy #0 lag: (min: 0.0, avg: 1.1, max: 13.0)
+[2025-08-28 11:22:16,316][02663] Avg episode reward: [(0, '-101.748')]
+[2025-08-28 11:22:19,037][02860] Updated weights for policy 0, policy_version 840 (0.0015)
+[2025-08-28 11:22:21,316][02663] Fps is (10 sec: 614.9, 60 sec: 580.3, 300 sec: 590.1). Total num frames: 861184. Throughput: 0: 593.4. Samples: 863299. Policy #0 lag: (min: 0.0, avg: 1.3, max: 8.0)
+[2025-08-28 11:22:21,316][02663] Avg episode reward: [(0, '-100.406')]
+[2025-08-28 11:22:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 583.2). Total num frames: 863232. Throughput: 0: 569.0. Samples: 864430. Policy #0 lag: (min: 0.0, avg: 2.6, max: 9.0)
+[2025-08-28 11:22:26,316][02663] Avg episode reward: [(0, '-99.324')]
+[2025-08-28 11:22:26,316][02830] Saving new best policy, reward=-99.324!
+[2025-08-28 11:22:31,316][02663] Fps is (10 sec: 409.6, 60 sec: 563.2, 300 sec: 579.7). Total num frames: 865280. Throughput: 0: 557.4. Samples: 867160. Policy #0 lag: (min: 0.0, avg: 1.0, max: 12.0)
+[2025-08-28 11:22:31,316][02663] Avg episode reward: [(0, '-100.513')]
+[2025-08-28 11:22:31,319][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000845_865280.pth...
+[2025-08-28 11:22:31,388][02830] Removing /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000710_727040.pth
+[2025-08-28 11:22:36,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 869376. Throughput: 0: 580.9. Samples: 871239. Policy #0 lag: (min: 0.0, avg: 1.6, max: 8.0)
+[2025-08-28 11:22:36,316][02663] Avg episode reward: [(0, '-101.813')]
+[2025-08-28 11:22:37,709][02860] Updated weights for policy 0, policy_version 850 (0.0015)
+[2025-08-28 11:22:41,316][02663] Fps is (10 sec: 716.8, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 872448. Throughput: 0: 577.3. Samples: 872855. Policy #0 lag: (min: 0.0, avg: 1.8, max: 7.0)
+[2025-08-28 11:22:41,316][02663] Avg episode reward: [(0, '-102.854')]
+[2025-08-28 11:22:46,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 875520. Throughput: 0: 577.7. Samples: 876592. Policy #0 lag: (min: 0.0, avg: 1.7, max: 8.0)
+[2025-08-28 11:22:46,316][02663] Avg episode reward: [(0, '-103.863')]
+[2025-08-28 11:22:51,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 878592. Throughput: 0: 590.7. Samples: 880304. Policy #0 lag: (min: 0.0, avg: 1.7, max: 9.0)
+[2025-08-28 11:22:51,316][02663] Avg episode reward: [(0, '-105.165')]
+[2025-08-28 11:22:55,849][02860] Updated weights for policy 0, policy_version 860 (0.0014)
+[2025-08-28 11:22:56,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 880640. Throughput: 0: 583.9. Samples: 881634. Policy #0 lag: (min: 0.0, avg: 1.2, max: 8.0)
+[2025-08-28 11:22:56,316][02663] Avg episode reward: [(0, '-106.471')]
+[2025-08-28 11:23:01,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 883712. Throughput: 0: 564.5. Samples: 884752. Policy #0 lag: (min: 0.0, avg: 2.1, max: 14.0)
+[2025-08-28 11:23:01,316][02663] Avg episode reward: [(0, '-104.021')]
+[2025-08-28 11:23:06,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 886784. Throughput: 0: 560.3. Samples: 888511. Policy #0 lag: (min: 0.0, avg: 1.6, max: 13.0)
+[2025-08-28 11:23:06,316][02663] Avg episode reward: [(0, '-102.819')]
+[2025-08-28 11:23:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 889856. Throughput: 0: 573.4. Samples: 890235. Policy #0 lag: (min: 0.0, avg: 1.7, max: 12.0)
+[2025-08-28 11:23:11,316][02663] Avg episode reward: [(0, '-103.121')]
+[2025-08-28 11:23:12,672][02860] Updated weights for policy 0, policy_version 870 (0.0015)
+[2025-08-28 11:23:16,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 892928. Throughput: 0: 612.9. Samples: 894741. Policy #0 lag: (min: 0.0, avg: 1.8, max: 10.0)
+[2025-08-28 11:23:16,316][02663] Avg episode reward: [(0, '-102.645')]
+[2025-08-28 11:23:21,318][02663] Fps is (10 sec: 614.3, 60 sec: 580.2, 300 sec: 586.6). Total num frames: 896000. Throughput: 0: 597.2. Samples: 898114. Policy #0 lag: (min: 0.0, avg: 1.5, max: 8.0)
+[2025-08-28 11:23:21,318][02663] Avg episode reward: [(0, '-102.798')]
+[2025-08-28 11:23:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 898048. Throughput: 0: 590.4. Samples: 899423. Policy #0 lag: (min: 0.0, avg: 1.5, max: 14.0)
+[2025-08-28 11:23:26,316][02663] Avg episode reward: [(0, '-102.411')]
+[2025-08-28 11:23:29,291][02860] Updated weights for policy 0, policy_version 880 (0.0016)
+[2025-08-28 11:23:31,316][02663] Fps is (10 sec: 614.5, 60 sec: 614.4, 300 sec: 583.2). Total num frames: 902144. Throughput: 0: 595.2. Samples: 903378. Policy #0 lag: (min: 0.0, avg: 1.1, max: 7.0)
+[2025-08-28 11:23:31,316][02663] Avg episode reward: [(0, '-102.925')]
+[2025-08-28 11:23:36,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 905216. Throughput: 0: 604.0. Samples: 907484. Policy #0 lag: (min: 0.0, avg: 1.0, max: 8.0)
+[2025-08-28 11:23:36,317][02663] Avg episode reward: [(0, '-103.038')]
+[2025-08-28 11:23:41,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 908288. Throughput: 0: 612.8. Samples: 909210. Policy #0 lag: (min: 0.0, avg: 1.1, max: 9.0)
+[2025-08-28 11:23:41,316][02663] Avg episode reward: [(0, '-102.084')]
+[2025-08-28 11:23:45,088][02860] Updated weights for policy 0, policy_version 890 (0.0014)
+[2025-08-28 11:23:46,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 911360. Throughput: 0: 630.0. Samples: 913102. Policy #0 lag: (min: 0.0, avg: 2.2, max: 13.0)
+[2025-08-28 11:23:46,316][02663] Avg episode reward: [(0, '-102.235')]
+[2025-08-28 11:23:51,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 586.7). Total num frames: 913408. Throughput: 0: 611.3. Samples: 916021. Policy #0 lag: (min: 0.0, avg: 1.1, max: 9.0)
+[2025-08-28 11:23:51,316][02663] Avg episode reward: [(0, '-101.917')]
+[2025-08-28 11:23:56,316][02663] Fps is (10 sec: 512.0, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 916480. Throughput: 0: 600.8. Samples: 917271. Policy #0 lag: (min: 0.0, avg: 1.9, max: 18.0)
+[2025-08-28 11:23:56,316][02663] Avg episode reward: [(0, '-102.685')]
+[2025-08-28 11:24:01,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 583.2). Total num frames: 919552. Throughput: 0: 594.9. Samples: 921513. Policy #0 lag: (min: 0.0, avg: 1.1, max: 6.0)
+[2025-08-28 11:24:01,316][02663] Avg episode reward: [(0, '-102.640')]
+[2025-08-28 11:24:03,149][02860] Updated weights for policy 0, policy_version 900 (0.0014)
+[2025-08-28 11:24:06,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 922624. Throughput: 0: 596.1. Samples: 924939. Policy #0 lag: (min: 0.0, avg: 1.4, max: 7.0)
+[2025-08-28 11:24:06,316][02663] Avg episode reward: [(0, '-102.528')]
+[2025-08-28 11:24:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 583.2). Total num frames: 925696. Throughput: 0: 607.1. Samples: 926741. Policy #0 lag: (min: 0.0, avg: 1.4, max: 10.0)
+[2025-08-28 11:24:11,316][02663] Avg episode reward: [(0, '-103.224')]
+[2025-08-28 11:24:16,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 928768. Throughput: 0: 602.5. Samples: 930489. Policy #0 lag: (min: 0.0, avg: 1.3, max: 8.0)
+[2025-08-28 11:24:16,316][02663] Avg episode reward: [(0, '-102.591')]
+[2025-08-28 11:24:21,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 930816. Throughput: 0: 559.7. Samples: 932671. Policy #0 lag: (min: 0.0, avg: 1.7, max: 8.0)
+[2025-08-28 11:24:21,316][02663] Avg episode reward: [(0, '-102.407')]
+[2025-08-28 11:24:23,189][02860] Updated weights for policy 0, policy_version 910 (0.0015)
+[2025-08-28 11:24:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 933888. Throughput: 0: 555.4. Samples: 934204. Policy #0 lag: (min: 0.0, avg: 0.8, max: 12.0)
+[2025-08-28 11:24:26,316][02663] Avg episode reward: [(0, '-101.530')]
+[2025-08-28 11:24:31,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 936960. Throughput: 0: 570.9. Samples: 938793. Policy #0 lag: (min: 0.0, avg: 1.7, max: 12.0)
+[2025-08-28 11:24:31,316][02663] Avg episode reward: [(0, '-101.022')]
+[2025-08-28 11:24:31,320][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000915_936960.pth...
+[2025-08-28 11:24:31,391][02830] Removing /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000778_796672.pth
+[2025-08-28 11:24:36,316][02663] Fps is (10 sec: 512.0, 60 sec: 563.2, 300 sec: 583.2). Total num frames: 939008. Throughput: 0: 562.2. Samples: 941319. Policy #0 lag: (min: 0.0, avg: 1.5, max: 12.0)
+[2025-08-28 11:24:36,316][02663] Avg episode reward: [(0, '-101.005')]
+[2025-08-28 11:24:39,689][02860] Updated weights for policy 0, policy_version 920 (0.0015)
+[2025-08-28 11:24:41,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 943104. Throughput: 0: 576.8. Samples: 943226. Policy #0 lag: (min: 0.0, avg: 1.5, max: 10.0)
+[2025-08-28 11:24:41,316][02663] Avg episode reward: [(0, '-100.129')]
+[2025-08-28 11:24:46,316][02663] Fps is (10 sec: 716.8, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 946176. Throughput: 0: 581.9. Samples: 947700. Policy #0 lag: (min: 0.0, avg: 1.2, max: 10.0)
+[2025-08-28 11:24:46,316][02663] Avg episode reward: [(0, '-99.793')]
+[2025-08-28 11:24:51,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 948224. Throughput: 0: 557.9. Samples: 950046. Policy #0 lag: (min: 0.0, avg: 2.0, max: 12.0)
+[2025-08-28 11:24:51,316][02663] Avg episode reward: [(0, '-98.879')]
+[2025-08-28 11:24:51,319][02830] Saving new best policy, reward=-98.879!
+[2025-08-28 11:24:56,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 951296. Throughput: 0: 557.8. Samples: 951841. Policy #0 lag: (min: 0.0, avg: 1.6, max: 9.0)
+[2025-08-28 11:24:56,317][02663] Avg episode reward: [(0, '-99.034')]
+[2025-08-28 11:24:56,712][02860] Updated weights for policy 0, policy_version 930 (0.0015)
+[2025-08-28 11:25:01,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 590.1). Total num frames: 955392. Throughput: 0: 584.8. Samples: 956804. Policy #0 lag: (min: 0.0, avg: 1.5, max: 9.0)
+[2025-08-28 11:25:01,316][02663] Avg episode reward: [(0, '-98.861')]
+[2025-08-28 11:25:01,321][02830] Saving new best policy, reward=-98.861!
+[2025-08-28 11:25:06,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 957440. Throughput: 0: 592.2. Samples: 959319. Policy #0 lag: (min: 0.0, avg: 1.7, max: 9.0)
+[2025-08-28 11:25:06,316][02663] Avg episode reward: [(0, '-99.303')]
+[2025-08-28 11:25:11,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 960512. Throughput: 0: 596.7. Samples: 961054. Policy #0 lag: (min: 0.0, avg: 2.1, max: 12.0)
+[2025-08-28 11:25:11,316][02663] Avg episode reward: [(0, '-100.124')]
+[2025-08-28 11:25:13,985][02860] Updated weights for policy 0, policy_version 940 (0.0014)
+[2025-08-28 11:25:16,316][02663] Fps is (10 sec: 614.4, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 963584. Throughput: 0: 586.2. Samples: 965173. Policy #0 lag: (min: 0.0, avg: 2.0, max: 9.0)
+[2025-08-28 11:25:16,316][02663] Avg episode reward: [(0, '-100.370')]
+[2025-08-28 11:25:21,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 965632. Throughput: 0: 585.5. Samples: 967668. Policy #0 lag: (min: 0.0, avg: 1.1, max: 7.0)
+[2025-08-28 11:25:21,316][02663] Avg episode reward: [(0, '-101.677')]
+[2025-08-28 11:25:26,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 968704. Throughput: 0: 585.5. Samples: 969575. Policy #0 lag: (min: 0.0, avg: 1.4, max: 12.0)
+[2025-08-28 11:25:26,316][02663] Avg episode reward: [(0, '-101.994')]
+[2025-08-28 11:25:30,557][02860] Updated weights for policy 0, policy_version 950 (0.0015)
+[2025-08-28 11:25:31,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 972800. Throughput: 0: 587.6. Samples: 974141. Policy #0 lag: (min: 0.0, avg: 2.2, max: 9.0)
+[2025-08-28 11:25:31,316][02663] Avg episode reward: [(0, '-102.095')]
+[2025-08-28 11:25:36,316][02663] Fps is (10 sec: 716.8, 60 sec: 614.4, 300 sec: 586.6). Total num frames: 975872. Throughput: 0: 610.6. Samples: 977523. Policy #0 lag: (min: 0.0, avg: 2.0, max: 17.0)
+[2025-08-28 11:25:36,316][02663] Avg episode reward: [(0, '-103.329')]
+[2025-08-28 11:25:41,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 590.1). Total num frames: 978944. Throughput: 0: 614.7. Samples: 979503. Policy #0 lag: (min: 0.0, avg: 0.7, max: 8.0)
+[2025-08-28 11:25:41,316][02663] Avg episode reward: [(0, '-102.859')]
+[2025-08-28 11:25:46,316][02663] Fps is (10 sec: 512.0, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 980992. Throughput: 0: 566.6. Samples: 982300. Policy #0 lag: (min: 0.0, avg: 1.8, max: 9.0)
+[2025-08-28 11:25:46,316][02663] Avg episode reward: [(0, '-103.488')]
+[2025-08-28 11:25:50,345][02860] Updated weights for policy 0, policy_version 960 (0.0016)
+[2025-08-28 11:25:51,316][02663] Fps is (10 sec: 409.6, 60 sec: 580.3, 300 sec: 579.7). Total num frames: 983040. Throughput: 0: 577.0. Samples: 985283. Policy #0 lag: (min: 0.0, avg: 1.4, max: 7.0)
+[2025-08-28 11:25:51,316][02663] Avg episode reward: [(0, '-103.409')]
+[2025-08-28 11:25:56,317][02663] Fps is (10 sec: 614.3, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 987136. Throughput: 0: 593.2. Samples: 987750. Policy #0 lag: (min: 0.0, avg: 1.5, max: 12.0)
+[2025-08-28 11:25:56,318][02663] Avg episode reward: [(0, '-103.132')]
+[2025-08-28 11:26:01,316][02663] Fps is (10 sec: 716.8, 60 sec: 580.3, 300 sec: 586.6). Total num frames: 990208. Throughput: 0: 590.2. Samples: 991730. Policy #0 lag: (min: 0.0, avg: 1.8, max: 12.0)
+[2025-08-28 11:26:01,316][02663] Avg episode reward: [(0, '-101.435')]
+[2025-08-28 11:26:06,316][02663] Fps is (10 sec: 512.1, 60 sec: 580.3, 300 sec: 583.2). Total num frames: 992256. Throughput: 0: 601.8. Samples: 994750. Policy #0 lag: (min: 0.0, avg: 1.1, max: 7.0)
+[2025-08-28 11:26:06,316][02663] Avg episode reward: [(0, '-99.489')]
+[2025-08-28 11:26:06,456][02860] Updated weights for policy 0, policy_version 970 (0.0015)
+[2025-08-28 11:26:11,316][02663] Fps is (10 sec: 614.4, 60 sec: 597.3, 300 sec: 590.1). Total num frames: 996352. Throughput: 0: 608.5. Samples: 996956. Policy #0 lag: (min: 0.0, avg: 1.0, max: 8.0)
+[2025-08-28 11:26:11,316][02663] Avg episode reward: [(0, '-99.705')]
+[2025-08-28 11:26:16,316][02663] Fps is (10 sec: 716.8, 60 sec: 597.3, 300 sec: 586.6). Total num frames: 999424. Throughput: 0: 586.4. Samples: 1000528. Policy #0 lag: (min: 0.0, avg: 0.8, max: 9.0)
+[2025-08-28 11:26:16,316][02663] Avg episode reward: [(0, '-98.496')]
+[2025-08-28 11:26:16,317][02830] Saving new best policy, reward=-98.496!
+[2025-08-28 11:26:20,749][02830] Stopping Batcher_0...
+[2025-08-28 11:26:20,749][02663] Component Batcher_0 stopped!
+[2025-08-28 11:26:20,749][02830] Loop batcher_evt_loop terminating...
+[2025-08-28 11:26:20,750][02663] Component RolloutWorker_w7 stopped!
+[2025-08-28 11:26:20,750][02867] Stopping RolloutWorker_w7...
+[2025-08-28 11:26:20,751][02867] Loop rollout_proc7_evt_loop terminating...
+[2025-08-28 11:26:20,755][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000978_1001472.pth...
+[2025-08-28 11:26:20,757][02959] Stopping RolloutWorker_w28...
+[2025-08-28 11:26:20,758][02959] Loop rollout_proc28_evt_loop terminating...
+[2025-08-28 11:26:20,758][02921] Stopping RolloutWorker_w13...
+[2025-08-28 11:26:20,759][02663] Component RolloutWorker_w28 stopped!
+[2025-08-28 11:26:20,759][02663] Component RolloutWorker_w13 stopped!
+[2025-08-28 11:26:20,759][02921] Loop rollout_proc13_evt_loop terminating...
+[2025-08-28 11:26:20,760][02663] Component RolloutWorker_w12 stopped!
+[2025-08-28 11:26:20,760][02914] Stopping RolloutWorker_w12...
+[2025-08-28 11:26:20,761][02914] Loop rollout_proc12_evt_loop terminating...
+[2025-08-28 11:26:20,767][02663] Component RolloutWorker_w19 stopped!
+[2025-08-28 11:26:20,768][02943] Stopping RolloutWorker_w19...
+[2025-08-28 11:26:20,769][02943] Loop rollout_proc19_evt_loop terminating...
+[2025-08-28 11:26:20,779][02663] Component RolloutWorker_w6 stopped!
+[2025-08-28 11:26:20,779][02868] Stopping RolloutWorker_w6...
+[2025-08-28 11:26:20,780][02868] Loop rollout_proc6_evt_loop terminating...
+[2025-08-28 11:26:20,801][02663] Component RolloutWorker_w48 stopped!
+[2025-08-28 11:26:20,801][03105] Stopping RolloutWorker_w48...
+[2025-08-28 11:26:20,801][03105] Loop rollout_proc48_evt_loop terminating...
+[2025-08-28 11:26:20,803][02663] Component RolloutWorker_w30 stopped!
+[2025-08-28 11:26:20,803][02663] Component RolloutWorker_w31 stopped!
+[2025-08-28 11:26:20,803][02977] Stopping RolloutWorker_w31...
+[2025-08-28 11:26:20,803][02962] Stopping RolloutWorker_w30...
+[2025-08-28 11:26:20,804][02977] Loop rollout_proc31_evt_loop terminating...
+[2025-08-28 11:26:20,804][02962] Loop rollout_proc30_evt_loop terminating...
+[2025-08-28 11:26:20,807][02663] Component RolloutWorker_w42 stopped!
+[2025-08-28 11:26:20,807][03043] Stopping RolloutWorker_w42...
+[2025-08-28 11:26:20,807][03043] Loop rollout_proc42_evt_loop terminating...
+[2025-08-28 11:26:20,809][02663] Component RolloutWorker_w26 stopped!
+[2025-08-28 11:26:20,809][02960] Stopping RolloutWorker_w26...
+[2025-08-28 11:26:20,810][02960] Loop rollout_proc26_evt_loop terminating...
+[2025-08-28 11:26:20,829][02830] Removing /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000845_865280.pth
+[2025-08-28 11:26:20,832][02830] Saving new best policy, reward=-98.045!
+[2025-08-28 11:26:20,838][02663] Component RolloutWorker_w45 stopped!
+[2025-08-28 11:26:20,838][03089] Stopping RolloutWorker_w45...
+[2025-08-28 11:26:20,877][02860] Weights refcount: 2 0
+[2025-08-28 11:26:20,879][02860] Stopping InferenceWorker_p0-w0...
+[2025-08-28 11:26:20,879][02663] Component InferenceWorker_p0-w0 stopped!
+[2025-08-28 11:26:20,879][02860] Loop inference_proc0-0_evt_loop terminating...
+[2025-08-28 11:26:20,895][03089] Loop rollout_proc45_evt_loop terminating...
+[2025-08-28 11:26:20,910][02830] Saving /home/modular_hrl/openended_homeostatic_rl/train_dir/modular_Aug28_1M/checkpoint_p0/checkpoint_000000978_1001472.pth...
+[2025-08-28 11:26:20,984][02830] Stopping LearnerWorker_p0...
+[2025-08-28 11:26:20,984][02663] Component LearnerWorker_p0 stopped!
+[2025-08-28 11:26:20,984][02830] Loop learner_proc0_evt_loop terminating...
+[2025-08-28 11:26:21,075][02663] Component RolloutWorker_w27 stopped!
+[2025-08-28 11:26:21,076][02958] Stopping RolloutWorker_w27...
+[2025-08-28 11:26:21,076][02958] Loop rollout_proc27_evt_loop terminating...
+[2025-08-28 11:26:21,231][02663] Component RolloutWorker_w44 stopped!
+[2025-08-28 11:26:21,232][03084] Stopping RolloutWorker_w44...
+[2025-08-28 11:26:21,239][03084] Loop rollout_proc44_evt_loop terminating...
+[2025-08-28 11:26:21,539][02663] Component RolloutWorker_w25 stopped!
+[2025-08-28 11:26:21,540][02950] Stopping RolloutWorker_w25...
+[2025-08-28 11:26:21,571][02950] Loop rollout_proc25_evt_loop terminating...
+[2025-08-28 11:26:21,815][02663] Component RolloutWorker_w38 stopped!
+[2025-08-28 11:26:21,816][03010] Stopping RolloutWorker_w38...
+[2025-08-28 11:26:21,816][03010] Loop rollout_proc38_evt_loop terminating...
+[2025-08-28 11:26:21,847][02663] Component RolloutWorker_w0 stopped!
+[2025-08-28 11:26:21,848][02863] Stopping RolloutWorker_w0...
+[2025-08-28 11:26:21,883][02863] Loop rollout_proc0_evt_loop terminating...
+[2025-08-28 11:26:22,191][02663] Component RolloutWorker_w49 stopped!
+[2025-08-28 11:26:22,192][03131] Stopping RolloutWorker_w49...
+[2025-08-28 11:26:22,207][02663] Component RolloutWorker_w39 stopped!
+[2025-08-28 11:26:22,207][03012] Stopping RolloutWorker_w39...
+[2025-08-28 11:26:22,207][03012] Loop rollout_proc39_evt_loop terminating...
+[2025-08-28 11:26:22,227][03131] Loop rollout_proc49_evt_loop terminating...
+[2025-08-28 11:26:22,236][02663] Component RolloutWorker_w47 stopped!
+[2025-08-28 11:26:22,236][03088] Stopping RolloutWorker_w47...
+[2025-08-28 11:26:22,237][03088] Loop rollout_proc47_evt_loop terminating...
+[2025-08-28 11:26:22,371][02663] Component RolloutWorker_w9 stopped!
+[2025-08-28 11:26:22,371][02904] Stopping RolloutWorker_w9...
+[2025-08-28 11:26:22,371][02904] Loop rollout_proc9_evt_loop terminating...
+[2025-08-28 11:26:22,469][02663] Component RolloutWorker_w35 stopped!
+[2025-08-28 11:26:22,469][03007] Stopping RolloutWorker_w35...
+[2025-08-28 11:26:22,470][03007] Loop rollout_proc35_evt_loop terminating...
+[2025-08-28 11:26:22,639][02663] Component RolloutWorker_w5 stopped!
+[2025-08-28 11:26:22,640][02866] Stopping RolloutWorker_w5...
+[2025-08-28 11:26:22,647][02866] Loop rollout_proc5_evt_loop terminating...
+[2025-08-28 11:26:22,759][02663] Component RolloutWorker_w33 stopped!
+[2025-08-28 11:26:22,760][02985] Stopping RolloutWorker_w33...
+[2025-08-28 11:26:22,787][02985] Loop rollout_proc33_evt_loop terminating...
+[2025-08-28 11:26:23,107][02663] Component RolloutWorker_w34 stopped!
+[2025-08-28 11:26:23,108][02993] Stopping RolloutWorker_w34...
+[2025-08-28 11:26:23,108][02993] Loop rollout_proc34_evt_loop terminating...
+[2025-08-28 11:26:23,187][02663] Component RolloutWorker_w3 stopped!
+[2025-08-28 11:26:23,188][02864] Stopping RolloutWorker_w3...
+[2025-08-28 11:26:23,195][02864] Loop rollout_proc3_evt_loop terminating...
+[2025-08-28 11:26:23,247][02663] Component RolloutWorker_w10 stopped!
+[2025-08-28 11:26:23,248][02884] Stopping RolloutWorker_w10...
+[2025-08-28 11:26:23,248][02884] Loop rollout_proc10_evt_loop terminating...
+[2025-08-28 11:26:23,375][02663] Component RolloutWorker_w17 stopped!
+[2025-08-28 11:26:23,376][02942] Stopping RolloutWorker_w17...
+[2025-08-28 11:26:23,376][02942] Loop rollout_proc17_evt_loop terminating...
+[2025-08-28 11:26:23,892][02663] Component RolloutWorker_w16 stopped!
+[2025-08-28 11:26:23,893][02931] Stopping RolloutWorker_w16...
+[2025-08-28 11:26:23,894][02931] Loop rollout_proc16_evt_loop terminating...
+[2025-08-28 11:26:24,075][02663] Component RolloutWorker_w15 stopped!
+[2025-08-28 11:26:24,075][02923] Stopping RolloutWorker_w15...
+[2025-08-28 11:26:24,076][02923] Loop rollout_proc15_evt_loop terminating...
+[2025-08-28 11:26:25,627][02663] Component RolloutWorker_w41 stopped!
+[2025-08-28 11:26:25,628][03023] Stopping RolloutWorker_w41...
+[2025-08-28 11:26:25,628][03023] Loop rollout_proc41_evt_loop terminating...
+[2025-08-28 11:26:25,786][02663] Component RolloutWorker_w11 stopped!
+[2025-08-28 11:26:25,786][02907] Stopping RolloutWorker_w11...
+[2025-08-28 11:26:25,787][02907] Loop rollout_proc11_evt_loop terminating...
+[2025-08-28 11:26:26,131][02663] Component RolloutWorker_w22 stopped!
+[2025-08-28 11:26:26,131][02930] Stopping RolloutWorker_w22...
+[2025-08-28 11:26:26,155][02930] Loop rollout_proc22_evt_loop terminating...
+[2025-08-28 11:26:26,320][02663] Component RolloutWorker_w40 stopped!
+[2025-08-28 11:26:26,320][03013] Stopping RolloutWorker_w40...
+[2025-08-28 11:26:26,321][03013] Loop rollout_proc40_evt_loop terminating...
+[2025-08-28 11:26:26,488][02663] Component RolloutWorker_w43 stopped!
+[2025-08-28 11:26:26,488][03063] Stopping RolloutWorker_w43...
+[2025-08-28 11:26:26,489][03063] Loop rollout_proc43_evt_loop terminating...
+[2025-08-28 11:26:26,660][02663] Component RolloutWorker_w20 stopped!
+[2025-08-28 11:26:26,661][02939] Stopping RolloutWorker_w20...
+[2025-08-28 11:26:26,667][02939] Loop rollout_proc20_evt_loop terminating...
+[2025-08-28 11:26:26,945][02663] Component RolloutWorker_w8 stopped!
+[2025-08-28 11:26:26,945][02871] Stopping RolloutWorker_w8...
+[2025-08-28 11:26:26,945][02871] Loop rollout_proc8_evt_loop terminating...
+[2025-08-28 11:26:26,963][02663] Component RolloutWorker_w1 stopped!
+[2025-08-28 11:26:26,963][02861] Stopping RolloutWorker_w1...
+[2025-08-28 11:26:26,984][02861] Loop rollout_proc1_evt_loop terminating...
+[2025-08-28 11:26:27,198][02932] Stopping RolloutWorker_w18...
+[2025-08-28 11:26:27,198][02663] Component RolloutWorker_w18 stopped!
+[2025-08-28 11:26:27,215][02932] Loop rollout_proc18_evt_loop terminating...
+[2025-08-28 11:26:27,332][02944] Stopping RolloutWorker_w24...
+[2025-08-28 11:26:27,332][02663] Component RolloutWorker_w24 stopped!
+[2025-08-28 11:26:27,333][02944] Loop rollout_proc24_evt_loop terminating...
+[2025-08-28 11:26:27,427][02663] Component RolloutWorker_w21 stopped!
+[2025-08-28 11:26:27,427][02941] Stopping RolloutWorker_w21...
+[2025-08-28 11:26:27,428][02941] Loop rollout_proc21_evt_loop terminating...
+[2025-08-28 11:26:27,530][02663] Component RolloutWorker_w23 stopped!
+[2025-08-28 11:26:27,530][02940] Stopping RolloutWorker_w23...
+[2025-08-28 11:26:27,530][02940] Loop rollout_proc23_evt_loop terminating...
+[2025-08-28 11:26:27,626][02663] Component RolloutWorker_w46 stopped!
+[2025-08-28 11:26:27,626][03086] Stopping RolloutWorker_w46...
+[2025-08-28 11:26:27,643][03086] Loop rollout_proc46_evt_loop terminating...
+[2025-08-28 11:26:27,830][02663] Component RolloutWorker_w36 stopped!
+[2025-08-28 11:26:27,830][03008] Stopping RolloutWorker_w36...
+[2025-08-28 11:26:27,831][03008] Loop rollout_proc36_evt_loop terminating...
+[2025-08-28 11:26:28,220][02663] Component RolloutWorker_w32 stopped!
+[2025-08-28 11:26:28,220][02970] Stopping RolloutWorker_w32...
+[2025-08-28 11:26:28,221][02970] Loop rollout_proc32_evt_loop terminating...
+[2025-08-28 11:26:28,363][02663] Component RolloutWorker_w29 stopped!
+[2025-08-28 11:26:28,363][02961] Stopping RolloutWorker_w29...
+[2025-08-28 11:26:28,364][02961] Loop rollout_proc29_evt_loop terminating...
+[2025-08-28 11:26:28,394][02663] Component RolloutWorker_w4 stopped!
+[2025-08-28 11:26:28,394][02869] Stopping RolloutWorker_w4...
+[2025-08-28 11:26:28,395][02869] Loop rollout_proc4_evt_loop terminating...
+[2025-08-28 11:26:28,718][02663] Component RolloutWorker_w37 stopped!
+[2025-08-28 11:26:28,718][03009] Stopping RolloutWorker_w37...
+[2025-08-28 11:26:28,719][03009] Loop rollout_proc37_evt_loop terminating...
+[2025-08-28 11:26:29,336][02663] Component RolloutWorker_w2 stopped!
+[2025-08-28 11:26:29,336][02862] Stopping RolloutWorker_w2...
+[2025-08-28 11:26:29,337][02862] Loop rollout_proc2_evt_loop terminating...
+[2025-08-28 11:26:29,927][02663] Component RolloutWorker_w14 stopped!
+[2025-08-28 11:26:29,927][02663] Waiting for process learner_proc0 to stop...
+[2025-08-28 11:26:29,927][02663] Waiting for process inference_proc0-0 to join...
+[2025-08-28 11:26:29,928][02663] Waiting for process rollout_proc0 to join...
+[2025-08-28 11:26:29,928][02663] Waiting for process rollout_proc1 to join...
+[2025-08-28 11:26:29,928][02922] Stopping RolloutWorker_w14...
+[2025-08-28 11:26:29,929][02922] Loop rollout_proc14_evt_loop terminating...
+[2025-08-28 11:26:30,917][02663] Waiting for process rollout_proc2 to join...
+[2025-08-28 11:26:30,919][02663] Waiting for process rollout_proc3 to join...
+[2025-08-28 11:26:30,919][02663] Waiting for process rollout_proc4 to join...
+[2025-08-28 11:26:30,920][02663] Waiting for process rollout_proc5 to join...
+[2025-08-28 11:26:30,921][02663] Waiting for process rollout_proc6 to join...
+[2025-08-28 11:26:30,921][02663] Waiting for process rollout_proc7 to join...
+[2025-08-28 11:26:30,922][02663] Waiting for process rollout_proc8 to join...
+[2025-08-28 11:26:31,039][02663] Waiting for process rollout_proc9 to join...
+[2025-08-28 11:26:31,040][02663] Waiting for process rollout_proc10 to join...
+[2025-08-28 11:26:31,041][02663] Waiting for process rollout_proc11 to join...
+[2025-08-28 11:26:31,041][02663] Waiting for process rollout_proc12 to join...
+[2025-08-28 11:26:31,042][02663] Waiting for process rollout_proc13 to join...
+[2025-08-28 11:26:31,042][02663] Waiting for process rollout_proc14 to join...
+[2025-08-28 11:26:31,043][02663] Waiting for process rollout_proc15 to join...
+[2025-08-28 11:26:31,044][02663] Waiting for process rollout_proc16 to join...
+[2025-08-28 11:26:31,044][02663] Waiting for process rollout_proc17 to join...
+[2025-08-28 11:26:31,045][02663] Waiting for process rollout_proc18 to join...
+[2025-08-28 11:26:31,046][02663] Waiting for process rollout_proc19 to join...
+[2025-08-28 11:26:31,047][02663] Waiting for process rollout_proc20 to join...
+[2025-08-28 11:26:31,047][02663] Waiting for process rollout_proc21 to join...
+[2025-08-28 11:26:31,048][02663] Waiting for process rollout_proc22 to join...
+[2025-08-28 11:26:31,049][02663] Waiting for process rollout_proc23 to join...
+[2025-08-28 11:26:31,050][02663] Waiting for process rollout_proc24 to join...
+[2025-08-28 11:26:31,050][02663] Waiting for process rollout_proc25 to join...
+[2025-08-28 11:26:31,051][02663] Waiting for process rollout_proc26 to join...
+[2025-08-28 11:26:31,052][02663] Waiting for process rollout_proc27 to join...
+[2025-08-28 11:26:31,053][02663] Waiting for process rollout_proc28 to join...
+[2025-08-28 11:26:31,053][02663] Waiting for process rollout_proc29 to join...
+[2025-08-28 11:26:31,257][02663] Waiting for process rollout_proc30 to join...
+[2025-08-28 11:26:31,258][02663] Waiting for process rollout_proc31 to join...
+[2025-08-28 11:26:31,259][02663] Waiting for process rollout_proc32 to join...
+[2025-08-28 11:26:31,260][02663] Waiting for process rollout_proc33 to join...
+[2025-08-28 11:26:31,260][02663] Waiting for process rollout_proc34 to join...
+[2025-08-28 11:26:31,261][02663] Waiting for process rollout_proc35 to join...
+[2025-08-28 11:26:31,262][02663] Waiting for process rollout_proc36 to join...
+[2025-08-28 11:26:31,263][02663] Waiting for process rollout_proc37 to join...
+[2025-08-28 11:26:31,264][02663] Waiting for process rollout_proc38 to join...
+[2025-08-28 11:26:31,264][02663] Waiting for process rollout_proc39 to join...
+[2025-08-28 11:26:31,265][02663] Waiting for process rollout_proc40 to join...
+[2025-08-28 11:26:31,266][02663] Waiting for process rollout_proc41 to join...
+[2025-08-28 11:26:31,267][02663] Waiting for process rollout_proc42 to join...
+[2025-08-28 11:26:31,268][02663] Waiting for process rollout_proc43 to join...
+[2025-08-28 11:26:31,268][02663] Waiting for process rollout_proc44 to join...
+[2025-08-28 11:26:31,269][02663] Waiting for process rollout_proc45 to join...
+[2025-08-28 11:26:31,270][02663] Waiting for process rollout_proc46 to join...
+[2025-08-28 11:26:31,271][02663] Waiting for process rollout_proc47 to join...
+[2025-08-28 11:26:31,272][02663] Waiting for process rollout_proc48 to join...
+[2025-08-28 11:26:31,273][02663] Waiting for process rollout_proc49 to join...
+[2025-08-28 11:26:31,273][02663] Batcher 0 profile tree view:
+batching: 22.5421, releasing_batches: 0.0209
+[2025-08-28 11:26:31,274][02663] InferenceWorker_p0-w0 profile tree view:
+wait_policy: 0.0051
+  wait_policy_total: 1541.2138
+update_model: 3.9767
+  weight_update: 0.0015
+one_step: 0.0029
+  handle_policy_step: 193.7462
+    deserialize: 6.6194, stack: 1.0180, obs_to_device_normalize: 42.0397, forward: 105.5203, send_messages: 15.4488
+    prepare_outputs: 16.1993
+      to_cpu: 7.9242
+[2025-08-28 11:26:31,275][02663] Learner 0 profile tree view:
+misc: 0.0061, prepare_batch: 8.5156
+train: 23.4188
+  epoch_init: 0.0047, minibatch_init: 0.0049, losses_postprocess: 0.2454, kl_divergence: 0.2542, after_optimizer: 5.0420
+  calculate_losses: 7.2597
+    losses_init: 0.0026, forward_head: 1.5016, bptt_initial: 3.0096, tail: 0.5626, advantages_returns: 0.1280, losses: 1.0182
+    bptt: 0.9146
+      bptt_forward_core: 0.8546
+  update: 10.2812
+    clip: 1.2386
+[2025-08-28 11:26:31,275][02663] RolloutWorker_w0 profile tree view:
+wait_for_trajectories: 0.0894, enqueue_policy_requests: 119.4449, env_step: 1423.8991, overhead: 2.3974, complete_rollouts: 2.7141
+save_policy_outputs: 2.0428
+  split_output_tensors: 0.6642
+[2025-08-28 11:26:31,276][02663] RolloutWorker_w49 profile tree view:
+wait_for_trajectories: 0.1220, enqueue_policy_requests: 110.3546, env_step: 1463.0059, overhead: 2.8491, complete_rollouts: 2.6826
+save_policy_outputs: 2.0397
+  split_output_tensors: 0.7016
+[2025-08-28 11:26:31,276][02663] Loop Runner_EvtLoop terminating...
+[2025-08-28 11:26:31,279][02663] Runner profile tree view:
+main_loop: 1791.1604
+[2025-08-28 11:26:31,279][02663] Collected {0: 1001472}, FPS: 559.1
