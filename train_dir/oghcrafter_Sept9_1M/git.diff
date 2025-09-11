@@ -1,0 +1,24 @@
+diff --git a/run_hcrafter_test_record.bash b/run_hcrafter_test_record.bash
+index 36bea44..be8f62b 100644
+--- a/run_hcrafter_test_record.bash
++++ b/run_hcrafter_test_record.bash
+@@ -1,6 +1,6 @@
+ python enjoy_hcrafter_env_record.py \
+ --env=HomeostaticCrafter-v1 \
+---experiment=myhcrafter_Aug_27_1M \
++--experiment=myhcrafter_Sept9_1M_try2 \
+ --train_dir=./train_dir \
+ --device=cpu \
+ --num_envs_per_worker=1 \
+diff --git a/run_hcrafter_train.bash b/run_hcrafter_train.bash
+index c819a3a..545e982 100644
+--- a/run_hcrafter_train.bash
++++ b/run_hcrafter_train.bash
+@@ -1,6 +1,6 @@
+ python train_hcrafter_env.py \
+ --env=HomeostaticCrafter-v1 \
+---experiment=myhcrafter_Aug_27_1M \
++--experiment=oghcrafter_Sept9_1M \
+ --stats_avg=100 \
+ --num_envs_per_worker=2 \
+ --with_wandb=False \
