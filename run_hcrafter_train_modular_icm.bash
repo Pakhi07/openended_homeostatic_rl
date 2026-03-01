@@ -3,7 +3,7 @@ python train_hcrafter_env_modular_icm.py \
 --experiment=modular_icm_Mar01_1M \
 --stats_avg=100 \
 --num_envs_per_worker=2 \
---with_wandb=False \
+--with_wandb=True \
 --wandb_user=pakhibanchalia2418 \
 --wandb_project=homeostatic_crafter_modular_icm \
 --wandb_group=modular_icm \

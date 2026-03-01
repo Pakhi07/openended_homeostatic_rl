@@ -266,6 +266,19 @@ class ModularHomeostaticActorCritic(ActorCritic):
             f"Unsupported action parameterization output type: {type(action_output)}"
         )
 
+    @staticmethod
+    def _extract_distribution(action_output: Any, action_logits: torch.Tensor):
+        if hasattr(action_output, "sample") and hasattr(action_output, "log_prob"):
+            return action_output
+
+        if isinstance(action_output, tuple):
+            for item in action_output:
+                if hasattr(item, "sample") and hasattr(item, "log_prob"):
+                    return item
+
+        # Fallback for discrete action spaces.
+        return torch.distributions.Categorical(logits=action_logits)
+
     def _build_specialist_latents(self, shared_latent: torch.Tensor) -> torch.Tensor:
         return torch.stack(
             [
@@ -308,11 +321,38 @@ class ModularHomeostaticActorCritic(ActorCritic):
             "gate_weights": gate_weights,
             "new_rnn_states": rnn_states,
         }
+        # Provide a scalar value stream for Sample Factory components that expect "values".
+        result["values"] = torch.sum(
+            gate_weights
+            * torch.stack(
+                [
+                    result["value_health"],
+                    result["value_food"],
+                    result["value_drink"],
+                    result["value_energy"],
+                ],
+                dim=1,
+            ),
+            dim=1,
+        )
         if values_only:
             return result
 
         action_output = self.action_parameterization(decoder_output)
-        result["action_logits"] = self._extract_action_logits(action_output)
+        action_logits = self._extract_action_logits(action_output)
+        action_distribution = self._extract_distribution(action_output, action_logits)
+        actions = action_distribution.sample()
+        log_prob_actions = action_distribution.log_prob(actions)
+
+        # Keep discrete actions compatible with Sample Factory rollout format.
+        if actions.ndim == 1:
+            actions = actions.unsqueeze(-1)
+        if log_prob_actions.ndim > 1:
+            log_prob_actions = log_prob_actions.sum(dim=-1)
+
+        result["action_logits"] = action_logits
+        result["actions"] = actions
+        result["log_prob_actions"] = log_prob_actions
         return result
 
 
