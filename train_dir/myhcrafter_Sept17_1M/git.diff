@@ -1,0 +1,118 @@
+diff --git a/run_hcrafter_train.bash b/run_hcrafter_train.bash
+index c819a3a..dba6109 100644
+--- a/run_hcrafter_train.bash
++++ b/run_hcrafter_train.bash
+@@ -1,6 +1,6 @@
+ python train_hcrafter_env.py \
+ --env=HomeostaticCrafter-v1 \
+---experiment=myhcrafter_Aug_27_1M \
++--experiment=myhcrafter_Sept17_1M \
+ --stats_avg=100 \
+ --num_envs_per_worker=2 \
+ --with_wandb=False \
+@@ -9,7 +9,8 @@ python train_hcrafter_env.py \
+ --wandb_group=no_maxgrad_norm \
+ --gamma=0.995 \
+ --train_for_env_steps=1000000 \
+---batch_size=1024 \
++--batch_size=512 \
++--num_workers=2 \
++--rollout=32 \
+ # --num_workers=1 \
+-# --rollout=64 \
+ # --device=cpu
+diff --git a/train_hcrafter_env.py b/train_hcrafter_env.py
+index ecd03ae..99db2ab 100644
+--- a/train_hcrafter_env.py
++++ b/train_hcrafter_env.py
+@@ -1,16 +1,20 @@
+ from typing import Optional
+-import argparse
+ import sys
+ 
+ import gymnasium
+ import homeostatic_crafter
+ 
++# --- Core Sample Factory imports ---
+ from sample_factory.algo.utils.context import global_model_factory
+ from sample_factory.cfg.arguments import parse_full_cfg, parse_sf_args
+ from sample_factory.envs.env_utils import register_env
+ from sample_factory.train import run_rl
+ 
+-from hcrafter_model import make_hcrafter_encoder
++# --- Custom model and learner imports ---
++from homeostatic_model import HomeostaticActorCritic
++from homeostatic_learner import HomeostaticLearner
++
++# --- Original helper imports ---
+ from hcrafter_params import hcrafter_override_defaults
+ from recorder import StatsRecorder, VideoRecorder, EpisodeRecorder
+ 
+@@ -32,7 +36,7 @@ def make_custom_env_enjoy(
+         render_mode: Optional[str] = None,
+ ):
+     env = gymnasium.make(full_env_name, size=(64, 64),
+-                         random_internal=False,  # False by default!
++                         random_internal=False,
+                          render_mode="human")
+     
+     from datetime import datetime
+@@ -50,28 +54,45 @@ def register_custom_env_envs(enjoy=False):
+         register_env('HomeostaticCrafter-v1', make_custom_env)
+ 
+ 
+-def register_hcrafter_models():
+-    global_model_factory().register_encoder_factory(make_hcrafter_encoder)
++def add_custom_args(parser):
++    """Adds custom arguments for the homeostatic agent."""
++    parser.add_argument("--icm_reward_scale", default=0.01, type=float, help="Scaling factor for the intrinsic curiosity reward")
++    parser.add_argument("--icm_beta", default=0.2, type=float, help="Weight for the forward model loss in ICM")
++    parser.add_argument("--icm_loss_coeff", default=1.0, type=float, help="Coefficient for the total ICM loss")
+ 
+ 
+-def parse_args(argv=None, evaluation=False):
+-    parser, partial_cfg = parse_sf_args(argv=argv, evaluation=evaluation)
++def main():
++    """Script entry point."""
++    # 1. Register the custom environment
++    register_custom_env_envs()
++    
++    # 2. Register our custom ActorCritic model. The model factory is a standard feature.
++    global_model_factory().register_actor_critic_factory(HomeostaticActorCritic)
++    
++    # 3. Set up argument parser
++    parser, _ = parse_sf_args()
+     
++    # 4. Add our new custom arguments for the ICM
++    add_custom_args(parser)
++    
++    # 5. Apply the original default parameter overrides for the hcrafter env
+     hcrafter_override_defaults(parser)
+     
+-    final_cfg = parse_full_cfg(parser, argv)
+-    return final_cfg
+-
++    # 6. Parse all arguments to get the final configuration
++    cfg = parse_full_cfg(parser)
+ 
+-def main():
+-    register_custom_env_envs()
+-    register_hcrafter_models()
++    # 7. THE FIX: Directly tell the configuration to use our custom learner class.
++    # Sample Factory's run_rl function is designed to look for this specific parameter
++    # to allow for custom learners without a complex registration system.
++    cfg.learner_custom_class = "homeostatic_learner.HomeostaticLearner"
+     
+-    cfg = parse_args()
++    # 8. Ensure the algorithm is set to PPO, which our custom learner is based on
++    cfg.algo = 'PPO'
+     
++    # 9. Start the training run
+     status = run_rl(cfg)
+     return status
+ 
+ 
+ if __name__ == '__main__':
+-    sys.exit(main())
++    sys.exit(main())
+\ No newline at end of file

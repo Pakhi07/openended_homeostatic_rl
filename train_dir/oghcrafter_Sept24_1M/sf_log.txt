@@ -1,0 +1,391 @@
+[2025-09-23 19:47:00,903][16665] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/oghcrafter_Sept24_1M/config.json...
+[2025-09-23 19:47:00,922][16665] Rollout worker 0 uses device cpu
+[2025-09-23 19:47:00,922][16665] Rollout worker 1 uses device cpu
+[2025-09-23 19:47:00,923][16665] Rollout worker 2 uses device cpu
+[2025-09-23 19:47:00,924][16665] Rollout worker 3 uses device cpu
+[2025-09-23 19:47:00,924][16665] Rollout worker 4 uses device cpu
+[2025-09-23 19:47:00,924][16665] Rollout worker 5 uses device cpu
+[2025-09-23 19:47:00,925][16665] Rollout worker 6 uses device cpu
+[2025-09-23 19:47:00,926][16665] Rollout worker 7 uses device cpu
+[2025-09-23 19:47:00,926][16665] Rollout worker 8 uses device cpu
+[2025-09-23 19:47:00,927][16665] Rollout worker 9 uses device cpu
+[2025-09-23 19:47:00,927][16665] Rollout worker 10 uses device cpu
+[2025-09-23 19:47:00,928][16665] Rollout worker 11 uses device cpu
+[2025-09-23 19:47:00,928][16665] Rollout worker 12 uses device cpu
+[2025-09-23 19:47:00,929][16665] Rollout worker 13 uses device cpu
+[2025-09-23 19:47:00,929][16665] Rollout worker 14 uses device cpu
+[2025-09-23 19:47:00,930][16665] Rollout worker 15 uses device cpu
+[2025-09-23 19:47:00,931][16665] Rollout worker 16 uses device cpu
+[2025-09-23 19:47:00,931][16665] Rollout worker 17 uses device cpu
+[2025-09-23 19:47:00,932][16665] Rollout worker 18 uses device cpu
+[2025-09-23 19:47:00,932][16665] Rollout worker 19 uses device cpu
+[2025-09-23 19:47:00,933][16665] Rollout worker 20 uses device cpu
+[2025-09-23 19:47:00,933][16665] Rollout worker 21 uses device cpu
+[2025-09-23 19:47:00,934][16665] Rollout worker 22 uses device cpu
+[2025-09-23 19:47:00,934][16665] Rollout worker 23 uses device cpu
+[2025-09-23 19:47:00,935][16665] Rollout worker 24 uses device cpu
+[2025-09-23 19:47:00,935][16665] Rollout worker 25 uses device cpu
+[2025-09-23 19:47:00,936][16665] Rollout worker 26 uses device cpu
+[2025-09-23 19:47:00,936][16665] Rollout worker 27 uses device cpu
+[2025-09-23 19:47:00,937][16665] Rollout worker 28 uses device cpu
+[2025-09-23 19:47:00,937][16665] Rollout worker 29 uses device cpu
+[2025-09-23 19:47:00,938][16665] Rollout worker 30 uses device cpu
+[2025-09-23 19:47:00,938][16665] Rollout worker 31 uses device cpu
+[2025-09-23 19:47:00,939][16665] Rollout worker 32 uses device cpu
+[2025-09-23 19:47:00,940][16665] Rollout worker 33 uses device cpu
+[2025-09-23 19:47:00,940][16665] Rollout worker 34 uses device cpu
+[2025-09-23 19:47:00,941][16665] Rollout worker 35 uses device cpu
+[2025-09-23 19:47:00,941][16665] Rollout worker 36 uses device cpu
+[2025-09-23 19:47:00,942][16665] Rollout worker 37 uses device cpu
+[2025-09-23 19:47:00,942][16665] Rollout worker 38 uses device cpu
+[2025-09-23 19:47:00,943][16665] Rollout worker 39 uses device cpu
+[2025-09-23 19:47:00,943][16665] Rollout worker 40 uses device cpu
+[2025-09-23 19:47:00,944][16665] Rollout worker 41 uses device cpu
+[2025-09-23 19:47:00,944][16665] Rollout worker 42 uses device cpu
+[2025-09-23 19:47:00,945][16665] Rollout worker 43 uses device cpu
+[2025-09-23 19:47:00,946][16665] Rollout worker 44 uses device cpu
+[2025-09-23 19:47:00,946][16665] Rollout worker 45 uses device cpu
+[2025-09-23 19:47:00,947][16665] Rollout worker 46 uses device cpu
+[2025-09-23 19:47:00,948][16665] Rollout worker 47 uses device cpu
+[2025-09-23 19:47:00,948][16665] Rollout worker 48 uses device cpu
+[2025-09-23 19:47:00,949][16665] Rollout worker 49 uses device cpu
+[2025-09-23 19:47:01,254][16665] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-23 19:47:01,254][16665] InferenceWorker_p0-w0: min num requests: 16
+[2025-09-23 19:47:01,587][16665] Starting all processes...
+[2025-09-23 19:47:01,588][16665] Starting process learner_proc0
+[2025-09-23 19:47:03,810][16665] Starting all processes...
+[2025-09-23 19:47:03,815][16665] Starting process inference_proc0-0
+[2025-09-23 19:47:03,817][18292] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-23 19:47:03,817][18292] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-23 19:47:03,816][16665] Starting process rollout_proc0
+[2025-09-23 19:47:03,816][16665] Starting process rollout_proc1
+[2025-09-23 19:47:03,818][16665] Starting process rollout_proc2
+[2025-09-23 19:47:03,818][16665] Starting process rollout_proc3
+[2025-09-23 19:47:03,819][16665] Starting process rollout_proc4
+[2025-09-23 19:47:03,819][16665] Starting process rollout_proc5
+[2025-09-23 19:47:03,819][16665] Starting process rollout_proc6
+[2025-09-23 19:47:03,820][16665] Starting process rollout_proc7
+[2025-09-23 19:47:03,827][16665] Starting process rollout_proc8
+[2025-09-23 19:47:03,840][18292] Num visible devices: 1
+[2025-09-23 19:47:03,842][18292] Starting seed is not provided
+[2025-09-23 19:47:03,842][18292] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-23 19:47:03,842][18292] Initializing actor-critic model on device cuda:0
+[2025-09-23 19:47:03,843][18292] RunningMeanStd input shape: (4,)
+[2025-09-23 19:47:03,844][18292] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-23 19:47:03,845][18292] RunningMeanStd input shape: (1,)
+[2025-09-23 19:47:03,827][16665] Starting process rollout_proc9
+[2025-09-23 19:47:03,867][18292] Num input channels: 3
+[2025-09-23 19:47:03,887][18292] Convolutional layer output size: 2048
+[2025-09-23 19:47:03,833][16665] Starting process rollout_proc10
+[2025-09-23 19:47:03,906][18292] Policy head output size: 640
+[2025-09-23 19:47:03,833][16665] Starting process rollout_proc11
+[2025-09-23 19:47:03,834][16665] Starting process rollout_proc12
+[2025-09-23 19:47:03,839][16665] Starting process rollout_proc13
+[2025-09-23 19:47:03,841][16665] Starting process rollout_proc14
+[2025-09-23 19:47:03,852][16665] Starting process rollout_proc15
+[2025-09-23 19:47:03,857][16665] Starting process rollout_proc16
+[2025-09-23 19:47:03,861][16665] Starting process rollout_proc17
+[2025-09-23 19:47:03,862][16665] Starting process rollout_proc18
+[2025-09-23 19:47:03,876][16665] Starting process rollout_proc19
+[2025-09-23 19:47:03,877][16665] Starting process rollout_proc20
+[2025-09-23 19:47:04,024][16665] Starting process rollout_proc28
+[2025-09-23 19:47:03,916][16665] Starting process rollout_proc22
+[2025-09-23 19:47:03,916][16665] Starting process rollout_proc23
+[2025-09-23 19:47:03,917][16665] Starting process rollout_proc24
+[2025-09-23 19:47:03,917][16665] Starting process rollout_proc25
+[2025-09-23 19:47:03,957][16665] Starting process rollout_proc26
+[2025-09-23 19:47:03,958][16665] Starting process rollout_proc27
+[2025-09-23 19:47:03,885][16665] Starting process rollout_proc21
+[2025-09-23 19:47:04,035][16665] Starting process rollout_proc29
+[2025-09-23 19:47:04,038][16665] Starting process rollout_proc30
+[2025-09-23 19:47:04,038][16665] Starting process rollout_proc31
+[2025-09-23 19:47:04,084][16665] Starting process rollout_proc32
+[2025-09-23 19:47:04,107][16665] Starting process rollout_proc33
+[2025-09-23 19:47:04,107][16665] Starting process rollout_proc34
+[2025-09-23 19:47:04,341][16665] Starting process rollout_proc46
+[2025-09-23 19:47:04,164][16665] Starting process rollout_proc36
+[2025-09-23 19:47:04,164][16665] Starting process rollout_proc37
+[2025-09-23 19:47:04,165][16665] Starting process rollout_proc38
+[2025-09-23 19:47:04,217][16665] Starting process rollout_proc39
+[2025-09-23 19:47:04,241][16665] Starting process rollout_proc41
+[2025-09-23 19:47:04,240][16665] Starting process rollout_proc40
+[2025-09-23 19:47:04,261][16665] Starting process rollout_proc42
+[2025-09-23 19:47:04,277][16665] Starting process rollout_proc43
+[2025-09-23 19:47:04,330][16665] Starting process rollout_proc44
+[2025-09-23 19:47:04,331][16665] Starting process rollout_proc45
+[2025-09-23 19:47:04,143][16665] Starting process rollout_proc35
+[2025-09-23 19:47:04,388][16665] Starting process rollout_proc47
+[2025-09-23 19:47:04,585][18292] Created Actor Critic model with architecture:
+[2025-09-23 19:47:04,420][16665] Starting process rollout_proc48
+[2025-09-23 19:47:04,421][16665] Starting process rollout_proc49
+[2025-09-23 19:47:04,607][18292] ActorCriticSharedWeights(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): HcrafterEncoder(
+    (basic_encoder): HcrafterResnetEncoder(
+      (conv_head): Sequential(
+        (0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+        (2): ResBlock(
+          (res_block_core): Sequential(
+            (0): ELU(alpha=1.0)
+            (1): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (2): ELU(alpha=1.0)
+            (3): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+        (3): ResBlock(
+          (res_block_core): Sequential(
+            (0): ELU(alpha=1.0)
+            (1): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (2): ELU(alpha=1.0)
+            (3): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+        (4): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (5): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+        (6): ResBlock(
+          (res_block_core): Sequential(
+            (0): ELU(alpha=1.0)
+            (1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (2): ELU(alpha=1.0)
+            (3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+        (7): ResBlock(
+          (res_block_core): Sequential(
+            (0): ELU(alpha=1.0)
+            (1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (2): ELU(alpha=1.0)
+            (3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+        (8): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (9): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+        (10): ResBlock(
+          (res_block_core): Sequential(
+            (0): ELU(alpha=1.0)
+            (1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (2): ELU(alpha=1.0)
+            (3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+        (11): ResBlock(
+          (res_block_core): Sequential(
+            (0): ELU(alpha=1.0)
+            (1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (2): ELU(alpha=1.0)
+            (3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+        (12): ELU(alpha=1.0)
+      )
+      (mlp_layers): Sequential(
+        (0): Linear(in_features=2048, out_features=512, bias=True)
+        (1): ELU(alpha=1.0)
+      )
+    )
+    (measurements_head): Sequential(
+      (0): Linear(in_features=4, out_features=128, bias=True)
+      (1): ELU(alpha=1.0)
+      (2): Linear(in_features=128, out_features=128, bias=True)
+      (3): ELU(alpha=1.0)
+    )
+  )
+  (core): ModelCoreRNN(
+    (core): GRU(640, 512)
+  )
+  (decoder): MlpDecoder(
+    (mlp): Identity()
+  )
+  (critic_linear): Linear(in_features=512, out_features=1, bias=True)
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+)
+[2025-09-23 19:47:07,121][18292] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-09-23 19:47:18,506][18292] No checkpoints found
+[2025-09-23 19:47:18,507][18292] Did not load from checkpoint, starting from scratch!
+[2025-09-23 19:47:18,508][18292] Initialized policy 0 weights for model version 0
+[2025-09-23 19:47:18,518][18292] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-23 19:47:18,521][18292] LearnerWorker_p0 finished initialization!
+[2025-09-23 19:47:20,835][18339] Worker 1 uses CPU cores [1]
+[2025-09-23 19:47:22,480][18347] Worker 6 uses CPU cores [6]
+[2025-09-23 19:47:23,543][18507] Worker 40 uses CPU cores [0]
+[2025-09-23 19:47:23,751][18417] Worker 26 uses CPU cores [2]
+[2025-09-23 19:47:24,831][18483] Worker 39 uses CPU cores [7]
+[2025-09-23 19:47:24,942][18441] Worker 31 uses CPU cores [7]
+[2025-09-23 19:47:24,976][18345] Worker 7 uses CPU cores [7]
+[2025-09-23 19:47:25,191][18338] Worker 0 uses CPU cores [0]
+[2025-09-23 19:47:25,478][18403] Worker 28 uses CPU cores [4]
+[2025-09-23 19:47:26,851][18424] Worker 21 uses CPU cores [5]
+[2025-09-23 19:47:26,898][18346] Worker 2 uses CPU cores [2]
+[2025-09-23 19:47:27,101][18491] Worker 37 uses CPU cores [5]
+[2025-09-23 19:47:27,730][18350] Worker 10 uses CPU cores [2]
+[2025-09-23 19:47:27,877][18418] Worker 24 uses CPU cores [0]
+[2025-09-23 19:47:27,886][18459] Worker 34 uses CPU cores [2]
+[2025-09-23 19:47:28,041][18408] Worker 22 uses CPU cores [6]
+[2025-09-23 19:47:28,126][18348] Worker 4 uses CPU cores [4]
+[2025-09-23 19:47:28,177][18530] Worker 45 uses CPU cores [5]
+[2025-09-23 19:47:28,587][18422] Worker 25 uses CPU cores [1]
+[2025-09-23 19:47:28,676][18391] Worker 13 uses CPU cores [5]
+[2025-09-23 19:47:28,981][18433] Worker 30 uses CPU cores [6]
+[2025-09-23 19:47:28,985][18382] Worker 15 uses CPU cores [7]
+[2025-09-23 19:47:29,061][18574] Worker 49 uses CPU cores [4, 5, 6, 7]
+[2025-09-23 19:47:29,120][18343] Worker 3 uses CPU cores [3]
+[2025-09-23 19:47:29,224][18349] Worker 5 uses CPU cores [5]
+[2025-09-23 19:47:29,349][18475] Worker 38 uses CPU cores [6]
+[2025-09-23 19:47:29,347][18460] Worker 32 uses CPU cores [0]
+[2025-09-23 19:47:29,355][18409] Worker 23 uses CPU cores [7]
+[2025-09-23 19:47:29,374][18499] Worker 42 uses CPU cores [2]
+[2025-09-23 19:47:29,490][18423] Worker 27 uses CPU cores [3]
+[2025-09-23 19:47:29,529][16665] Heartbeat connected on Batcher_0
+[2025-09-23 19:47:29,534][16665] Heartbeat connected on LearnerWorker_p0
+[2025-09-23 19:47:29,536][16665] Heartbeat connected on RolloutWorker_w1
+[2025-09-23 19:47:29,540][16665] Heartbeat connected on RolloutWorker_w6
+[2025-09-23 19:47:29,550][16665] Heartbeat connected on RolloutWorker_w40
+[2025-09-23 19:47:29,552][16665] Heartbeat connected on RolloutWorker_w26
+[2025-09-23 19:47:29,559][16665] Heartbeat connected on RolloutWorker_w39
+[2025-09-23 19:47:29,569][16665] Heartbeat connected on RolloutWorker_w31
+[2025-09-23 19:47:29,572][18531] Worker 35 uses CPU cores [3]
+[2025-09-23 19:47:29,571][16665] Heartbeat connected on RolloutWorker_w7
+[2025-09-23 19:47:29,577][16665] Heartbeat connected on RolloutWorker_w0
+[2025-09-23 19:47:29,578][16665] Heartbeat connected on RolloutWorker_w28
+[2025-09-23 19:47:29,582][18341] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-23 19:47:29,579][16665] Heartbeat connected on RolloutWorker_w2
+[2025-09-23 19:47:29,583][16665] Heartbeat connected on RolloutWorker_w21
+[2025-09-23 19:47:29,584][16665] Heartbeat connected on RolloutWorker_w37
+[2025-09-23 19:47:29,588][16665] Heartbeat connected on RolloutWorker_w10
+[2025-09-23 19:47:29,589][18341] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-23 19:47:29,589][16665] Heartbeat connected on RolloutWorker_w24
+[2025-09-23 19:47:29,592][16665] Heartbeat connected on RolloutWorker_w34
+[2025-09-23 19:47:29,593][16665] Heartbeat connected on RolloutWorker_w22
+[2025-09-23 19:47:29,594][16665] Heartbeat connected on RolloutWorker_w4
+[2025-09-23 19:47:29,597][16665] Heartbeat connected on RolloutWorker_w45
+[2025-09-23 19:47:29,598][16665] Heartbeat connected on RolloutWorker_w25
+[2025-09-23 19:47:29,602][16665] Heartbeat connected on RolloutWorker_w13
+[2025-09-23 19:47:29,607][16665] Heartbeat connected on RolloutWorker_w30
+[2025-09-23 19:47:29,608][16665] Heartbeat connected on RolloutWorker_w15
+[2025-09-23 19:47:29,609][16665] Heartbeat connected on RolloutWorker_w49
+[2025-09-23 19:47:29,612][16665] Heartbeat connected on RolloutWorker_w3
+[2025-09-23 19:47:29,613][16665] Heartbeat connected on RolloutWorker_w5
+[2025-09-23 19:47:29,614][16665] Heartbeat connected on RolloutWorker_w38
+[2025-09-23 19:47:29,619][16665] Heartbeat connected on RolloutWorker_w32
+[2025-09-23 19:47:29,621][16665] Heartbeat connected on RolloutWorker_w23
+[2025-09-23 19:47:29,622][16665] Heartbeat connected on RolloutWorker_w42
+[2025-09-23 19:47:29,623][16665] Heartbeat connected on RolloutWorker_w27
+[2025-09-23 19:47:29,626][16665] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-23 19:47:29,637][16665] Heartbeat connected on RolloutWorker_w35
+[2025-09-23 19:47:29,639][16665] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-23 19:47:29,653][16665] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-23 19:47:29,661][16665] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-23 19:47:29,666][16665] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-23 19:47:29,706][18533] Worker 44 uses CPU cores [4]
+[2025-09-23 19:47:29,709][16665] Heartbeat connected on RolloutWorker_w44
+[2025-09-23 19:47:29,725][18341] Num visible devices: 1
+[2025-09-23 19:47:29,939][18514] Worker 41 uses CPU cores [1]
+[2025-09-23 19:47:29,940][16665] Heartbeat connected on RolloutWorker_w41
+[2025-09-23 19:47:30,079][18384] Worker 14 uses CPU cores [6]
+[2025-09-23 19:47:30,081][16665] Heartbeat connected on RolloutWorker_w14
+[2025-09-23 19:47:30,082][18351] Worker 9 uses CPU cores [1]
+[2025-09-23 19:47:30,092][16665] Heartbeat connected on RolloutWorker_w9
+[2025-09-23 19:47:30,108][18532] Worker 43 uses CPU cores [3]
+[2025-09-23 19:47:30,109][16665] Heartbeat connected on RolloutWorker_w43
+[2025-09-23 19:47:30,171][18394] Worker 20 uses CPU cores [4]
+[2025-09-23 19:47:30,201][16665] Heartbeat connected on RolloutWorker_w20
+[2025-09-23 19:47:30,262][18458] Worker 36 uses CPU cores [4]
+[2025-09-23 19:47:30,266][18563] Worker 47 uses CPU cores [7]
+[2025-09-23 19:47:30,274][18341] RunningMeanStd input shape: (4,)
+[2025-09-23 19:47:30,275][16665] Heartbeat connected on RolloutWorker_w47
+[2025-09-23 19:47:30,279][18341] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-23 19:47:30,285][18341] RunningMeanStd input shape: (1,)
+[2025-09-23 19:47:30,285][16665] Heartbeat connected on RolloutWorker_w36
+[2025-09-23 19:47:30,298][18385] Worker 16 uses CPU cores [0]
+[2025-09-23 19:47:30,300][16665] Heartbeat connected on RolloutWorker_w16
+[2025-09-23 19:47:30,314][18341] Num input channels: 3
+[2025-09-23 19:47:30,335][18341] Convolutional layer output size: 2048
+[2025-09-23 19:47:30,357][18341] Policy head output size: 640
+[2025-09-23 19:47:30,406][18404] Worker 19 uses CPU cores [3]
+[2025-09-23 19:47:30,420][18344] Worker 8 uses CPU cores [0]
+[2025-09-23 19:47:30,413][16665] Heartbeat connected on RolloutWorker_w19
+[2025-09-23 19:47:30,471][18395] Worker 18 uses CPU cores [2]
+[2025-09-23 19:47:30,473][16665] Heartbeat connected on RolloutWorker_w18
+[2025-09-23 19:47:30,491][18456] Worker 46 uses CPU cores [6]
+[2025-09-23 19:47:30,494][16665] Heartbeat connected on RolloutWorker_w8
+[2025-09-23 19:47:30,497][16665] Heartbeat connected on RolloutWorker_w46
+[2025-09-23 19:47:30,508][18368] Worker 12 uses CPU cores [4]
+[2025-09-23 19:47:30,509][16665] Heartbeat connected on RolloutWorker_w12
+[2025-09-23 19:47:30,528][18432] Worker 29 uses CPU cores [5]
+[2025-09-23 19:47:30,529][16665] Heartbeat connected on RolloutWorker_w29
+[2025-09-23 19:47:30,560][16665] Inference worker 0-0 is ready!
+[2025-09-23 19:47:30,561][16665] All inference workers are ready! Signal rollout workers to start!
+[2025-09-23 19:47:30,568][16665] Heartbeat connected on InferenceWorker_p0-w0
+[2025-09-23 19:47:30,647][18555] Worker 48 uses CPU cores [0, 1, 2, 3]
+[2025-09-23 19:47:30,669][18457] Worker 33 uses CPU cores [1]
+[2025-09-23 19:47:30,766][18383] Worker 17 uses CPU cores [1]
+[2025-09-23 19:47:30,812][18352] Worker 11 uses CPU cores [3]
+[2025-09-23 19:47:31,098][16665] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-23 19:47:36,098][16665] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-23 19:47:41,102][16665] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-23 19:47:46,099][16665] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-23 19:47:50,004][18533] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,070][18532] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,099][16665] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-23 19:47:51,177][18531] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,333][18348] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,342][18491] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,412][18408] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,533][18343] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,565][18433] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,566][18432] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,641][18368] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,725][18404] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,734][18352] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,774][18351] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,789][18394] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:51,818][18423] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,102][18475] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,121][18457] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,124][18403] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,133][18339] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,166][18349] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,176][18424] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,207][18507] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,414][18483] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,422][18384] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,486][18391] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,557][18417] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,572][18395] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,660][18456] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,673][18344] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,752][18383] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,761][18514] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,791][18458] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:52,977][18346] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:53,081][18409] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:53,175][18499] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:53,189][18563] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:53,238][18422] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:53,304][18345] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:53,338][18347] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:53,529][18459] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:53,664][18460] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:53,849][18338] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:53,925][18574] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:53,984][18530] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:53,997][18350] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:54,367][18418] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:54,555][18441] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:54,607][18382] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:54,620][18385] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:55,670][18555] Decorrelating experience for 0 frames...
+[2025-09-23 19:47:56,098][16665] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-23 19:48:01,101][16665] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-23 19:48:06,102][16665] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)

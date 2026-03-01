@@ -1,0 +1,48 @@
+diff --git a/run_hcrafter_test_record.bash b/run_hcrafter_test_record.bash
+index 36bea44..bcfe6e9 100644
+--- a/run_hcrafter_test_record.bash
++++ b/run_hcrafter_test_record.bash
+@@ -1,12 +1,17 @@
+ python enjoy_hcrafter_env_record.py \
+ --env=HomeostaticCrafter-v1 \
+---experiment=myhcrafter_Aug_27_1M \
++--experiment=oghcrafter_Sept9_1M \
+ --train_dir=./train_dir \
+ --device=cpu \
+ --num_envs_per_worker=1 \
++--with_wandb=True \
++--wandb_user=pakhibanchalia2418 \
++--wandb_project=homeostatic_crafter \
++--wandb_group=no_maxgrad_norm \
+ --num_workers 1 \
+ --stats_avg 1 \
+ --serial_mode True \
+ --max_num_episodes 1 \
+ --save_video \
++--max_num_episodes 100 \
+ --no_render \
+diff --git a/run_hcrafter_train.bash b/run_hcrafter_train.bash
+index c819a3a..1ba2cdb 100644
+--- a/run_hcrafter_train.bash
++++ b/run_hcrafter_train.bash
+@@ -1,10 +1,10 @@
+ python train_hcrafter_env.py \
+ --env=HomeostaticCrafter-v1 \
+---experiment=myhcrafter_Aug_27_1M \
++--experiment=oghcrafter_Nov9_1M \
+ --stats_avg=100 \
+ --num_envs_per_worker=2 \
+---with_wandb=False \
+---wandb_user=pakhibanchalia2418 \
++--with_wandb=True \
++--wandb_user=pakhibanchalia24 \
+ --wandb_project=homeostatic_crafter \
+ --wandb_group=no_maxgrad_norm \
+ --gamma=0.995 \
+@@ -12,4 +12,4 @@ python train_hcrafter_env.py \
+ --batch_size=1024 \
+ # --num_workers=1 \
+ # --rollout=64 \
+-# --device=cpu
++# --device=cpu
+\ No newline at end of file

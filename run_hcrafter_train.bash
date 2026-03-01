@@ -1,10 +1,10 @@
 python train_hcrafter_env.py \
 --env=HomeostaticCrafter-v1 \
---experiment=myhcrafter_Aug_27_1M \
+--experiment=oghcrafter_Nov10_1M \
 --stats_avg=100 \
 --num_envs_per_worker=2 \
---with_wandb=False \
---wandb_user=pakhibanchalia2418 \
+--with_wandb=True \
+--wandb_user=pakhibanchalia24 \
 --wandb_project=homeostatic_crafter \
 --wandb_group=no_maxgrad_norm \
 --gamma=0.995 \

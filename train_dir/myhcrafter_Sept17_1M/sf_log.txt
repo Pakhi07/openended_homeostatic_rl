@@ -1,0 +1,1527 @@
+[2025-09-17 09:31:24,590][04684] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/myhcrafter_Sept17_1M/config.json...
+[2025-09-17 09:31:25,593][04684] Rollout worker 0 uses device cpu
+[2025-09-17 09:31:25,594][04684] Rollout worker 1 uses device cpu
+[2025-09-17 09:31:25,630][04684] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 09:31:25,631][04684] InferenceWorker_p0-w0: min num requests: 1
+[2025-09-17 09:31:25,642][04684] Starting all processes...
+[2025-09-17 09:31:25,642][04684] Starting process learner_proc0
+[2025-09-17 09:31:25,645][04684] Starting all processes...
+[2025-09-17 09:31:25,649][04684] Starting process inference_proc0-0
+[2025-09-17 09:31:25,649][04684] Starting process rollout_proc0
+[2025-09-17 09:31:25,649][04684] Starting process rollout_proc1
+[2025-09-17 09:31:28,623][04856] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 09:31:28,623][04856] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-17 09:31:28,645][04856] Num visible devices: 1
+[2025-09-17 09:31:28,647][04856] Starting seed is not provided
+[2025-09-17 09:31:28,647][04856] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 09:31:28,647][04856] Initializing actor-critic model on device cuda:0
+[2025-09-17 09:31:28,647][04856] RunningMeanStd input shape: (4,)
+[2025-09-17 09:31:28,648][04856] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 09:31:28,649][04856] RunningMeanStd input shape: (1,)
+[2025-09-17 09:31:28,683][04856] Created Actor Critic model with architecture:
+[2025-09-17 09:31:28,683][04856] HomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): HomeostaticEncoder(
+    (pov_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (features_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=64, bias=True)
+      (3): ReLU()
+    )
+  )
+  (core): HomeostaticCore(
+    (core_net): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+  (critic_food): Linear(in_features=512, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=512, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=512, out_features=1, bias=True)
+  (critic_health): Linear(in_features=512, out_features=1, bias=True)
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (1): ELU(alpha=1.0)
+      (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ELU(alpha=1.0)
+      (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (5): ELU(alpha=1.0)
+      (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): ELU(alpha=1.0)
+      (8): Flatten(start_dim=1, end_dim=-1)
+    )
+    (feature_fc): Linear(in_features=512, out_features=288, bias=True)
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2025-09-17 09:31:28,688][04864] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2025-09-17 09:31:28,888][04865] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2025-09-17 09:31:28,932][04856] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-09-17 09:31:28,974][04863] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 09:31:28,975][04863] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-17 09:31:28,998][04863] Num visible devices: 1
+[2025-09-17 09:31:30,445][04856] No checkpoints found
+[2025-09-17 09:31:30,445][04856] Did not load from checkpoint, starting from scratch!
+[2025-09-17 09:31:30,445][04856] Initialized policy 0 weights for model version 0
+[2025-09-17 09:31:30,450][04856] LearnerWorker_p0 finished initialization!
+[2025-09-17 09:31:30,451][04856] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 09:31:30,705][04863] RunningMeanStd input shape: (4,)
+[2025-09-17 09:31:30,706][04863] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 09:31:30,707][04863] RunningMeanStd input shape: (1,)
+[2025-09-17 09:31:30,749][04684] Inference worker 0-0 is ready!
+[2025-09-17 09:31:30,749][04684] All inference workers are ready! Signal rollout workers to start!
+[2025-09-17 09:31:32,295][04865] Decorrelating experience for 0 frames...
+[2025-09-17 09:31:32,397][04864] Decorrelating experience for 0 frames...
+[2025-09-17 09:31:34,151][04865] Decorrelating experience for 32 frames...
+[2025-09-17 09:31:34,296][04864] Decorrelating experience for 32 frames...
+[2025-09-17 09:31:34,321][04684] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 09:31:34,943][04863] EvtLoop [inference_proc0-0_evt_loop, process=inference_proc0-0] unhandled exception in slot='_run' connected to emitter=Emitter(object_id='Timer_0dab431b-392d-41c2-a584-b3538b42523d', signal_name='iteration'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 372, in _run
+    self._handle_policy_steps(self.timing)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 331, in _handle_policy_steps
+    policy_outputs = actor_critic(normalized_obs, rnn_states, action_mask=action_mask)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/teamspace/studios/this_studio/openended_homeostatic_rl/homeostatic_model.py", line 152, in forward
+    normalized_obs_dict['next_obs'],
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/utils/tensor_dict.py", line 25, in __getitem__
+    return dict.__getitem__(self, key)
+KeyError: 'next_obs'
+[2025-09-17 09:31:34,946][04863] Unhandled exception 'next_obs' in evt loop inference_proc0-0_evt_loop
+[2025-09-17 09:31:39,321][04684] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 10:46:38,517][02865] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/myhcrafter_Sept17_1M/config.json...
+[2025-09-17 10:46:39,520][02865] Rollout worker 0 uses device cpu
+[2025-09-17 10:46:39,521][02865] Rollout worker 1 uses device cpu
+[2025-09-17 10:46:39,596][02865] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 10:46:39,596][02865] InferenceWorker_p0-w0: min num requests: 1
+[2025-09-17 10:46:39,610][02865] Starting all processes...
+[2025-09-17 10:46:39,610][02865] Starting process learner_proc0
+[2025-09-17 10:46:39,615][02865] Starting all processes...
+[2025-09-17 10:46:39,619][02865] Starting process inference_proc0-0
+[2025-09-17 10:46:39,619][02865] Starting process rollout_proc0
+[2025-09-17 10:46:39,619][02865] Starting process rollout_proc1
+[2025-09-17 10:46:46,700][03186] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2025-09-17 10:46:46,723][03177] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 10:46:46,723][03177] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-17 10:46:46,749][03177] Num visible devices: 1
+[2025-09-17 10:46:46,750][03177] Starting seed is not provided
+[2025-09-17 10:46:46,751][03177] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 10:46:46,751][03177] Initializing actor-critic model on device cuda:0
+[2025-09-17 10:46:46,752][03177] RunningMeanStd input shape: (4,)
+[2025-09-17 10:46:46,755][03177] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 10:46:46,756][03177] RunningMeanStd input shape: (1,)
+[2025-09-17 10:46:46,783][03185] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 10:46:46,783][03185] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-17 10:46:46,784][03184] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2025-09-17 10:46:46,805][03185] Num visible devices: 1
+[2025-09-17 10:46:46,890][03177] Created Actor Critic model with architecture:
+[2025-09-17 10:46:46,890][03177] HomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): HomeostaticEncoder(
+    (pov_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (features_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=64, bias=True)
+      (3): ReLU()
+    )
+  )
+  (core): HomeostaticCore(
+    (core_net): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+  (critic_food): Linear(in_features=512, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=512, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=512, out_features=1, bias=True)
+  (critic_health): Linear(in_features=512, out_features=1, bias=True)
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (1): ELU(alpha=1.0)
+      (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ELU(alpha=1.0)
+      (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (5): ELU(alpha=1.0)
+      (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): ELU(alpha=1.0)
+      (8): Flatten(start_dim=1, end_dim=-1)
+    )
+    (feature_fc): Linear(in_features=512, out_features=288, bias=True)
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2025-09-17 10:46:47,250][03177] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-09-17 10:46:49,312][03177] No checkpoints found
+[2025-09-17 10:46:49,312][03177] Did not load from checkpoint, starting from scratch!
+[2025-09-17 10:46:49,313][03177] Initialized policy 0 weights for model version 0
+[2025-09-17 10:46:49,318][03177] LearnerWorker_p0 finished initialization!
+[2025-09-17 10:46:49,319][03177] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 10:46:49,570][03185] RunningMeanStd input shape: (4,)
+[2025-09-17 10:46:49,572][03185] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 10:46:49,572][03185] RunningMeanStd input shape: (1,)
+[2025-09-17 10:46:49,634][02865] Inference worker 0-0 is ready!
+[2025-09-17 10:46:49,635][02865] All inference workers are ready! Signal rollout workers to start!
+[2025-09-17 10:46:51,659][02865] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 10:46:55,951][03186] Decorrelating experience for 0 frames...
+[2025-09-17 10:46:56,361][03184] Decorrelating experience for 0 frames...
+[2025-09-17 10:46:56,659][02865] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 10:46:59,409][03186] Decorrelating experience for 32 frames...
+[2025-09-17 10:46:59,581][02865] Heartbeat connected on Batcher_0
+[2025-09-17 10:46:59,588][02865] Heartbeat connected on LearnerWorker_p0
+[2025-09-17 10:46:59,610][02865] Heartbeat connected on RolloutWorker_w1
+[2025-09-17 10:47:00,094][03184] Decorrelating experience for 32 frames...
+[2025-09-17 10:47:00,323][02865] Heartbeat connected on RolloutWorker_w0
+[2025-09-17 10:47:00,818][03185] EvtLoop [inference_proc0-0_evt_loop, process=inference_proc0-0] unhandled exception in slot='_run' connected to emitter=Emitter(object_id='Timer_0c225a11-48b5-4b9e-9abf-2255c36b42c7', signal_name='iteration'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 372, in _run
+    self._handle_policy_steps(self.timing)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 332, in _handle_policy_steps
+    policy_outputs["policy_version"] = torch.empty([num_samples]).fill_(self.param_client.policy_version)
+TypeError: 'tuple' object does not support item assignment
+[2025-09-17 10:47:00,820][03185] Unhandled exception 'tuple' object does not support item assignment in evt loop inference_proc0-0_evt_loop
+[2025-09-17 10:47:01,659][02865] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 10:47:06,659][02865] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 10:54:35,813][08751] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/myhcrafter_Sept17_1M/config.json...
+[2025-09-17 10:54:36,817][08751] Rollout worker 0 uses device cpu
+[2025-09-17 10:54:36,817][08751] Rollout worker 1 uses device cpu
+[2025-09-17 10:54:36,860][08751] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 10:54:36,860][08751] InferenceWorker_p0-w0: min num requests: 1
+[2025-09-17 10:54:36,875][08751] Starting all processes...
+[2025-09-17 10:54:36,875][08751] Starting process learner_proc0
+[2025-09-17 10:54:36,879][08751] Starting all processes...
+[2025-09-17 10:54:36,884][08751] Starting process inference_proc0-0
+[2025-09-17 10:54:36,884][08751] Starting process rollout_proc0
+[2025-09-17 10:54:36,884][08751] Starting process rollout_proc1
+[2025-09-17 10:54:39,591][08905] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2025-09-17 10:54:40,140][08906] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 10:54:40,140][08906] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-17 10:54:40,164][08906] Num visible devices: 1
+[2025-09-17 10:54:40,235][08897] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 10:54:40,235][08897] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-17 10:54:40,258][08897] Num visible devices: 1
+[2025-09-17 10:54:40,260][08897] Starting seed is not provided
+[2025-09-17 10:54:40,260][08897] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 10:54:40,261][08897] Initializing actor-critic model on device cuda:0
+[2025-09-17 10:54:40,261][08897] RunningMeanStd input shape: (4,)
+[2025-09-17 10:54:40,263][08897] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 10:54:40,264][08897] RunningMeanStd input shape: (1,)
+[2025-09-17 10:54:40,298][08904] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2025-09-17 10:54:40,309][08897] Created Actor Critic model with architecture:
+[2025-09-17 10:54:40,310][08897] HomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): HomeostaticEncoder(
+    (pov_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (features_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=64, bias=True)
+      (3): ReLU()
+    )
+  )
+  (core): HomeostaticCore(
+    (core_net): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+  (critic_food): Linear(in_features=512, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=512, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=512, out_features=1, bias=True)
+  (critic_health): Linear(in_features=512, out_features=1, bias=True)
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (1): ELU(alpha=1.0)
+      (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ELU(alpha=1.0)
+      (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (5): ELU(alpha=1.0)
+      (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): ELU(alpha=1.0)
+      (8): Flatten(start_dim=1, end_dim=-1)
+    )
+    (feature_fc): Linear(in_features=512, out_features=288, bias=True)
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2025-09-17 10:54:40,537][08897] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-09-17 10:54:41,991][08897] No checkpoints found
+[2025-09-17 10:54:41,992][08897] Did not load from checkpoint, starting from scratch!
+[2025-09-17 10:54:41,992][08897] Initialized policy 0 weights for model version 0
+[2025-09-17 10:54:41,999][08897] LearnerWorker_p0 finished initialization!
+[2025-09-17 10:54:42,004][08897] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 10:54:42,212][08906] RunningMeanStd input shape: (4,)
+[2025-09-17 10:54:42,213][08906] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 10:54:42,213][08906] RunningMeanStd input shape: (1,)
+[2025-09-17 10:54:42,253][08751] Inference worker 0-0 is ready!
+[2025-09-17 10:54:42,253][08751] All inference workers are ready! Signal rollout workers to start!
+[2025-09-17 10:54:43,840][08904] Decorrelating experience for 0 frames...
+[2025-09-17 10:54:43,844][08905] Decorrelating experience for 0 frames...
+[2025-09-17 10:54:45,419][08904] Decorrelating experience for 32 frames...
+[2025-09-17 10:54:45,425][08905] Decorrelating experience for 32 frames...
+[2025-09-17 10:54:45,860][08906] EvtLoop [inference_proc0-0_evt_loop, process=inference_proc0-0] unhandled exception in slot='_run' connected to emitter=Emitter(object_id='Timer_eac97ad2-64c8-4ac7-b2f5-08a75d3284c9', signal_name='iteration'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 372, in _run
+    self._handle_policy_steps(self.timing)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 335, in _handle_policy_steps
+    signals_to_send = self._prepare_policy_outputs_func(num_samples, policy_outputs, self.requests)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 280, in _prepare_policy_outputs_non_batched
+    policy_outputs[key] = output_value.to(device)
+AttributeError: 'tuple' object has no attribute 'to'
+[2025-09-17 10:54:45,861][08906] Unhandled exception 'tuple' object has no attribute 'to' in evt loop inference_proc0-0_evt_loop
+[2025-09-17 10:54:45,929][08751] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 11:00:12,170][13356] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/myhcrafter_Sept17_1M/config.json...
+[2025-09-17 11:00:12,181][13356] Rollout worker 0 uses device cpu
+[2025-09-17 11:00:12,181][13356] Rollout worker 1 uses device cpu
+[2025-09-17 11:00:12,208][13356] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:00:12,209][13356] InferenceWorker_p0-w0: min num requests: 1
+[2025-09-17 11:00:12,221][13356] Starting all processes...
+[2025-09-17 11:00:12,221][13356] Starting process learner_proc0
+[2025-09-17 11:00:12,271][13356] Starting all processes...
+[2025-09-17 11:00:12,275][13356] Starting process inference_proc0-0
+[2025-09-17 11:00:12,275][13356] Starting process rollout_proc0
+[2025-09-17 11:00:12,275][13356] Starting process rollout_proc1
+[2025-09-17 11:00:14,770][13524] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:00:14,770][13524] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-17 11:00:14,798][13524] Num visible devices: 1
+[2025-09-17 11:00:14,799][13524] Starting seed is not provided
+[2025-09-17 11:00:14,800][13524] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:00:14,800][13524] Initializing actor-critic model on device cuda:0
+[2025-09-17 11:00:14,800][13524] RunningMeanStd input shape: (4,)
+[2025-09-17 11:00:14,802][13524] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 11:00:14,802][13524] RunningMeanStd input shape: (1,)
+[2025-09-17 11:00:14,817][13531] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:00:14,817][13531] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-17 11:00:14,819][13539] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2025-09-17 11:00:14,840][13531] Num visible devices: 1
+[2025-09-17 11:00:14,843][13524] Created Actor Critic model with architecture:
+[2025-09-17 11:00:14,845][13540] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2025-09-17 11:00:14,844][13524] HomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): HomeostaticEncoder(
+    (pov_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (features_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=64, bias=True)
+      (3): ReLU()
+    )
+  )
+  (core): HomeostaticCore(
+    (core_net): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+  (critic_food): Linear(in_features=512, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=512, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=512, out_features=1, bias=True)
+  (critic_health): Linear(in_features=512, out_features=1, bias=True)
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (1): ELU(alpha=1.0)
+      (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ELU(alpha=1.0)
+      (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (5): ELU(alpha=1.0)
+      (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): ELU(alpha=1.0)
+      (8): Flatten(start_dim=1, end_dim=-1)
+    )
+    (feature_fc): Linear(in_features=512, out_features=288, bias=True)
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2025-09-17 11:00:15,064][13524] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-09-17 11:00:16,367][13524] No checkpoints found
+[2025-09-17 11:00:16,367][13524] Did not load from checkpoint, starting from scratch!
+[2025-09-17 11:00:16,368][13524] Initialized policy 0 weights for model version 0
+[2025-09-17 11:00:16,372][13524] LearnerWorker_p0 finished initialization!
+[2025-09-17 11:00:16,372][13524] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:00:16,575][13531] RunningMeanStd input shape: (4,)
+[2025-09-17 11:00:16,576][13531] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 11:00:16,577][13531] RunningMeanStd input shape: (1,)
+[2025-09-17 11:00:16,614][13356] Inference worker 0-0 is ready!
+[2025-09-17 11:00:16,614][13356] All inference workers are ready! Signal rollout workers to start!
+[2025-09-17 11:00:17,310][13356] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 11:00:18,159][13539] Decorrelating experience for 0 frames...
+[2025-09-17 11:00:18,162][13540] Decorrelating experience for 0 frames...
+[2025-09-17 11:00:19,620][13540] Decorrelating experience for 32 frames...
+[2025-09-17 11:00:19,645][13539] Decorrelating experience for 32 frames...
+[2025-09-17 11:00:20,076][13531] EvtLoop [inference_proc0-0_evt_loop, process=inference_proc0-0] unhandled exception in slot='_run' connected to emitter=Emitter(object_id='Timer_2e1d9c87-f3a1-4351-8b2b-2756361fc654', signal_name='iteration'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 372, in _run
+    self._handle_policy_steps(self.timing)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 335, in _handle_policy_steps
+    signals_to_send = self._prepare_policy_outputs_func(num_samples, policy_outputs, self.requests)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 280, in _prepare_policy_outputs_non_batched
+    policy_outputs[key] = output_value.to(device)
+AttributeError: 'tuple' object has no attribute 'to'
+[2025-09-17 11:00:20,078][13531] Unhandled exception 'tuple' object has no attribute 'to' in evt loop inference_proc0-0_evt_loop
+[2025-09-17 11:00:22,310][13356] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 11:28:39,078][29542] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/myhcrafter_Sept17_1M/config.json...
+[2025-09-17 11:28:39,097][29542] Rollout worker 0 uses device cpu
+[2025-09-17 11:28:39,097][29542] Rollout worker 1 uses device cpu
+[2025-09-17 11:28:39,129][29542] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:28:39,129][29542] InferenceWorker_p0-w0: min num requests: 1
+[2025-09-17 11:28:39,140][29542] Starting all processes...
+[2025-09-17 11:28:39,141][29542] Starting process learner_proc0
+[2025-09-17 11:28:39,143][29542] Starting all processes...
+[2025-09-17 11:28:39,147][29542] Starting process inference_proc0-0
+[2025-09-17 11:28:39,147][29542] Starting process rollout_proc0
+[2025-09-17 11:28:39,148][29542] Starting process rollout_proc1
+[2025-09-17 11:28:41,517][29760] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:28:41,517][29760] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-17 11:28:41,539][29760] Num visible devices: 1
+[2025-09-17 11:28:41,549][29753] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:28:41,549][29753] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-17 11:28:41,560][29761] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2025-09-17 11:28:41,560][29762] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2025-09-17 11:28:41,572][29753] Num visible devices: 1
+[2025-09-17 11:28:41,573][29753] Starting seed is not provided
+[2025-09-17 11:28:41,573][29753] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:28:41,573][29753] Initializing actor-critic model on device cuda:0
+[2025-09-17 11:28:41,574][29753] RunningMeanStd input shape: (4,)
+[2025-09-17 11:28:41,575][29753] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 11:28:41,575][29753] RunningMeanStd input shape: (1,)
+[2025-09-17 11:28:41,608][29753] Created Actor Critic model with architecture:
+[2025-09-17 11:28:41,608][29753] HomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): HomeostaticEncoder(
+    (pov_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (features_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=64, bias=True)
+      (3): ReLU()
+    )
+  )
+  (core): HomeostaticCore(
+    (core_net): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+  (critic_food): Linear(in_features=512, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=512, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=512, out_features=1, bias=True)
+  (critic_health): Linear(in_features=512, out_features=1, bias=True)
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (1): ELU(alpha=1.0)
+      (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ELU(alpha=1.0)
+      (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (5): ELU(alpha=1.0)
+      (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): ELU(alpha=1.0)
+      (8): Flatten(start_dim=1, end_dim=-1)
+    )
+    (feature_fc): Linear(in_features=512, out_features=288, bias=True)
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2025-09-17 11:28:41,846][29753] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-09-17 11:28:43,138][29753] No checkpoints found
+[2025-09-17 11:28:43,138][29753] Did not load from checkpoint, starting from scratch!
+[2025-09-17 11:28:43,139][29753] Initialized policy 0 weights for model version 0
+[2025-09-17 11:28:43,144][29753] LearnerWorker_p0 finished initialization!
+[2025-09-17 11:28:43,144][29753] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:28:43,358][29760] RunningMeanStd input shape: (4,)
+[2025-09-17 11:28:43,359][29760] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 11:28:43,360][29760] RunningMeanStd input shape: (1,)
+[2025-09-17 11:28:43,399][29542] Inference worker 0-0 is ready!
+[2025-09-17 11:28:43,399][29542] All inference workers are ready! Signal rollout workers to start!
+[2025-09-17 11:28:44,026][29542] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 11:28:44,818][29762] Decorrelating experience for 0 frames...
+[2025-09-17 11:28:44,895][29761] Decorrelating experience for 0 frames...
+[2025-09-17 11:28:46,280][29762] Decorrelating experience for 32 frames...
+[2025-09-17 11:28:46,402][29761] Decorrelating experience for 32 frames...
+[2025-09-17 11:28:46,712][29760] EvtLoop [inference_proc0-0_evt_loop, process=inference_proc0-0] unhandled exception in slot='_run' connected to emitter=Emitter(object_id='Timer_e2a40a6f-ad23-4e56-95d4-da7b25928b49', signal_name='iteration'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 372, in _run
+    self._handle_policy_steps(self.timing)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 335, in _handle_policy_steps
+    signals_to_send = self._prepare_policy_outputs_func(num_samples, policy_outputs, self.requests)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 280, in _prepare_policy_outputs_non_batched
+    policy_outputs[key] = output_value.to(device)
+AttributeError: 'tuple' object has no attribute 'to'
+[2025-09-17 11:28:46,714][29760] Unhandled exception 'tuple' object has no attribute 'to' in evt loop inference_proc0-0_evt_loop
+[2025-09-17 11:28:49,026][29542] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 11:28:54,026][29542] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 11:28:59,026][29542] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 11:28:59,118][29542] Heartbeat connected on Batcher_0
+[2025-09-17 11:28:59,123][29542] Heartbeat connected on LearnerWorker_p0
+[2025-09-17 11:28:59,135][29542] Heartbeat connected on RolloutWorker_w0
+[2025-09-17 11:28:59,140][29542] Heartbeat connected on RolloutWorker_w1
+[2025-09-17 11:32:13,853][31157] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/myhcrafter_Sept17_1M/config.json...
+[2025-09-17 11:32:13,871][31157] Rollout worker 0 uses device cpu
+[2025-09-17 11:32:13,872][31157] Rollout worker 1 uses device cpu
+[2025-09-17 11:32:13,906][31157] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:32:13,906][31157] InferenceWorker_p0-w0: min num requests: 1
+[2025-09-17 11:32:13,917][31157] Starting all processes...
+[2025-09-17 11:32:13,918][31157] Starting process learner_proc0
+[2025-09-17 11:32:13,967][31157] Starting all processes...
+[2025-09-17 11:32:13,973][31157] Starting process inference_proc0-0
+[2025-09-17 11:32:13,973][31157] Starting process rollout_proc0
+[2025-09-17 11:32:13,973][31157] Starting process rollout_proc1
+[2025-09-17 11:32:16,479][31323] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2025-09-17 11:32:16,493][31309] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:32:16,493][31309] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-17 11:32:16,516][31309] Num visible devices: 1
+[2025-09-17 11:32:16,517][31309] Starting seed is not provided
+[2025-09-17 11:32:16,517][31309] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:32:16,517][31309] Initializing actor-critic model on device cuda:0
+[2025-09-17 11:32:16,518][31309] RunningMeanStd input shape: (4,)
+[2025-09-17 11:32:16,519][31309] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 11:32:16,520][31309] RunningMeanStd input shape: (1,)
+[2025-09-17 11:32:16,540][31325] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:32:16,540][31325] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-17 11:32:16,544][31324] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2025-09-17 11:32:16,556][31309] Created Actor Critic model with architecture:
+[2025-09-17 11:32:16,556][31309] HomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): HomeostaticEncoder(
+    (pov_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (features_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=64, bias=True)
+      (3): ReLU()
+    )
+  )
+  (core): HomeostaticCore(
+    (core_net): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+  (critic_food): Linear(in_features=512, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=512, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=512, out_features=1, bias=True)
+  (critic_health): Linear(in_features=512, out_features=1, bias=True)
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (1): ELU(alpha=1.0)
+      (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ELU(alpha=1.0)
+      (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (5): ELU(alpha=1.0)
+      (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): ELU(alpha=1.0)
+      (8): Flatten(start_dim=1, end_dim=-1)
+    )
+    (feature_fc): Linear(in_features=512, out_features=288, bias=True)
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2025-09-17 11:32:16,565][31325] Num visible devices: 1
+[2025-09-17 11:32:16,787][31309] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-09-17 11:32:18,116][31309] No checkpoints found
+[2025-09-17 11:32:18,116][31309] Did not load from checkpoint, starting from scratch!
+[2025-09-17 11:32:18,117][31309] Initialized policy 0 weights for model version 0
+[2025-09-17 11:32:18,123][31309] LearnerWorker_p0 finished initialization!
+[2025-09-17 11:32:18,123][31309] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:32:18,333][31325] RunningMeanStd input shape: (4,)
+[2025-09-17 11:32:18,334][31325] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 11:32:18,335][31325] RunningMeanStd input shape: (1,)
+[2025-09-17 11:32:18,374][31157] Inference worker 0-0 is ready!
+[2025-09-17 11:32:18,375][31157] All inference workers are ready! Signal rollout workers to start!
+[2025-09-17 11:32:18,975][31157] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 11:32:19,976][31323] Decorrelating experience for 0 frames...
+[2025-09-17 11:32:19,983][31324] Decorrelating experience for 0 frames...
+[2025-09-17 11:32:21,471][31323] Decorrelating experience for 32 frames...
+[2025-09-17 11:32:21,541][31324] Decorrelating experience for 32 frames...
+[2025-09-17 11:32:21,957][31325] EvtLoop [inference_proc0-0_evt_loop, process=inference_proc0-0] unhandled exception in slot='_run' connected to emitter=Emitter(object_id='Timer_75804a87-cf09-4d8f-8cc5-e2c7a98bb848', signal_name='iteration'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 372, in _run
+    self._handle_policy_steps(self.timing)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 335, in _handle_policy_steps
+    signals_to_send = self._prepare_policy_outputs_func(num_samples, policy_outputs, self.requests)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 280, in _prepare_policy_outputs_non_batched
+    policy_outputs[key] = output_value.to(device)
+AttributeError: 'tuple' object has no attribute 'to'
+[2025-09-17 11:32:21,958][31325] Unhandled exception 'tuple' object has no attribute 'to' in evt loop inference_proc0-0_evt_loop
+[2025-09-17 11:32:23,974][31157] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 11:32:28,974][31157] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 11:36:00,537][32904] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/myhcrafter_Sept17_1M/config.json...
+[2025-09-17 11:36:00,556][32904] Rollout worker 0 uses device cpu
+[2025-09-17 11:36:00,556][32904] Rollout worker 1 uses device cpu
+[2025-09-17 11:36:00,585][32904] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:36:00,586][32904] InferenceWorker_p0-w0: min num requests: 1
+[2025-09-17 11:36:00,597][32904] Starting all processes...
+[2025-09-17 11:36:00,598][32904] Starting process learner_proc0
+[2025-09-17 11:36:00,647][32904] Starting all processes...
+[2025-09-17 11:36:00,651][32904] Starting process inference_proc0-0
+[2025-09-17 11:36:00,655][32904] Starting process rollout_proc0
+[2025-09-17 11:36:00,656][32904] Starting process rollout_proc1
+[2025-09-17 11:36:03,181][33060] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:36:03,182][33060] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-17 11:36:03,207][33060] Num visible devices: 1
+[2025-09-17 11:36:03,208][33060] Starting seed is not provided
+[2025-09-17 11:36:03,208][33060] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:36:03,209][33060] Initializing actor-critic model on device cuda:0
+[2025-09-17 11:36:03,209][33060] RunningMeanStd input shape: (4,)
+[2025-09-17 11:36:03,210][33060] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 11:36:03,211][33060] RunningMeanStd input shape: (1,)
+[2025-09-17 11:36:03,245][33060] Created Actor Critic model with architecture:
+[2025-09-17 11:36:03,245][33060] HomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): HomeostaticEncoder(
+    (pov_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (features_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=64, bias=True)
+      (3): ReLU()
+    )
+  )
+  (core): HomeostaticCore(
+    (core_net): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+  (critic_food): Linear(in_features=512, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=512, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=512, out_features=1, bias=True)
+  (critic_health): Linear(in_features=512, out_features=1, bias=True)
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (1): ELU(alpha=1.0)
+      (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ELU(alpha=1.0)
+      (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (5): ELU(alpha=1.0)
+      (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): ELU(alpha=1.0)
+      (8): Flatten(start_dim=1, end_dim=-1)
+    )
+    (feature_fc): Linear(in_features=512, out_features=288, bias=True)
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2025-09-17 11:36:03,299][33071] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:36:03,300][33071] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-17 11:36:03,301][33072] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2025-09-17 11:36:03,332][33080] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2025-09-17 11:36:03,381][33071] Num visible devices: 1
+[2025-09-17 11:36:03,467][33060] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-09-17 11:36:04,715][33060] No checkpoints found
+[2025-09-17 11:36:04,715][33060] Did not load from checkpoint, starting from scratch!
+[2025-09-17 11:36:04,716][33060] Initialized policy 0 weights for model version 0
+[2025-09-17 11:36:04,719][33060] LearnerWorker_p0 finished initialization!
+[2025-09-17 11:36:04,720][33060] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 11:36:04,920][33071] RunningMeanStd input shape: (4,)
+[2025-09-17 11:36:04,921][33071] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 11:36:04,922][33071] RunningMeanStd input shape: (1,)
+[2025-09-17 11:36:04,959][32904] Inference worker 0-0 is ready!
+[2025-09-17 11:36:04,959][32904] All inference workers are ready! Signal rollout workers to start!
+[2025-09-17 11:36:05,682][32904] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 11:36:06,430][33080] Decorrelating experience for 0 frames...
+[2025-09-17 11:36:06,511][33072] Decorrelating experience for 0 frames...
+[2025-09-17 11:36:07,962][33080] Decorrelating experience for 32 frames...
+[2025-09-17 11:36:08,157][33072] Decorrelating experience for 32 frames...
+[2025-09-17 11:36:08,397][33071] EvtLoop [inference_proc0-0_evt_loop, process=inference_proc0-0] unhandled exception in slot='_run' connected to emitter=Emitter(object_id='Timer_46f2fb78-6315-461e-8600-e16bf793a5d8', signal_name='iteration'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 372, in _run
+    self._handle_policy_steps(self.timing)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 335, in _handle_policy_steps
+    signals_to_send = self._prepare_policy_outputs_func(num_samples, policy_outputs, self.requests)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 280, in _prepare_policy_outputs_non_batched
+    policy_outputs[key] = output_value.to(device)
+AttributeError: 'tuple' object has no attribute 'to'
+[2025-09-17 11:36:08,398][33071] Unhandled exception 'tuple' object has no attribute 'to' in evt loop inference_proc0-0_evt_loop
+[2025-09-17 16:43:31,401][07143] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/myhcrafter_Sept17_1M/config.json...
+[2025-09-17 16:43:32,404][07143] Rollout worker 0 uses device cpu
+[2025-09-17 16:43:32,405][07143] Rollout worker 1 uses device cpu
+[2025-09-17 16:43:32,467][07143] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 16:43:32,467][07143] InferenceWorker_p0-w0: min num requests: 1
+[2025-09-17 16:43:32,477][07143] Starting all processes...
+[2025-09-17 16:43:32,478][07143] Starting process learner_proc0
+[2025-09-17 16:43:32,481][07143] Starting all processes...
+[2025-09-17 16:43:32,486][07143] Starting process inference_proc0-0
+[2025-09-17 16:43:32,486][07143] Starting process rollout_proc0
+[2025-09-17 16:43:32,486][07143] Starting process rollout_proc1
+[2025-09-17 16:43:39,066][07527] Worker 1 uses CPU cores [2, 3]
+[2025-09-17 16:43:39,067][07524] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 16:43:39,068][07524] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-17 16:43:39,140][07524] Num visible devices: 1
+[2025-09-17 16:43:39,154][07517] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 16:43:39,154][07517] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-17 16:43:39,185][07517] Num visible devices: 1
+[2025-09-17 16:43:39,187][07517] Starting seed is not provided
+[2025-09-17 16:43:39,189][07517] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 16:43:39,190][07517] Initializing actor-critic model on device cuda:0
+[2025-09-17 16:43:39,191][07517] RunningMeanStd input shape: (4,)
+[2025-09-17 16:43:39,248][07517] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 16:43:39,249][07517] RunningMeanStd input shape: (1,)
+[2025-09-17 16:43:39,543][07517] Created Actor Critic model with architecture:
+[2025-09-17 16:43:39,544][07517] HomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): HomeostaticEncoder(
+    (pov_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (features_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=64, bias=True)
+      (3): ReLU()
+    )
+  )
+  (core): HomeostaticCore(
+    (core_net): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+  (critic_food): Linear(in_features=512, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=512, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=512, out_features=1, bias=True)
+  (critic_health): Linear(in_features=512, out_features=1, bias=True)
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (1): ELU(alpha=1.0)
+      (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ELU(alpha=1.0)
+      (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (5): ELU(alpha=1.0)
+      (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): ELU(alpha=1.0)
+      (8): Flatten(start_dim=1, end_dim=-1)
+    )
+    (feature_fc): Linear(in_features=512, out_features=288, bias=True)
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2025-09-17 16:43:39,727][07526] Worker 0 uses CPU cores [0, 1]
+[2025-09-17 16:43:40,124][07517] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-09-17 16:43:45,862][07517] No checkpoints found
+[2025-09-17 16:43:45,862][07517] Did not load from checkpoint, starting from scratch!
+[2025-09-17 16:43:45,871][07517] Initialized policy 0 weights for model version 0
+[2025-09-17 16:43:45,892][07517] LearnerWorker_p0 finished initialization!
+[2025-09-17 16:43:45,893][07517] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 16:43:46,231][07524] RunningMeanStd input shape: (4,)
+[2025-09-17 16:43:46,233][07524] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 16:43:46,234][07524] RunningMeanStd input shape: (1,)
+[2025-09-17 16:43:46,368][07143] Inference worker 0-0 is ready!
+[2025-09-17 16:43:46,368][07143] All inference workers are ready! Signal rollout workers to start!
+[2025-09-17 16:43:48,682][07143] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 16:43:51,663][07526] Decorrelating experience for 0 frames...
+[2025-09-17 16:43:51,687][07527] Decorrelating experience for 0 frames...
+[2025-09-17 16:43:52,458][07143] Heartbeat connected on Batcher_0
+[2025-09-17 16:43:52,465][07143] Heartbeat connected on LearnerWorker_p0
+[2025-09-17 16:43:52,506][07143] Heartbeat connected on InferenceWorker_p0-w0
+[2025-09-17 16:43:53,680][07143] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 16:43:56,715][07526] Decorrelating experience for 32 frames...
+[2025-09-17 16:43:56,940][07143] Heartbeat connected on RolloutWorker_w0
+[2025-09-17 16:43:57,001][07527] Decorrelating experience for 32 frames...
+[2025-09-17 16:43:57,296][07143] Heartbeat connected on RolloutWorker_w1
+[2025-09-17 16:43:58,483][07524] EvtLoop [inference_proc0-0_evt_loop, process=inference_proc0-0] unhandled exception in slot='_run' connected to emitter=Emitter(object_id='Timer_5325f273-02d4-4229-9472-8b8eafdd580b', signal_name='iteration'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 372, in _run
+    self._handle_policy_steps(self.timing)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 335, in _handle_policy_steps
+    signals_to_send = self._prepare_policy_outputs_func(num_samples, policy_outputs, self.requests)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 280, in _prepare_policy_outputs_non_batched
+    policy_outputs[key] = output_value.to(device)
+AttributeError: 'tuple' object has no attribute 'to'
+[2025-09-17 16:43:58,486][07524] Unhandled exception 'tuple' object has no attribute 'to' in evt loop inference_proc0-0_evt_loop
+[2025-09-17 16:43:58,680][07143] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 19:31:46,495][06201] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/myhcrafter_Sept17_1M/config.json...
+[2025-09-17 19:31:47,498][06201] Rollout worker 0 uses device cpu
+[2025-09-17 19:31:47,498][06201] Rollout worker 1 uses device cpu
+[2025-09-17 19:31:47,565][06201] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:31:47,566][06201] InferenceWorker_p0-w0: min num requests: 1
+[2025-09-17 19:31:47,577][06201] Starting all processes...
+[2025-09-17 19:31:47,577][06201] Starting process learner_proc0
+[2025-09-17 19:31:47,581][06201] Starting all processes...
+[2025-09-17 19:31:47,585][06201] Starting process inference_proc0-0
+[2025-09-17 19:31:47,585][06201] Starting process rollout_proc0
+[2025-09-17 19:31:47,585][06201] Starting process rollout_proc1
+[2025-09-17 19:31:50,086][06464] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:31:50,087][06464] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-17 19:31:50,108][06464] Num visible devices: 1
+[2025-09-17 19:31:50,110][06464] Starting seed is not provided
+[2025-09-17 19:31:50,111][06464] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:31:50,111][06464] Initializing actor-critic model on device cuda:0
+[2025-09-17 19:31:50,112][06464] RunningMeanStd input shape: (4,)
+[2025-09-17 19:31:50,116][06464] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 19:31:50,116][06464] RunningMeanStd input shape: (1,)
+[2025-09-17 19:31:50,129][06472] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2025-09-17 19:31:50,154][06464] EvtLoop [learner_proc0_evt_loop, process=learner_proc0] unhandled exception in slot='init' connected to emitter=Emitter(object_id='Runner_EvtLoop', signal_name='start'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/learning/learner_worker.py", line 132, in init
+    init_model_data = self.learner.init()
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/learning/learner.py", line 212, in init
+    self.actor_critic = create_actor_critic(self.cfg, self.env_info.obs_space, self.env_info.action_space)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/model/actor_critic.py", line 342, in create_actor_critic
+    return make_actor_critic_func(cfg, obs_space, action_space)
+  File "/teamspace/studios/this_studio/openended_homeostatic_rl/homeostatic_model.py", line 122, in __init__
+    self.encoder = HomeostaticEncoder(cfg, self.obs_space)
+  File "/teamspace/studios/this_studio/openended_homeostatic_rl/homeostatic_model.py", line 27, in __init__
+    nn.Conv2d(image_in_channels, 32, kernel_size=8, stride=4), nn.ReLU(),
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 521, in __init__
+    super().__init__(
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 106, in __init__
+    if in_channels % groups != 0:
+TypeError: unsupported operand type(s) for %: 'tuple' and 'int'
+[2025-09-17 19:31:50,157][06464] Unhandled exception unsupported operand type(s) for %: 'tuple' and 'int' in evt loop learner_proc0_evt_loop
+[2025-09-17 19:31:50,337][06471] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:31:50,337][06471] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-17 19:31:50,363][06471] Num visible devices: 1
+[2025-09-17 19:31:50,472][06473] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2025-09-17 19:32:07,555][06201] Heartbeat connected on Batcher_0
+[2025-09-17 19:32:07,566][06201] Heartbeat connected on InferenceWorker_p0-w0
+[2025-09-17 19:32:07,572][06201] Heartbeat connected on RolloutWorker_w0
+[2025-09-17 19:32:07,577][06201] Heartbeat connected on RolloutWorker_w1
+[2025-09-17 19:32:46,979][07346] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/myhcrafter_Sept17_1M/config.json...
+[2025-09-17 19:32:46,998][07346] Rollout worker 0 uses device cpu
+[2025-09-17 19:32:46,998][07346] Rollout worker 1 uses device cpu
+[2025-09-17 19:32:47,028][07346] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:32:47,028][07346] InferenceWorker_p0-w0: min num requests: 1
+[2025-09-17 19:32:47,039][07346] Starting all processes...
+[2025-09-17 19:32:47,039][07346] Starting process learner_proc0
+[2025-09-17 19:32:47,089][07346] Starting all processes...
+[2025-09-17 19:32:47,092][07346] Starting process inference_proc0-0
+[2025-09-17 19:32:47,092][07346] Starting process rollout_proc0
+[2025-09-17 19:32:47,093][07346] Starting process rollout_proc1
+[2025-09-17 19:32:49,523][07502] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:32:49,523][07502] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-17 19:32:49,545][07502] Num visible devices: 1
+[2025-09-17 19:32:49,546][07502] Starting seed is not provided
+[2025-09-17 19:32:49,547][07502] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:32:49,547][07502] Initializing actor-critic model on device cuda:0
+[2025-09-17 19:32:49,547][07502] RunningMeanStd input shape: (4,)
+[2025-09-17 19:32:49,548][07502] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 19:32:49,549][07502] RunningMeanStd input shape: (1,)
+[2025-09-17 19:32:49,597][07516] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2025-09-17 19:32:49,626][07518] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2025-09-17 19:32:49,649][07517] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:32:49,650][07517] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-17 19:32:49,657][07502] Created Actor Critic model with architecture:
+[2025-09-17 19:32:49,658][07502] HomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): HomeostaticEncoder(
+    (pov_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (features_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=64, bias=True)
+      (3): ReLU()
+    )
+  )
+  (core): HomeostaticCore(
+    (core_net): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+  (critic_food): Linear(in_features=512, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=512, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=512, out_features=1, bias=True)
+  (critic_health): Linear(in_features=512, out_features=1, bias=True)
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (1): ELU(alpha=1.0)
+      (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ELU(alpha=1.0)
+      (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (5): ELU(alpha=1.0)
+      (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): ELU(alpha=1.0)
+      (8): Flatten(start_dim=1, end_dim=-1)
+    )
+    (feature_fc): Linear(in_features=512, out_features=288, bias=True)
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2025-09-17 19:32:49,673][07517] Num visible devices: 1
+[2025-09-17 19:32:49,964][07502] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-09-17 19:32:51,724][07502] No checkpoints found
+[2025-09-17 19:32:51,724][07502] Did not load from checkpoint, starting from scratch!
+[2025-09-17 19:32:51,725][07502] Initialized policy 0 weights for model version 0
+[2025-09-17 19:32:51,731][07502] LearnerWorker_p0 finished initialization!
+[2025-09-17 19:32:51,732][07502] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:32:51,938][07517] RunningMeanStd input shape: (4,)
+[2025-09-17 19:32:51,939][07517] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 19:32:51,939][07517] RunningMeanStd input shape: (1,)
+[2025-09-17 19:32:51,980][07346] Inference worker 0-0 is ready!
+[2025-09-17 19:32:51,980][07346] All inference workers are ready! Signal rollout workers to start!
+[2025-09-17 19:32:52,194][07346] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 19:32:53,465][07516] Decorrelating experience for 0 frames...
+[2025-09-17 19:32:53,508][07518] Decorrelating experience for 0 frames...
+[2025-09-17 19:32:54,939][07516] Decorrelating experience for 32 frames...
+[2025-09-17 19:32:55,015][07518] Decorrelating experience for 32 frames...
+[2025-09-17 19:32:55,774][07517] EvtLoop [inference_proc0-0_evt_loop, process=inference_proc0-0] unhandled exception in slot='_run' connected to emitter=Emitter(object_id='Timer_f4c46568-ceda-48b4-a247-9de8e208b4fa', signal_name='iteration'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 372, in _run
+    self._handle_policy_steps(self.timing)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 335, in _handle_policy_steps
+    signals_to_send = self._prepare_policy_outputs_func(num_samples, policy_outputs, self.requests)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 280, in _prepare_policy_outputs_non_batched
+    policy_outputs[key] = output_value.to(device)
+AttributeError: 'tuple' object has no attribute 'to'
+[2025-09-17 19:32:55,774][07517] Unhandled exception 'tuple' object has no attribute 'to' in evt loop inference_proc0-0_evt_loop
+[2025-09-17 19:32:57,195][07346] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 19:37:52,033][10054] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/myhcrafter_Sept17_1M/config.json...
+[2025-09-17 19:37:52,051][10054] Rollout worker 0 uses device cpu
+[2025-09-17 19:37:52,051][10054] Rollout worker 1 uses device cpu
+[2025-09-17 19:37:52,083][10054] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:37:52,084][10054] InferenceWorker_p0-w0: min num requests: 1
+[2025-09-17 19:37:52,095][10054] Starting all processes...
+[2025-09-17 19:37:52,095][10054] Starting process learner_proc0
+[2025-09-17 19:37:52,145][10054] Starting all processes...
+[2025-09-17 19:37:52,151][10054] Starting process inference_proc0-0
+[2025-09-17 19:37:52,151][10054] Starting process rollout_proc0
+[2025-09-17 19:37:52,152][10054] Starting process rollout_proc1
+[2025-09-17 19:37:54,536][10282] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2025-09-17 19:37:54,553][10265] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:37:54,554][10265] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-17 19:37:54,575][10265] Num visible devices: 1
+[2025-09-17 19:37:54,576][10265] Starting seed is not provided
+[2025-09-17 19:37:54,576][10265] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:37:54,576][10265] Initializing actor-critic model on device cuda:0
+[2025-09-17 19:37:54,577][10265] RunningMeanStd input shape: (4,)
+[2025-09-17 19:37:54,578][10265] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 19:37:54,579][10265] RunningMeanStd input shape: (1,)
+[2025-09-17 19:37:54,580][10280] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2025-09-17 19:37:54,603][10279] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:37:54,603][10279] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-17 19:37:54,610][10265] Created Actor Critic model with architecture:
+[2025-09-17 19:37:54,610][10265] HomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): HomeostaticEncoder(
+    (pov_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (features_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=64, bias=True)
+      (3): ReLU()
+    )
+  )
+  (core): HomeostaticCore(
+    (core_net): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+  (critic_food): Linear(in_features=512, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=512, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=512, out_features=1, bias=True)
+  (critic_health): Linear(in_features=512, out_features=1, bias=True)
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (1): ELU(alpha=1.0)
+      (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ELU(alpha=1.0)
+      (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (5): ELU(alpha=1.0)
+      (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): ELU(alpha=1.0)
+      (8): Flatten(start_dim=1, end_dim=-1)
+    )
+    (feature_fc): Linear(in_features=512, out_features=288, bias=True)
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2025-09-17 19:37:54,743][10279] Num visible devices: 1
+[2025-09-17 19:37:54,827][10265] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-09-17 19:37:56,243][10265] No checkpoints found
+[2025-09-17 19:37:56,244][10265] Did not load from checkpoint, starting from scratch!
+[2025-09-17 19:37:56,244][10265] Initialized policy 0 weights for model version 0
+[2025-09-17 19:37:56,250][10265] LearnerWorker_p0 finished initialization!
+[2025-09-17 19:37:56,251][10265] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:37:56,471][10279] RunningMeanStd input shape: (4,)
+[2025-09-17 19:37:56,472][10279] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 19:37:56,472][10279] RunningMeanStd input shape: (1,)
+[2025-09-17 19:37:56,511][10054] Inference worker 0-0 is ready!
+[2025-09-17 19:37:56,511][10054] All inference workers are ready! Signal rollout workers to start!
+[2025-09-17 19:37:57,245][10054] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 19:37:57,983][10280] Decorrelating experience for 0 frames...
+[2025-09-17 19:37:58,012][10282] Decorrelating experience for 0 frames...
+[2025-09-17 19:37:59,511][10280] Decorrelating experience for 32 frames...
+[2025-09-17 19:37:59,541][10282] Decorrelating experience for 32 frames...
+[2025-09-17 19:38:00,127][10279] EvtLoop [inference_proc0-0_evt_loop, process=inference_proc0-0] unhandled exception in slot='_run' connected to emitter=Emitter(object_id='Timer_a7592b00-7c4b-4150-b437-24d3a626bdb5', signal_name='iteration'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 372, in _run
+    self._handle_policy_steps(self.timing)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 335, in _handle_policy_steps
+    signals_to_send = self._prepare_policy_outputs_func(num_samples, policy_outputs, self.requests)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 280, in _prepare_policy_outputs_non_batched
+    policy_outputs[key] = output_value.to(device)
+AttributeError: 'tuple' object has no attribute 'to'
+[2025-09-17 19:38:00,129][10279] Unhandled exception 'tuple' object has no attribute 'to' in evt loop inference_proc0-0_evt_loop
+[2025-09-17 19:38:02,245][10054] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 19:44:26,352][12157] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/myhcrafter_Sept17_1M/config.json...
+[2025-09-17 19:44:26,370][12157] Rollout worker 0 uses device cpu
+[2025-09-17 19:44:26,370][12157] Rollout worker 1 uses device cpu
+[2025-09-17 19:44:26,399][12157] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:44:26,399][12157] InferenceWorker_p0-w0: min num requests: 1
+[2025-09-17 19:44:26,410][12157] Starting all processes...
+[2025-09-17 19:44:26,410][12157] Starting process learner_proc0
+[2025-09-17 19:44:26,460][12157] Starting all processes...
+[2025-09-17 19:44:26,463][12157] Starting process inference_proc0-0
+[2025-09-17 19:44:26,464][12157] Starting process rollout_proc0
+[2025-09-17 19:44:26,464][12157] Starting process rollout_proc1
+[2025-09-17 19:44:28,837][12371] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:44:28,837][12371] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-17 19:44:28,860][12371] Num visible devices: 1
+[2025-09-17 19:44:28,861][12371] Starting seed is not provided
+[2025-09-17 19:44:28,861][12371] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:44:28,861][12371] Initializing actor-critic model on device cuda:0
+[2025-09-17 19:44:28,862][12371] RunningMeanStd input shape: (4,)
+[2025-09-17 19:44:28,863][12371] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 19:44:28,864][12371] RunningMeanStd input shape: (1,)
+[2025-09-17 19:44:28,871][12386] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2025-09-17 19:44:28,872][12387] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2025-09-17 19:44:28,886][12385] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:44:28,886][12385] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-17 19:44:28,896][12371] Created Actor Critic model with architecture:
+[2025-09-17 19:44:28,896][12371] HomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): HomeostaticEncoder(
+    (pov_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (features_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=64, bias=True)
+      (3): ReLU()
+    )
+  )
+  (core): HomeostaticCore(
+    (core_net): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+  (critic_food): Linear(in_features=512, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=512, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=512, out_features=1, bias=True)
+  (critic_health): Linear(in_features=512, out_features=1, bias=True)
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (1): ELU(alpha=1.0)
+      (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ELU(alpha=1.0)
+      (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (5): ELU(alpha=1.0)
+      (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): ELU(alpha=1.0)
+      (8): Flatten(start_dim=1, end_dim=-1)
+    )
+    (feature_fc): Linear(in_features=512, out_features=288, bias=True)
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2025-09-17 19:44:29,026][12385] Num visible devices: 1
+[2025-09-17 19:44:29,116][12371] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-09-17 19:44:30,449][12371] No checkpoints found
+[2025-09-17 19:44:30,449][12371] Did not load from checkpoint, starting from scratch!
+[2025-09-17 19:44:30,450][12371] Initialized policy 0 weights for model version 0
+[2025-09-17 19:44:30,457][12371] LearnerWorker_p0 finished initialization!
+[2025-09-17 19:44:30,457][12371] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:44:30,683][12385] RunningMeanStd input shape: (4,)
+[2025-09-17 19:44:30,684][12385] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 19:44:30,685][12385] RunningMeanStd input shape: (1,)
+[2025-09-17 19:44:30,723][12157] Inference worker 0-0 is ready!
+[2025-09-17 19:44:30,723][12157] All inference workers are ready! Signal rollout workers to start!
+[2025-09-17 19:44:31,569][12157] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 19:44:32,141][12387] Decorrelating experience for 0 frames...
+[2025-09-17 19:44:32,179][12386] Decorrelating experience for 0 frames...
+[2025-09-17 19:44:33,547][12387] Decorrelating experience for 32 frames...
+[2025-09-17 19:44:33,667][12386] Decorrelating experience for 32 frames...
+[2025-09-17 19:44:33,986][12385] EvtLoop [inference_proc0-0_evt_loop, process=inference_proc0-0] unhandled exception in slot='_run' connected to emitter=Emitter(object_id='Timer_fb9a6a67-d361-44eb-9d47-757e1852f196', signal_name='iteration'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 372, in _run
+    self._handle_policy_steps(self.timing)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 335, in _handle_policy_steps
+    signals_to_send = self._prepare_policy_outputs_func(num_samples, policy_outputs, self.requests)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 280, in _prepare_policy_outputs_non_batched
+    policy_outputs[key] = output_value.to(device)
+AttributeError: 'CategoricalActionDistribution' object has no attribute 'to'
+[2025-09-17 19:44:33,988][12385] Unhandled exception 'CategoricalActionDistribution' object has no attribute 'to' in evt loop inference_proc0-0_evt_loop
+[2025-09-17 19:44:36,569][12157] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 19:44:41,569][12157] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 19:49:28,041][13855] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/myhcrafter_Sept17_1M/config.json...
+[2025-09-17 19:49:28,059][13855] Rollout worker 0 uses device cpu
+[2025-09-17 19:49:28,060][13855] Rollout worker 1 uses device cpu
+[2025-09-17 19:49:28,094][13855] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:49:28,095][13855] InferenceWorker_p0-w0: min num requests: 1
+[2025-09-17 19:49:28,107][13855] Starting all processes...
+[2025-09-17 19:49:28,107][13855] Starting process learner_proc0
+[2025-09-17 19:49:28,110][13855] Starting all processes...
+[2025-09-17 19:49:28,115][13855] Starting process inference_proc0-0
+[2025-09-17 19:49:28,115][13855] Starting process rollout_proc0
+[2025-09-17 19:49:28,115][13855] Starting process rollout_proc1
+[2025-09-17 19:49:30,651][14081] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:49:30,651][14081] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2025-09-17 19:49:30,652][14088] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:49:30,653][14088] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2025-09-17 19:49:30,673][14081] Num visible devices: 1
+[2025-09-17 19:49:30,674][14081] Starting seed is not provided
+[2025-09-17 19:49:30,675][14081] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:49:30,675][14081] Initializing actor-critic model on device cuda:0
+[2025-09-17 19:49:30,675][14088] Num visible devices: 1
+[2025-09-17 19:49:30,676][14081] RunningMeanStd input shape: (4,)
+[2025-09-17 19:49:30,677][14081] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 19:49:30,677][14081] RunningMeanStd input shape: (1,)
+[2025-09-17 19:49:30,711][14081] Created Actor Critic model with architecture:
+[2025-09-17 19:49:30,711][14081] HomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): HomeostaticEncoder(
+    (pov_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (features_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=64, bias=True)
+      (3): ReLU()
+    )
+  )
+  (core): HomeostaticCore(
+    (core_net): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=512, out_features=17, bias=True)
+  )
+  (critic_food): Linear(in_features=512, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=512, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=512, out_features=1, bias=True)
+  (critic_health): Linear(in_features=512, out_features=1, bias=True)
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (1): ELU(alpha=1.0)
+      (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ELU(alpha=1.0)
+      (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (5): ELU(alpha=1.0)
+      (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): ELU(alpha=1.0)
+      (8): Flatten(start_dim=1, end_dim=-1)
+    )
+    (feature_fc): Linear(in_features=512, out_features=288, bias=True)
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2025-09-17 19:49:30,745][14089] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2025-09-17 19:49:30,752][14090] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2025-09-17 19:49:30,931][14081] Using optimizer <class 'torch.optim.adam.Adam'>
+[2025-09-17 19:49:32,199][14081] No checkpoints found
+[2025-09-17 19:49:32,199][14081] Did not load from checkpoint, starting from scratch!
+[2025-09-17 19:49:32,199][14081] Initialized policy 0 weights for model version 0
+[2025-09-17 19:49:32,203][14081] LearnerWorker_p0 finished initialization!
+[2025-09-17 19:49:32,203][14081] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2025-09-17 19:49:32,417][14088] RunningMeanStd input shape: (4,)
+[2025-09-17 19:49:32,418][14088] RunningMeanStd input shape: (3, 64, 64)
+[2025-09-17 19:49:32,419][14088] RunningMeanStd input shape: (1,)
+[2025-09-17 19:49:32,459][13855] Inference worker 0-0 is ready!
+[2025-09-17 19:49:32,460][13855] All inference workers are ready! Signal rollout workers to start!
+[2025-09-17 19:49:33,042][13855] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2025-09-17 19:49:33,897][14090] Decorrelating experience for 0 frames...
+[2025-09-17 19:49:33,951][14089] Decorrelating experience for 0 frames...
+[2025-09-17 19:49:35,482][14090] Decorrelating experience for 32 frames...
+[2025-09-17 19:49:35,593][14089] Decorrelating experience for 32 frames...
+[2025-09-17 19:49:35,917][14088] EvtLoop [inference_proc0-0_evt_loop, process=inference_proc0-0] unhandled exception in slot='_run' connected to emitter=Emitter(object_id='Timer_dd209749-ce4d-4989-8d75-4b4650f70069', signal_name='iteration'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 372, in _run
+    self._handle_policy_steps(self.timing)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 331, in _handle_policy_steps
+    policy_outputs = actor_critic(normalized_obs, rnn_states, action_mask=action_mask)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/teamspace/studios/this_studio/openended_homeostatic_rl/homeostatic_model.py", line 155, in forward
+    result["action_logits"] = action_distribution.logits
+AttributeError: 'tuple' object has no attribute 'logits'
+[2025-09-17 19:49:35,919][14088] Unhandled exception 'tuple' object has no attribute 'logits' in evt loop inference_proc0-0_evt_loop
+[2025-09-17 19:49:38,042][13855] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)

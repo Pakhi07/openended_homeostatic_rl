@@ -1,12 +1,17 @@
 python enjoy_hcrafter_env_record.py \
 --env=HomeostaticCrafter-v1 \
---experiment=myhcrafter_Aug_27_1M \
+--experiment=oghcrafter_Sept9_1M \
 --train_dir=./train_dir \
 --device=cpu \
 --num_envs_per_worker=1 \
+--with_wandb=True \
+--wandb_user=pakhibanchalia2418 \
+--wandb_project=homeostatic_crafter \
+--wandb_group=no_maxgrad_norm \
 --num_workers 1 \
 --stats_avg 1 \
 --serial_mode True \
 --max_num_episodes 1 \
 --save_video \
+--max_num_episodes 100 \
 --no_render \

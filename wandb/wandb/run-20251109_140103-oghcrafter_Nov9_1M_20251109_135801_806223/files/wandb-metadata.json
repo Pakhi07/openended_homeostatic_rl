@@ -1,0 +1,52 @@
+{
+  "os":  "Linux-6.8.0-1007-gcp-x86_64-with-glibc2.39",
+  "python":  "CPython 3.10.10",
+  "startedAt":  "2025-11-09T14:01:03.769695Z",
+  "args":  [
+    "--env=HomeostaticCrafter-v1",
+    "--experiment=oghcrafter_Nov9_1M",
+    "--stats_avg=100",
+    "--num_envs_per_worker=10",
+    "--with_wandb=True",
+    "--wandb_user=pakhibanchalia24",
+    "--wandb_project=homeostatic_crafter",
+    "--wandb_group=no_maxgrad_norm",
+    "--gamma=0.995",
+    "--train_for_env_steps=1000000"
+  ],
+  "program":  "/teamspace/studios/this_studio/openended_homeostatic_rl/train_hcrafter_env.py",
+  "codePath":  "train_hcrafter_env.py",
+  "codePathLocal":  "train_hcrafter_env.py",
+  "git":  {
+    "remote":  "https://github.com/Pakhi07/openended_homeostatic_rl.git",
+    "commit":  "57724d2941a4617445e0f505bc9ce09d558aad83"
+  },
+  "email":  "pakhibanchalia2418@gmail.com",
+  "root":  "/teamspace/studios/this_studio/openended_homeostatic_rl/wandb",
+  "host":  "cs-01k9me2yg2g7m9ef1mdhj1xare",
+  "executable":  "/home/zeus/miniconda3/envs/cloudspace/bin/python",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "gpu":  "Tesla T4",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "395184570368",
+      "used":  "26296090624"
+    }
+  },
+  "memory":  {
+    "total":  "31538298880"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "Tesla T4",
+      "memoryTotal":  "16106127360",
+      "cudaCores":  2560,
+      "architecture":  "Turing",
+      "uuid":  "GPU-74dbeb97-b843-c997-fdaa-e65a140c135f"
+    }
+  ],
+  "cudaVersion":  "12.8",
+  "writerId":  "z63sne4wbc1e8jjxw0n5jhcoc0rr7p47"
+}
