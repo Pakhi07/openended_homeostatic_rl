@@ -1,0 +1,22 @@
+python train_hcrafter_env_modular_icm.py \
+--env=HomeostaticCrafter-v1 \
+--experiment=modular_icm_Mar01_1M \
+--stats_avg=100 \
+--num_envs_per_worker=2 \
+--with_wandb=False \
+--wandb_user=pakhibanchalia2418 \
+--wandb_project=homeostatic_crafter_modular_icm \
+--wandb_group=modular_icm \
+--gamma=0.995 \
+--train_for_env_steps=1000000 \
+--batch_size=512 \
+--num_workers=2 \
+--rollout=32 \
+--homeo_setpoints=9.0,9.0,9.0,9.0 \
+--homeo_weights=1.0,1.0,1.0,1.0 \
+--homeo_reward_scale=1.0 \
+--curiosity_reward_scale=0.01 \
+--icm_beta=0.2 \
+--icm_loss_coeff=1.0 \
+--gate_entropy_coeff=0.01 \
+--gate_balance_coeff=0.01
