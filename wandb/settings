@@ -1,0 +1,5 @@
+[default]
+entity = pakhibanchalia24
+project = homeostatic_crafter
+base_url = https://api.wandb.ai
+

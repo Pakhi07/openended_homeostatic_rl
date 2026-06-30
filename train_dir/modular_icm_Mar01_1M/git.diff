@@ -1,0 +1,22 @@
+diff --git a/run_hcrafter_train_modular_icm.bash b/run_hcrafter_train_modular_icm.bash
+index fba7d39..55e5648 100644
+--- a/run_hcrafter_train_modular_icm.bash
++++ b/run_hcrafter_train_modular_icm.bash
+@@ -4,7 +4,7 @@ python train_hcrafter_env_modular_icm.py \
+ --stats_avg=100 \
+ --num_envs_per_worker=2 \
+ --with_wandb=True \
+---wandb_user=pakhibanchalia2418 \
++--wandb_user=pakhibanchalia24 \
+ --wandb_project=homeostatic_crafter_modular_icm \
+ --wandb_group=modular_icm \
+ --gamma=0.995 \
+diff --git a/wandb/wandb/latest-run b/wandb/wandb/latest-run
+index e1dd2f8..5982462 120000
+--- a/wandb/wandb/latest-run
++++ b/wandb/wandb/latest-run
+@@ -1 +1 @@
+-run-20251110_195607-oghcrafter_Nov10_1M_20251110_195606_447283
+\ No newline at end of file
++run-20260301_183459-modular_icm_Mar01_1M_20260301_183457_937370
+\ No newline at end of file

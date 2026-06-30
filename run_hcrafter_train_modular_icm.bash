@@ -4,7 +4,7 @@ python train_hcrafter_env_modular_icm.py \
 --stats_avg=100 \
 --num_envs_per_worker=2 \
 --with_wandb=True \
---wandb_user=pakhibanchalia2418 \
+--wandb_user=pakhibanchalia24 \
 --wandb_project=homeostatic_crafter_modular_icm \
 --wandb_group=modular_icm \
 --gamma=0.995 \

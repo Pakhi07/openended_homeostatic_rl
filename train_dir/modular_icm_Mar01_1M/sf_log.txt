@@ -1,0 +1,850 @@
+[2026-03-01 10:55:08,330][04094] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/config.json...
+[2026-03-01 10:55:09,332][04094] Rollout worker 0 uses device cpu
+[2026-03-01 10:55:09,332][04094] Rollout worker 1 uses device cpu
+[2026-03-01 10:55:09,399][04094] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2026-03-01 10:55:09,399][04094] InferenceWorker_p0-w0: min num requests: 1
+[2026-03-01 10:55:09,411][04094] Starting all processes...
+[2026-03-01 10:55:09,411][04094] Starting process learner_proc0
+[2026-03-01 10:55:09,452][04094] Starting all processes...
+[2026-03-01 10:55:09,458][04094] Starting process inference_proc0-0
+[2026-03-01 10:55:09,458][04094] Starting process rollout_proc0
+[2026-03-01 10:55:09,458][04094] Starting process rollout_proc1
+[2026-03-01 10:55:12,552][05885] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2026-03-01 10:55:12,728][05886] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2026-03-01 10:55:12,749][05881] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2026-03-01 10:55:12,750][05881] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2026-03-01 10:55:12,772][05881] Num visible devices: 1
+[2026-03-01 10:55:12,840][05841] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2026-03-01 10:55:12,840][05841] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2026-03-01 10:55:12,861][05841] Num visible devices: 1
+[2026-03-01 10:55:12,862][05841] Starting seed is not provided
+[2026-03-01 10:55:12,862][05841] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2026-03-01 10:55:12,862][05841] Initializing actor-critic model on device cuda:0
+[2026-03-01 10:55:12,863][05841] RunningMeanStd input shape: (4,)
+[2026-03-01 10:55:12,865][05841] RunningMeanStd input shape: (3, 64, 64)
+[2026-03-01 10:55:12,866][05841] RunningMeanStd input shape: (1,)
+[2026-03-01 10:55:12,977][05841] Created Actor Critic model with architecture:
+[2026-03-01 10:55:12,977][05841] ModularHomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): SharedHomeostaticEncoder(
+    (image_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (measurement_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=64, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=64, out_features=64, bias=True)
+      (3): ReLU()
+    )
+    (shared_projection): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (specialist_torso_health): Sequential(
+    (0): Linear(in_features=512, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): ReLU()
+  )
+  (specialist_torso_food): Sequential(
+    (0): Linear(in_features=512, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): ReLU()
+  )
+  (specialist_torso_drink): Sequential(
+    (0): Linear(in_features=512, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): ReLU()
+  )
+  (specialist_torso_energy): Sequential(
+    (0): Linear(in_features=512, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): ReLU()
+  )
+  (gating_network): Sequential(
+    (0): Linear(in_features=516, out_features=128, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=128, out_features=4, bias=True)
+  )
+  (critic_health): Linear(in_features=256, out_features=1, bias=True)
+  (critic_food): Linear(in_features=256, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=256, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=256, out_features=1, bias=True)
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=256, out_features=17, bias=True)
+  )
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): CuriosityFeatureEncoder(
+      (encoder): Sequential(
+        (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (1): ELU(alpha=1.0)
+        (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (3): ELU(alpha=1.0)
+        (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (5): ELU(alpha=1.0)
+        (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (7): ELU(alpha=1.0)
+        (8): Flatten(start_dim=1, end_dim=-1)
+      )
+      (proj): Linear(in_features=512, out_features=288, bias=True)
+    )
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2026-03-01 10:55:13,308][05841] Using optimizer <class 'torch.optim.adam.Adam'>
+[2026-03-01 10:55:15,066][05841] No checkpoints found
+[2026-03-01 10:55:15,066][05841] Did not load from checkpoint, starting from scratch!
+[2026-03-01 10:55:15,067][05841] Initialized policy 0 weights for model version 0
+[2026-03-01 10:55:15,074][05841] LearnerWorker_p0 finished initialization!
+[2026-03-01 10:55:15,074][05841] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2026-03-01 10:55:15,251][04094] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:55:15,318][05881] RunningMeanStd input shape: (4,)
+[2026-03-01 10:55:15,320][05881] RunningMeanStd input shape: (3, 64, 64)
+[2026-03-01 10:55:15,325][05881] RunningMeanStd input shape: (1,)
+[2026-03-01 10:55:15,415][04094] Inference worker 0-0 is ready!
+[2026-03-01 10:55:15,416][04094] All inference workers are ready! Signal rollout workers to start!
+[2026-03-01 10:55:17,049][05885] Decorrelating experience for 0 frames...
+[2026-03-01 10:55:17,163][05886] Decorrelating experience for 0 frames...
+[2026-03-01 10:55:18,491][05885] Decorrelating experience for 32 frames...
+[2026-03-01 10:55:18,622][05886] Decorrelating experience for 32 frames...
+[2026-03-01 10:55:19,279][05881] EvtLoop [inference_proc0-0_evt_loop, process=inference_proc0-0] unhandled exception in slot='_run' connected to emitter=Emitter(object_id='Timer_8aae6b06-feaf-4c39-b24c-d455967e49b2', signal_name='iteration'), args=()
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 372, in _run
+    self._handle_policy_steps(self.timing)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 335, in _handle_policy_steps
+    signals_to_send = self._prepare_policy_outputs_func(num_samples, policy_outputs, self.requests)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/sampling/inference_worker.py", line 285, in _prepare_policy_outputs_non_batched
+    output_value = policy_outputs[name].float()
+KeyError: 'actions'
+[2026-03-01 10:55:19,281][05881] Unhandled exception 'actions' in evt loop inference_proc0-0_evt_loop
+[2026-03-01 10:55:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:55:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:55:29,387][04094] Heartbeat connected on Batcher_0
+[2026-03-01 10:55:29,393][04094] Heartbeat connected on LearnerWorker_p0
+[2026-03-01 10:55:29,405][04094] Heartbeat connected on RolloutWorker_w0
+[2026-03-01 10:55:29,410][04094] Heartbeat connected on RolloutWorker_w1
+[2026-03-01 10:55:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:55:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:55:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:55:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:55:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:55:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:56:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:56:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:56:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:56:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:56:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:56:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:56:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:56:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:56:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:56:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:56:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:56:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:57:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:57:00,253][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 10:57:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:57:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:57:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:57:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:57:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:57:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:57:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:57:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:57:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:57:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:57:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:58:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:58:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:58:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:58:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:58:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:58:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:58:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:58:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:58:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:58:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:58:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:58:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:59:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:59:00,254][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 10:59:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:59:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:59:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:59:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:59:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:59:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:59:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:59:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:59:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:59:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 10:59:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:00:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:00:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:00:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:00:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:00:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:00:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:00:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:00:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:00:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:00:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:00:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:00:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:01:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:01:00,253][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:01:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:01:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:01:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:01:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:01:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:01:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:01:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:01:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:01:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:01:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:01:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:02:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:02:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:02:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:02:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:02:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:02:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:02:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:02:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:02:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:02:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:02:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:02:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:03:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:03:00,253][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:03:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:03:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:03:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:03:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:03:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:03:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:03:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:03:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:03:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:03:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:03:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:04:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:04:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:04:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:04:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:04:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:04:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:04:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:04:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:04:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:04:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:04:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:04:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:05:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:05:00,252][04094] Components not started: InferenceWorker_p0-w0, wait_time=600.0 seconds
+[2026-03-01 11:05:00,253][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:05:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:05:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:05:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:05:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:05:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:05:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:05:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:05:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:05:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:05:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:05:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:06:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:06:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:06:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:06:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:06:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:06:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:06:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:06:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:06:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:06:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:06:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:06:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:07:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:07:00,254][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:07:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:07:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:07:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:07:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:07:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:07:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:07:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:07:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:07:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:07:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:07:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:08:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:08:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:08:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:08:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:08:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:08:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:08:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:08:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:08:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:08:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:08:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:08:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:09:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:09:00,254][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:09:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:09:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:09:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:09:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:09:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:09:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:09:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:09:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:09:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:09:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:09:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:10:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:10:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:10:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:10:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:10:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:10:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:10:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:10:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:10:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:10:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:10:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:10:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:11:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:11:00,254][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:11:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:11:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:11:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:11:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:11:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:11:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:11:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:11:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:11:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:11:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:11:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:12:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:12:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:12:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:12:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:12:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:12:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:12:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:12:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:12:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:12:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:12:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:12:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:13:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:13:00,254][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:13:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:13:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:13:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:13:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:13:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:13:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:13:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:13:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:13:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:13:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:13:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:14:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:14:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:14:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:14:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:14:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:14:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:14:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:14:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:14:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:14:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:14:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:14:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:15:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:15:00,252][04094] Components not started: InferenceWorker_p0-w0, wait_time=1200.0 seconds
+[2026-03-01 11:15:00,254][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:15:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:15:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:15:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:15:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:15:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:15:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:15:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:15:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:15:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:15:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:15:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:16:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:16:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:16:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:16:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:16:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:16:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:16:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:16:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:16:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:16:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:16:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:16:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:17:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:17:00,254][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:17:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:17:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:17:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:17:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:17:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:17:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:17:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:17:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:17:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:17:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:17:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:18:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:18:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:18:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:18:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:18:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:18:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:18:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:18:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:18:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:18:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:18:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:18:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:19:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:19:00,254][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:19:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:19:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:19:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:19:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:19:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:19:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:19:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:19:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:19:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:19:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:19:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:20:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:20:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:20:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:20:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:20:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:20:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:20:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:20:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:20:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:20:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:20:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:20:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:21:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:21:00,253][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:21:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:21:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:21:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:21:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:21:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:21:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:21:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:21:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:21:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:21:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:21:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:22:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:22:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:22:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:22:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:22:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:22:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:22:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:22:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:22:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:22:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:22:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:22:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:23:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:23:00,254][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:23:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:23:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:23:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:23:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:23:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:23:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:23:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:23:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:23:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:23:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:23:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:24:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:24:05,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:24:10,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:24:15,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:24:20,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:24:25,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:24:30,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:24:35,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:24:40,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:24:45,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:24:50,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:24:55,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:25:00,251][04094] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 11:25:00,253][04094] Components not started: InferenceWorker_p0-w0, wait_time=1800.0 seconds
+[2026-03-01 11:25:00,254][04094] Components take too long to start: InferenceWorker_p0-w0. Aborting the experiment!
+
+
+
+[2026-03-01 11:25:00,254][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:25:00,254][05886] Stopping RolloutWorker_w0...
+[2026-03-01 11:25:00,254][05885] Stopping RolloutWorker_w1...
+[2026-03-01 11:25:00,255][04094] Component InferenceWorker_p0-w0 process died already! Don't wait for it.
+[2026-03-01 11:25:00,255][05885] Loop rollout_proc1_evt_loop terminating...
+[2026-03-01 11:25:00,255][05886] Loop rollout_proc0_evt_loop terminating...
+[2026-03-01 11:25:00,255][04094] Component RolloutWorker_w0 stopped!
+[2026-03-01 11:25:00,255][04094] Waiting for ['Batcher_0', 'LearnerWorker_p0', 'RolloutWorker_w1'] to stop...
+[2026-03-01 11:25:00,256][04094] Component RolloutWorker_w1 stopped!
+[2026-03-01 11:25:00,256][04094] Waiting for ['Batcher_0', 'LearnerWorker_p0'] to stop...
+[2026-03-01 11:25:00,256][04094] Component Batcher_0 stopped!
+[2026-03-01 11:25:00,256][04094] Waiting for ['LearnerWorker_p0'] to stop...
+[2026-03-01 11:25:00,255][05841] Stopping Batcher_0...
+[2026-03-01 11:25:00,261][05841] Loop batcher_evt_loop terminating...
+[2026-03-01 11:25:00,292][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:25:00,325][05841] Saving /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 11:25:00,358][05841] Stopping LearnerWorker_p0...
+[2026-03-01 11:25:00,358][04094] Component LearnerWorker_p0 stopped!
+[2026-03-01 11:25:00,358][05841] Loop learner_proc0_evt_loop terminating...
+[2026-03-01 11:25:00,358][04094] Waiting for process learner_proc0 to stop...
+[2026-03-01 11:25:01,101][04094] Waiting for process inference_proc0-0 to join...
+[2026-03-01 11:25:01,101][04094] Waiting for process rollout_proc0 to join...
+[2026-03-01 11:25:01,102][04094] Waiting for process rollout_proc1 to join...
+[2026-03-01 11:25:01,102][04094] Batcher 0 profile tree view:
+[2026-03-01 11:25:01,102][04094] Learner 0 profile tree view:
+[2026-03-01 11:25:01,103][04094] RolloutWorker_w0 profile tree view:
+wait_for_trajectories: 0.0002, enqueue_policy_requests: 0.0004
+[2026-03-01 11:25:01,103][04094] RolloutWorker_w1 profile tree view:
+wait_for_trajectories: 0.0001, enqueue_policy_requests: 0.0003
+[2026-03-01 11:25:01,103][04094] Loop Runner_EvtLoop terminating...
+[2026-03-01 11:25:01,103][04094] Runner profile tree view:
+main_loop: 1791.6935
+[2026-03-01 11:25:01,104][04094] Collected {0: 0}, FPS: 0.0
+[2026-03-01 18:35:04,922][18877] Saving configuration to /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/config.json...
+[2026-03-01 18:35:05,925][18877] Rollout worker 0 uses device cpu
+[2026-03-01 18:35:05,926][18877] Rollout worker 1 uses device cpu
+[2026-03-01 18:35:05,990][18877] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2026-03-01 18:35:05,991][18877] InferenceWorker_p0-w0: min num requests: 1
+[2026-03-01 18:35:06,006][18877] Starting all processes...
+[2026-03-01 18:35:06,006][18877] Starting process learner_proc0
+[2026-03-01 18:35:06,049][18877] Starting all processes...
+[2026-03-01 18:35:06,053][18877] Starting process inference_proc0-0
+[2026-03-01 18:35:06,053][18877] Starting process rollout_proc0
+[2026-03-01 18:35:06,053][18877] Starting process rollout_proc1
+[2026-03-01 18:35:08,557][19705] Worker 0 uses CPU cores [0, 1, 2, 3]
+[2026-03-01 18:35:08,845][19706] Worker 1 uses CPU cores [4, 5, 6, 7]
+[2026-03-01 18:35:09,004][19704] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2026-03-01 18:35:09,004][19704] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for inference process 0
+[2026-03-01 18:35:09,028][19704] Num visible devices: 1
+[2026-03-01 18:35:09,328][19697] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2026-03-01 18:35:09,328][19697] Set environment var CUDA_VISIBLE_DEVICES to '0' (GPU indices [0]) for learning process 0
+[2026-03-01 18:35:09,354][19697] Num visible devices: 1
+[2026-03-01 18:35:09,355][19697] Starting seed is not provided
+[2026-03-01 18:35:09,355][19697] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2026-03-01 18:35:09,355][19697] Initializing actor-critic model on device cuda:0
+[2026-03-01 18:35:09,356][19697] RunningMeanStd input shape: (4,)
+[2026-03-01 18:35:09,359][19697] RunningMeanStd input shape: (3, 64, 64)
+[2026-03-01 18:35:09,360][19697] RunningMeanStd input shape: (1,)
+[2026-03-01 18:35:09,469][19697] Created Actor Critic model with architecture:
+[2026-03-01 18:35:09,470][19697] ModularHomeostaticActorCritic(
+  (obs_normalizer): ObservationNormalizer(
+    (running_mean_std): RunningMeanStdDictInPlace(
+      (running_mean_std): ModuleDict(
+        (measurements): RunningMeanStdInPlace()
+        (obs): RunningMeanStdInPlace()
+      )
+    )
+  )
+  (returns_normalizer): RecursiveScriptModule(original_name=RunningMeanStdInPlace)
+  (encoder): SharedHomeostaticEncoder(
+    (image_encoder): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(8, 8), stride=(4, 4))
+      (1): ReLU()
+      (2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+      (5): ReLU()
+      (6): Flatten(start_dim=1, end_dim=-1)
+    )
+    (measurement_encoder): Sequential(
+      (0): Linear(in_features=4, out_features=64, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=64, out_features=64, bias=True)
+      (3): ReLU()
+    )
+    (shared_projection): Sequential(
+      (0): Linear(in_features=1088, out_features=512, bias=True)
+      (1): ReLU()
+    )
+  )
+  (specialist_torso_health): Sequential(
+    (0): Linear(in_features=512, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): ReLU()
+  )
+  (specialist_torso_food): Sequential(
+    (0): Linear(in_features=512, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): ReLU()
+  )
+  (specialist_torso_drink): Sequential(
+    (0): Linear(in_features=512, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): ReLU()
+  )
+  (specialist_torso_energy): Sequential(
+    (0): Linear(in_features=512, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): ReLU()
+  )
+  (gating_network): Sequential(
+    (0): Linear(in_features=516, out_features=128, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=128, out_features=4, bias=True)
+  )
+  (critic_health): Linear(in_features=256, out_features=1, bias=True)
+  (critic_food): Linear(in_features=256, out_features=1, bias=True)
+  (critic_drink): Linear(in_features=256, out_features=1, bias=True)
+  (critic_energy): Linear(in_features=256, out_features=1, bias=True)
+  (decoder): Identity()
+  (action_parameterization): ActionParameterizationDefault(
+    (distribution_linear): Linear(in_features=256, out_features=17, bias=True)
+  )
+  (icm): IntrinsicCuriosityModule(
+    (feature_encoder): CuriosityFeatureEncoder(
+      (encoder): Sequential(
+        (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (1): ELU(alpha=1.0)
+        (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (3): ELU(alpha=1.0)
+        (4): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (5): ELU(alpha=1.0)
+        (6): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (7): ELU(alpha=1.0)
+        (8): Flatten(start_dim=1, end_dim=-1)
+      )
+      (proj): Linear(in_features=512, out_features=288, bias=True)
+    )
+    (inverse_model): Sequential(
+      (0): Linear(in_features=576, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=17, bias=True)
+    )
+    (forward_model): Sequential(
+      (0): Linear(in_features=305, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=288, bias=True)
+    )
+  )
+)
+[2026-03-01 18:35:09,797][19697] Using optimizer <class 'torch.optim.adam.Adam'>
+[2026-03-01 18:35:11,536][19697] Loading state from checkpoint /teamspace/studios/this_studio/openended_homeostatic_rl/train_dir/modular_icm_Mar01_1M/checkpoint_p0/checkpoint_000000000_0.pth...
+[2026-03-01 18:35:11,560][19697] Loading model from checkpoint
+[2026-03-01 18:35:11,563][19697] Loaded experiment state at self.train_step=0, self.env_steps=0
+[2026-03-01 18:35:11,564][19697] Initialized policy 0 weights for model version 0
+[2026-03-01 18:35:11,568][19697] LearnerWorker_p0 finished initialization!
+[2026-03-01 18:35:11,568][19697] Using GPUs [0] for process 0 (actually maps to GPUs [0])
+[2026-03-01 18:35:11,775][19704] RunningMeanStd input shape: (4,)
+[2026-03-01 18:35:11,776][19704] RunningMeanStd input shape: (3, 64, 64)
+[2026-03-01 18:35:11,777][19704] RunningMeanStd input shape: (1,)
+[2026-03-01 18:35:11,853][18877] Inference worker 0-0 is ready!
+[2026-03-01 18:35:11,854][18877] All inference workers are ready! Signal rollout workers to start!
+[2026-03-01 18:35:13,298][19706] Decorrelating experience for 0 frames...
+[2026-03-01 18:35:13,367][19705] Decorrelating experience for 0 frames...
+[2026-03-01 18:35:14,782][19706] Decorrelating experience for 32 frames...
+[2026-03-01 18:35:14,866][19705] Decorrelating experience for 32 frames...
+[2026-03-01 18:35:15,193][18877] Fps is (10 sec: nan, 60 sec: nan, 300 sec: nan). Total num frames: 0. Throughput: 0: nan. Samples: 0. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:35:19,138][19697] EvtLoop [learner_proc0_evt_loop, process=learner_proc0] unhandled exception in slot='on_new_training_batch' connected to emitter=Emitter(object_id='Batcher_0', signal_name='training_batches_available'), args=(0,)
+Traceback (most recent call last):
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/signal_slot/signal_slot.py", line 355, in _process_signal
+    slot_callable(*args)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/learning/learner_worker.py", line 143, in on_new_training_batch
+    stats = self.learner.train(self.batcher.training_batches[batch_idx])
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/learning/learner.py", line 1052, in train
+    train_stats = self._train(buff, self.cfg.batch_size, experience_size, num_invalids)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/learning/learner.py", line 734, in _train
+    ) = self._calculate_losses(mb, num_invalids)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/algo/learning/learner.py", line 553, in _calculate_losses
+    head_outputs = self.actor_critic.forward_head(mb.normalized_obs)
+  File "/teamspace/studios/this_studio/sample-factory/sample_factory/model/actor_critic.py", line 120, in forward_head
+    raise NotImplementedError()
+NotImplementedError
+[2026-03-01 18:35:19,139][19697] Unhandled exception  in evt loop learner_proc0_evt_loop
+[2026-03-01 18:35:20,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 104.6. Samples: 523. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:35:20,194][18877] Avg episode reward: [(0, '-106.957')]
+[2026-03-01 18:35:22,098][19697] Signal inference workers to stop experience collection...
+[2026-03-01 18:35:22,104][19704] InferenceWorker_p0-w0: stopping experience collection
+[2026-03-01 18:35:25,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 103.4. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:35:25,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:35:25,979][18877] Heartbeat connected on Batcher_0
+[2026-03-01 18:35:25,991][18877] Heartbeat connected on InferenceWorker_p0-w0
+[2026-03-01 18:35:25,999][18877] Heartbeat connected on RolloutWorker_w0
+[2026-03-01 18:35:26,005][18877] Heartbeat connected on RolloutWorker_w1
+[2026-03-01 18:35:30,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 68.9. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:35:30,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:35:35,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 51.7. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:35:35,195][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:35:40,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 41.4. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:35:40,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:35:45,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 34.5. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:35:45,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:35:50,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 29.5. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:35:50,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:35:55,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 25.8. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:35:55,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:36:00,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 23.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:36:00,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:36:05,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 11.4. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:36:05,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:36:10,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:36:10,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:36:15,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:36:15,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:36:20,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:36:20,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:36:25,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:36:25,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:36:30,272][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:36:30,273][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:36:35,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:36:35,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:36:40,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:36:40,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:36:45,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:36:45,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:36:50,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:36:50,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:36:55,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:36:55,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:37:00,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:37:00,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:37:05,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:37:05,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:37:10,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:37:10,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:37:15,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:37:15,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:37:20,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:37:20,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:37:25,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:37:25,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:37:30,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:37:30,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:37:35,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:37:35,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:37:40,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:37:40,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:37:45,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:37:45,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:37:50,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:37:50,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:37:55,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:37:55,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:38:00,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:38:00,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:38:05,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:38:05,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:38:10,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:38:10,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:38:15,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:38:15,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:38:20,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:38:20,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:38:25,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:38:25,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:38:30,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:38:30,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:38:35,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:38:35,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:38:40,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:38:40,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:38:45,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:38:45,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:38:50,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:38:50,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:38:55,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:38:55,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:39:00,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:39:00,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:39:05,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:39:05,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:39:10,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:39:10,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:39:15,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:39:15,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:39:20,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:39:20,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:39:25,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:39:25,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:39:30,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:39:30,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:39:35,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:39:35,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:39:40,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:39:40,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:39:45,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:39:45,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:39:50,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:39:50,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:39:55,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:39:55,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:40:00,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:40:00,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:40:05,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:40:05,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:40:10,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:40:10,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:40:15,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:40:15,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:40:20,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:40:20,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:40:25,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:40:25,194][18877] Avg episode reward: [(0, '-104.583')]
+[2026-03-01 18:40:30,193][18877] Fps is (10 sec: 0.0, 60 sec: 0.0, 300 sec: 0.0). Total num frames: 0. Throughput: 0: 0.0. Samples: 1034. Policy #0 lag: (min: -1.0, avg: -1.0, max: -1.0)
+[2026-03-01 18:40:30,194][18877] Avg episode reward: [(0, '-104.583')]
